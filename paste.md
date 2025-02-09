@@ -1,1 +1,1 @@
-Got it! I'll keep my responses crisp and to the point while ensuring clarity. Let me know what you need. 😊
+Got it! If you have a specific topic or question in mind, feel free to share it with me, and I'll provide a well-detailed explanation following the structure you’ve mentioned. Whether it's understanding a concept, explaining a piece of code, or anything else, I'm here to help!
