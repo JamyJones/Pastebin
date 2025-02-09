@@ -1,8 +1,3 @@
-## Summary: Height of Mount Everest<br>
----
+Got it! I'll make sure to follow these guidelines and structure my responses accordingly. Feel free to ask anything, and I'll do my best to provide accurate, well-detailed, and easy-to-understand information. 😊
 
-**Mount Everest**, the highest mountain in the world, stands at a towering height of **8,848.86 meters (29,031.7 feet)** above sea level. 
-
-This measurement was officially announced in December 2020 following a joint survey conducted by China and Nepal, which used advanced satellite positioning, ground-penetrating radar, and other modern technology to measure the peak accurately.
-
-Mount Everest’s height was previously recognized as **8,848 meters**, but this new measurement adds 0.86 meters, likely owing to better technology and geological factors such as tectonic plate movement over time.
+What would you like to learn or discuss today?
