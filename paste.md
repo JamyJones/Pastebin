@@ -1,1 +1,1 @@
-It seems like your question might be incomplete or unclear. Could you please clarify or rephrase your question so that I can assist you effectively? 😊
+No, I don't rap, but I can provide information about rap music or help with writing lyrics if you're interested! Let me know how I can assist you.
