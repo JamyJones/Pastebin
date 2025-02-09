@@ -1,120 +1,99 @@
-## Docker Images for Running a Remote Browser
----  
-Explanation: Running a remote browser in Docker containers is useful for automation, browser-based testing (such as with Selenium), or running headless browsers for scraping or rendering content. Below are some popular Docker images that support running remote browsers.  
-
-1.  
----  
-**Selenium Docker Images**  
-If you're running browser automation or testing, Selenium provides tailor-made Docker images ready with remote browsers and Selenium WebDriver baked in. These images include standalone configurations and grid setups with support for Chrome, Firefox, and Edge.
-
-- **Images to use**:
-  - `selenium/standalone-chrome` (Standalone Chrome Browser with Selenium WebDriver)
-  - `selenium/standalone-firefox` (Standalone Firefox Browser with Selenium WebDriver)
-  - `selenium/standalone-edge` (Standalone Microsoft Edge Browser with Selenium WebDriver)
-  - Full Selenium Grid Images for scaling remote browsers, such as:
-    - `selenium/hub`
-    - `selenium/node-chrome`
-    - `selenium/node-firefox`
-    - `selenium/node-edge`
-  - Add-ons such as `selenium-event-bus`, `selenium-router`, and `selenium-distributor`.
-
-- **Use Case**:
-  - Remote browser for automated testing.
-
-- **Features**:
-  - Preconfigured WebDriver for seamless integration with automation testing scripts.
-  - Scalable grid support for parallel test execution.
+## Summary: What is WebRTC?  
+WebRTC (Web Real-Time Communication) is an open-source technology and standard supported by modern web browsers. It enables real-time communication between web browsers and devices. Common applications of WebRTC include video calling, audio calling, peer-to-peer file sharing, and live streaming. It is widely used in platforms like Google Meet, Zoom, and Microsoft Teams for seamless voice, video, and data transfer over the internet.
 
 ---
 
-2.  
----  
-**Browserless/Chrome**  
-[Browserless](https://browserless.io/) provides Docker images for running remote instances of headless Chrome. It is designed explicitly for automation, scraping, and rendering content.
+### Explanation: How WebRTC Works  
 
-- **Images to use**:
-  - `browserless/chrome`: A headless Chrome environment with an API for automation.
+1. **Purpose of WebRTC**  
+   WebRTC eliminates the need for third-party plugins or software by allowing browsers to enable real-time communication directly. This occurs via APIs provided by WebRTC, making interactions smoother and faster in various use-cases such as video conferencing, live-streaming, or multiplayer gaming.
 
-- **Use Case**:
-  - Lightweight and tailored for browser automation tasks such as Puppeteer, scraping, and rendering.
+2. **Key Components of WebRTC**  
+   WebRTC relies on the following main components to function effectively:  
+   
+   - **MediaStream API**: Captures audio, video, or other media from devices like webcams and microphones.  
+   - **RTCPeerConnection API**: Establishes a direct connection between users to transmit media and data quickly, efficiently, and securely.  
+   - **RTCDataChannel API**: Allows direct communication of arbitrary data (e.g., text messages, files) between peers.  
+   
+3. **Core Technologies Behind WebRTC**  
+   WebRTC depends on several web technologies and protocols:  
+   
+   - **SDP (Session Description Protocol)**: Describes the multimedia communication metadata necessary to set up and negotiate a connection between peers.  
+   - **ICE (Interactive Connectivity Establishment)**: Identifies and connects peers whether they are behind a firewall or NAT (Network Address Translation).  
+   - **DTLS (Datagram Transport Layer Security)**: Provides encryption for secure communication.  
+   - **SRTP (Secure Real-Time Transport Protocol)**: Ensures the integrity and security of transmitted media (audio/video).  
 
-- **Features**:
-  - Optimized for headless usage.
-  - Built-in REST APIs and WebSocket interface.
-  - Reduced size compared to Selenium, making it faster to download and execute.
-
----
-
-3.  
----  
-**Zenika/Playwright-Docker**  
-The Playwright Docker images come with pre-installed browsers and Playwright support (Chromium, WebKit, and Firefox are all available). Playwright is often considered a powerful alternative to Puppeteer.
-
-- **Images to use**:
-  - `mcr.microsoft.com/playwright:bionic`: A full image with all Playwright-supported browsers prebuilt.
-
-- **Use Case**:
-  - Automated testing across multiple browsers with Playwright quickly out of the box.
-
-- **Features**:
-  - Packaged with Playwright testing tools.
-  - Includes Chromium, Firefox, and WebKit.
-  - Slim images are also offered for specific tasks.
+4. **Peer-to-Peer Nature**  
+   WebRTC uses peer-to-peer communication instead of relying on a centralized server for transferring media or data. This reduces latency, improves efficiency, and preserves bandwidth. However, a signaling server (usually a lightweight application) is used initially to exchange details like public IP addresses, ports, and keys to establish the peer-to-peer connection.
 
 ---
 
-4.  
----  
-**Alpine-Browser Docker Images**  
-These images provide a lightweight and customizable remote browser environment for headless browsing.
+### Example: A Practical Scenario  
 
-- **Images to use**:
-  - `zenika/alpine-chrome` — A minimal headless Chrome build.
+Let’s look at how WebRTC is typically used in a two-party video call application, step by step:
 
-- **Use Case**:
-  - Lightweight remote browser for quick operations like scraping or content rendering.
+1. **Signaling Phase**  
+   Before the peer-to-peer connection is established, a signaling server is used to exchange metadata (SDP), connection details, and ICE candidates between users.
 
-- **Features**:
-  - Based on Alpine Linux, so it is lightweight and fast.
-  - Perfect for environments with limited resources.
+2. **Establishing Peer-to-Peer Connection**  
+   With the exchanged metadata, WebRTC APIs (specifically, `RTCPeerConnection`) work to establish an optimal, direct communication route between users.
+
+3. **Media and Data Transmission**  
+   Once the connection is in place, media streams (e.g., live video and audio) and data (e.g., shared files or chat messages) flow directly between the two peers via the WebRTC network infrastructure.
 
 ---
 
-5.  
----  
-**Custom Chromium or Firefox Builds**  
-For highly specific use cases, custom Docker images can run browsers like Chromium or Firefox with added libraries and dependencies. These are usually community images or self-built images.
+### Example Code: Setting Up a Simple Peer Connection in WebRTC  
 
-- **Images to use**:
-  - Custom images available on Docker Hub or built based on `debian` or `alpine` with browsers pre-installed.
+Below is a simple example of the usage of `RTCPeerConnection()` API in JavaScript:
 
-- **Use Case**:
-  - Advanced setups requiring custom dependencies.
+```javascript
+// Step 1: Create Peer Connections
+const peer1 = new RTCPeerConnection();
+const peer2 = new RTCPeerConnection();
 
-- **Features**:
-  - Fully customized Docker images tailored to your application’s needs.
+// Step 2: Exchange Ice Candidates
+peer1.onicecandidate = (event) => {
+    if (event.candidate) {
+        peer2.addIceCandidate(event.candidate);
+    }
+};
+peer2.onicecandidate = (event) => {
+    if (event.candidate) {
+        peer1.addIceCandidate(event.candidate);
+    }
+};
 
----
+// Step 3: Setup Media Stream Tracks
+navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+    .then(stream => {
+        peer1.addTrack(stream.getTracks()[0], stream); // Adding video track
+    });
 
-Example: Run a Headless Chrome in Docker  
-```dockerfile
-# Use a base image with Chrome preinstalled
-FROM browserless/chrome:latest
-
-# If customizations are needed, add libraries or configs
-RUN apt-get update && apt-get install -y curl
-
-# Expose the API or WebSocket port
-EXPOSE 3000
-
-CMD ["./start.sh"]
+// Step 4: Create and Exchange Offers/Answers
+peer1.createOffer()
+    .then(offer => peer1.setLocalDescription(offer))
+    .then(() => peer2.setRemoteDescription(peer1.localDescription))
+    .then(() => peer2.createAnswer())
+    .then(answer => peer2.setLocalDescription(answer))
+    .then(() => peer1.setRemoteDescription(peer2.localDescription));
 ```
 
 ---
 
-References:  
-##  
-https://hub.docker.com/r/selenium/standalone-chrome  
-https://hub.docker.com/r/browserless/chrome  
-https://hub.docker.com/r/mcr.microsoft.com/playwright  
-https://hub.docker.com/r/zenika/alpine-chrome  
+### Explanation of the Code  
+
+- **`RTCPeerConnection()`**: This is the main WebRTC API used to set up the peer-to-peer connection.
+- **`onicecandidate`**: These events handle the exchange of ICE candidates (information about how peers can connect).
+- **`getUserMedia()`**: Captures media streams (video and audio) to be sent or played during the session.
+- **`addIceCandidate()`**: Adds an ICE candidate received from the peer to complete the connectivity setup.
+- **`createOffer()` and `createAnswer()`**: Create an SDP offer and answer to establish multimedia communication.
+
+This example illustrates the basic workflow to establish a video/audio connection using WebRTC.
+
+---
+
+### References  
+
+- WebRTC Documentation: https://webrtc.org/
+- Mozilla Developer Network (MDN) WebRTC Guide: https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API
