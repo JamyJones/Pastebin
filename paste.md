@@ -1,99 +1,71 @@
-## Summary: What is WebRTC?  
-WebRTC (Web Real-Time Communication) is an open-source technology and standard supported by modern web browsers. It enables real-time communication between web browsers and devices. Common applications of WebRTC include video calling, audio calling, peer-to-peer file sharing, and live streaming. It is widely used in platforms like Google Meet, Zoom, and Microsoft Teams for seamless voice, video, and data transfer over the internet.
+## Summary: Communicating with Gecko Engine Using C++<br>
+Communicating with the Gecko engine using C++ involves understanding how to interact with the engine's components, either through integrating your application with an existing browser or creating your own application utilizing Gecko as the rendering engine. Primarily, this interaction is facilitated through the use of XULRunner and XPCOM (Cross Platform Component Object Model).
 
 ---
 
-### Explanation: How WebRTC Works  
+### Explanation:
 
-1. **Purpose of WebRTC**  
-   WebRTC eliminates the need for third-party plugins or software by allowing browsers to enable real-time communication directly. This occurs via APIs provided by WebRTC, making interactions smoother and faster in various use-cases such as video conferencing, live-streaming, or multiplayer gaming.
-
-2. **Key Components of WebRTC**  
-   WebRTC relies on the following main components to function effectively:  
-   
-   - **MediaStream API**: Captures audio, video, or other media from devices like webcams and microphones.  
-   - **RTCPeerConnection API**: Establishes a direct connection between users to transmit media and data quickly, efficiently, and securely.  
-   - **RTCDataChannel API**: Allows direct communication of arbitrary data (e.g., text messages, files) between peers.  
-   
-3. **Core Technologies Behind WebRTC**  
-   WebRTC depends on several web technologies and protocols:  
-   
-   - **SDP (Session Description Protocol)**: Describes the multimedia communication metadata necessary to set up and negotiate a connection between peers.  
-   - **ICE (Interactive Connectivity Establishment)**: Identifies and connects peers whether they are behind a firewall or NAT (Network Address Translation).  
-   - **DTLS (Datagram Transport Layer Security)**: Provides encryption for secure communication.  
-   - **SRTP (Secure Real-Time Transport Protocol)**: Ensures the integrity and security of transmitted media (audio/video).  
-
-4. **Peer-to-Peer Nature**  
-   WebRTC uses peer-to-peer communication instead of relying on a centralized server for transferring media or data. This reduces latency, improves efficiency, and preserves bandwidth. However, a signaling server (usually a lightweight application) is used initially to exchange details like public IP addresses, ports, and keys to establish the peer-to-peer connection.
+#### 1. **Understanding the Gecko Engine**
+   - Gecko is a web rendering engine developed by Mozilla for web browsers like Firefox.
+   - C++ is primarily used within the Gecko engine and its associated projects.
 
 ---
 
-### Example: A Practical Scenario  
-
-Let’s look at how WebRTC is typically used in a two-party video call application, step by step:
-
-1. **Signaling Phase**  
-   Before the peer-to-peer connection is established, a signaling server is used to exchange metadata (SDP), connection details, and ICE candidates between users.
-
-2. **Establishing Peer-to-Peer Connection**  
-   With the exchanged metadata, WebRTC APIs (specifically, `RTCPeerConnection`) work to establish an optimal, direct communication route between users.
-
-3. **Media and Data Transmission**  
-   Once the connection is in place, media streams (e.g., live video and audio) and data (e.g., shared files or chat messages) flow directly between the two peers via the WebRTC network infrastructure.
+#### 2. **Using XULRunner**
+   - **XULRunner**: A framework for building applications embedded with Gecko.
+   - Obtain **XULRunner SDK**: You need to have the XULRunner package and its development kit to build an application with Gecko.
+   - XULRunner allows developers to create a standalone application embedding the Mozilla application framework.
 
 ---
 
-### Example Code: Setting Up a Simple Peer Connection in WebRTC  
-
-Below is a simple example of the usage of `RTCPeerConnection()` API in JavaScript:
-
-```javascript
-// Step 1: Create Peer Connections
-const peer1 = new RTCPeerConnection();
-const peer2 = new RTCPeerConnection();
-
-// Step 2: Exchange Ice Candidates
-peer1.onicecandidate = (event) => {
-    if (event.candidate) {
-        peer2.addIceCandidate(event.candidate);
-    }
-};
-peer2.onicecandidate = (event) => {
-    if (event.candidate) {
-        peer1.addIceCandidate(event.candidate);
-    }
-};
-
-// Step 3: Setup Media Stream Tracks
-navigator.mediaDevices.getUserMedia({ video: true, audio: true })
-    .then(stream => {
-        peer1.addTrack(stream.getTracks()[0], stream); // Adding video track
-    });
-
-// Step 4: Create and Exchange Offers/Answers
-peer1.createOffer()
-    .then(offer => peer1.setLocalDescription(offer))
-    .then(() => peer2.setRemoteDescription(peer1.localDescription))
-    .then(() => peer2.createAnswer())
-    .then(answer => peer2.setLocalDescription(answer))
-    .then(() => peer1.setRemoteDescription(peer2.localDescription));
-```
+#### 3. **Interacting with XPCOM**
+  - **XPCOM**: Gecko's component model used for interaction with Gecko components.
+  - XPCOM is similar to Microsoft COM.
+  - Implement C++ components adhering to XPCOM’s interfaces.
+  - You create custom components or interact with existing ones using C++.
 
 ---
 
-### Explanation of the Code  
-
-- **`RTCPeerConnection()`**: This is the main WebRTC API used to set up the peer-to-peer connection.
-- **`onicecandidate`**: These events handle the exchange of ICE candidates (information about how peers can connect).
-- **`getUserMedia()`**: Captures media streams (video and audio) to be sent or played during the session.
-- **`addIceCandidate()`**: Adds an ICE candidate received from the peer to complete the connectivity setup.
-- **`createOffer()` and `createAnswer()`**: Create an SDP offer and answer to establish multimedia communication.
-
-This example illustrates the basic workflow to establish a video/audio connection using WebRTC.
+#### 4. **Embedding Gecko in C++ Applications**
+   - Use XULRunner to bootstrap an application.
+   - Implement a minimal XUL application and link it with C++ through the use of JavaScript interfaces or XPCOM.
 
 ---
 
-### References  
+#### 5. **Building and Deploying**
+   - Write your application code in C++ for the backend logic.
+   - Use XUL (XML User Interface Language), HTML, and CSS for user interfaces.
+   - Compile and link your application with the necessary XULRunner and XPCOM libraries.
 
-- WebRTC Documentation: https://webrtc.org/
-- Mozilla Developer Network (MDN) WebRTC Guide: https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API
+---
+
+### Example:
+
+Here’s a basic outline on how to set up a C++ project that uses XULRunner:
+
+1. Download and set up the XULRunner SDK.
+2. Create a XUL application structure which includes a XUL file for the interface, a JavaScript file for event handling, and C++ code for backend logic.
+3. Implement XPCOM components in C++:
+
+   ```cpp
+   #include "nsXPCOM.h"
+   #include "nsCOMPtr.h"
+   #include "nsServiceManagerUtils.h"
+   ```
+
+   - `#include "nsXPCOM.h"`: This is where you access the core interfaces provided by XPCOM.
+   - `#include "nsCOMPtr.h"`: Utility headers that help in memory management of XPCOM objects.
+   - `#include "nsServiceManagerUtils.h"`: Facilitates use of service managers to get service instances.
+
+4. Build the application with library dependencies.
+5. Run the application within the environment provided by XULRunner.
+
+---
+
+#### References:
+
+- Mozilla Developer Network (MDN): **##https://developer.mozilla.org##**
+- Gecko Project on Mozilla: **##https://wiki.mozilla.org/Gecko##**
+- XULRunner Documentation: **##https://developer.mozilla.org/en-US/docs/Mozilla/Projects/XULRunner##** 
+
+This setup allows you to communicate directly with the Gecko rendering engine to create C++ applications with embedded web capacities.
