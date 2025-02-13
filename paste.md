@@ -1,17 +1,30 @@
 ## Summary
-Hashrate in bitcoin mining pools refers to the total computational power contributed by all miners in the pool to solve complex mathematical problems and validate transactions on the Bitcoin network.
+To mine Bitcoin directly into your Electrum wallet using the command line, you can use **NiceHash** or **bitcoin-cli**.
 
 ## Explanation
-1. **Definition**: Hashrate is the speed at which a miner's hardware can perform these calculations, measured in terahashes per second (TH/s) or gigahashes per second (GH/s).
-2. **Importance**: Higher hashrate increases the chances of finding a block and earning rewards. In a mining pool, the combined hashrate of all participants is used to find blocks more efficiently.
-3. **Distribution**: Mining pools distribute rewards based on the proportion of hashrate each miner contributes. This makes earnings more predictable compared to solo mining.
+1. **NiceHash**: This platform allows you to mine Bitcoin and get paid directly into your wallet. However, there is a minimum payout threshold, typically **0.001 BTC**, before you can withdraw your earnings. To avoid this, you can use the Lightning Network for instant withdrawals.
+2. **bitcoin-cli**: This is the official Bitcoin command line interface. You can use it to interact with the Bitcoin network and manage your wallet. To mine Bitcoin directly into your Electrum wallet, you'll need to configure your mining software to send the mined Bitcoins to your Electrum wallet address.
 
 ## Example
-Imagine a mining pool with a total hashrate of 100 TH/s. If a miner contributes 1 TH/s, they would receive 1% of the pool's rewards.
+Here's a basic example of how to use `bitcoin-cli` to send mined Bitcoins to your Electrum wallet:
+
+```bash
+# Start the Bitcoin daemon
+bitcoind -daemon
+
+# Wait for the daemon to start
+sleep 10
+
+# Get the address of your Electrum wallet
+electrum_address=$(electrum getaddresses)
+
+# Send mined Bitcoins to your Electrum wallet
+bitcoin-cli sendtoaddress $electrum_address 0.001
+```
 
 ## References
-- [Braiins Blog](https://braiins.com/blog/bitcoin-mining-pools-luck-shares-estimated-hashrate)
-- [Blockchain.com Charts](https://www.blockchain.com/explorer/charts/pools)
-- [Minerstat](https://minerstat.com/coin/BTC/pools)
+- [Electrum Documentation](https://electrum.readthedocs.io/en/latest/cmdline.html)
+- [NiceHash Support](https://www.reddit.com/r/NiceHash/comments/kzm7h8/any_way_to_mine_directly_into_my_electrum_wallet/)
+- [Reddit Discussion on Command Line Tools](https://www.reddit.com/r/TREZOR/comments/j4lp9g/power_of_the_command_line_bitcoincli_hwi_electrum/)
 
 Does this help clarify things for you?
