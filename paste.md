@@ -2,29 +2,29 @@
 To mine Bitcoin directly into your Electrum wallet using the command line, you can use **NiceHash** or **bitcoin-cli**.
 
 ## Explanation
-1. **NiceHash**: This platform allows you to mine Bitcoin and get paid directly into your wallet. However, there is a minimum payout threshold, typically **0.001 BTC**, before you can withdraw your earnings. To avoid this, you can use the Lightning Network for instant withdrawals.
-2. **bitcoin-cli**: This is the official Bitcoin command line interface. You can use it to interact with the Bitcoin network and manage your wallet. To mine Bitcoin directly into your Electrum wallet, you'll need to configure your mining software to send the mined Bitcoins to your Electrum wallet address.
+1. **NiceHash**: This platform allows you to sell your mining power and get paid in Bitcoin. However, you need to reach a minimum payout threshold before you can withdraw your earnings. Once you reach the threshold, you can transfer the Bitcoin to your Electrum wallet.
+2. **bitcoin-cli**: This is the command-line interface for Bitcoin Core. You can use it to mine Bitcoin and manage your wallet. To mine directly into your Electrum wallet, you need to import your Electrum wallet's private key into Bitcoin Core.
 
 ## Example
-Here's a basic example of how to use `bitcoin-cli` to send mined Bitcoins to your Electrum wallet:
+Here's an example of how to use `bitcoin-cli` to mine Bitcoin and transfer it to your Electrum wallet:
 
 ```bash
-# Start the Bitcoin daemon
+# Start Bitcoin Core daemon
 bitcoind -daemon
 
-# Wait for the daemon to start
-sleep 10
+# Import Electrum wallet's private key
+bitcoin-cli importprivkey <your_private_key> <your_wallet_password>
 
-# Get the address of your Electrum wallet
-electrum_address=$(electrum getaddresses)
+# Start mining
+bitcoin-cli getblocktemplate
 
-# Send mined Bitcoins to your Electrum wallet
-bitcoin-cli sendtoaddress $electrum_address 0.001
+# Send mined Bitcoin to your Electrum wallet
+bitcoin-cli sendtoaddress <your_electrum_wallet_address> <amount>
 ```
 
 ## References
+- [NiceHash](https://www.reddit.com/r/NiceHash/comments/kzm7h8/any_way_to_mine_directly_into_my_electrum_wallet/)
 - [Electrum Documentation](https://electrum.readthedocs.io/en/latest/cmdline.html)
-- [NiceHash Support](https://www.reddit.com/r/NiceHash/comments/kzm7h8/any_way_to_mine_directly_into_my_electrum_wallet/)
-- [Reddit Discussion on Command Line Tools](https://www.reddit.com/r/TREZOR/comments/j4lp9g/power_of_the_command_line_bitcoincli_hwi_electrum/)
+- [Bitcoin Core CLI](https://www.reddit.com/r/TREZOR/comments/j4lp9g/power_of_the_command_line_bitcoincli_hwi_electrum/)
 
 Does this help clarify things for you?
