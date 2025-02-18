@@ -1,104 +1,46 @@
-## Summary: Explanation of an advanced FFmpeg command for creating a video from an image with a moving overlay effect.
+## Summary: How CMake Works<br>
+---
+**Explanation:**
+
+**1**<br>
+CMake is a cross-platform build system that automates the process of building, testing, and packaging software. It generates native build files for various operating systems and compilers, such as Unix Makefiles, Visual Studio project files, and Xcode project files.<br>
+---
+**2**<br>
+CMake uses configuration files, called `CMakeLists.txt`, which contain instructions and settings for the build process. These files specify the source files, compiler options, libraries, and dependencies required to build the software.<br>
+---
+**3**<br>
+The CMake build process typically involves three main steps:
+
+- **Configuration**: In this step, CMake reads the `CMakeLists.txt` files and generates build files for the chosen build system (e.g., Makefiles, Visual Studio project files). The configuration step is performed by running the `cmake` command in the project's root directory.
+
+- **Build**: In this step, the native build tool (e.g., `make`, `msbuild`, or `xcodebuild`) uses the generated build files to compile and link the source code, producing the final executable or library.
+
+- **Installation**: (optional) In this step, the built software is installed to a specified location, typically the system's default installation directory or a custom directory specified by the user.
+
+**Example:**
+
+Here's a simple example of a `CMakeLists.txt` file for a C++ project:
+
+```cmake
+cmake_minimum_required(VERSION 3.10)    # Specify the minimum required version of CMake
+project(MyProject)                      # Define the project name
+
+set(CMAKE_CXX_STANDARD 11)              # Set the C++ standard to C++11
+
+add_executable(MyExecutable main.cpp)   # Specify the executable target and source file
+```
+
+**Explanation of Code Snippets:**
+
+1. `cmake_minimum_required(VERSION 3.10)`: This line sets the minimum required version of CMake for the project. If the installed version of CMake is lower than the specified version, the build process will fail.
+
+2. `project(MyProject)`: This line defines the name of the project. CMake uses this name for various purposes, such as naming the build files and generating project-specific settings.
+
+3. `set(CMAKE_CXX_STANDARD 11)`: This line sets the C++ standard to C++11. The `CMAKE_CXX_STANDARD` variable controls the C++ standard used by the compiler.
+
+4. `add_executable(MyExecutable main.cpp)`: This line specifies the executable target and the source file(s) needed to build the executable. In this example, the target is named `MyExecutable`, and the source file is `main.cpp`.
 
 ---
+**References:** ##https://cmake.org/cmake/help/latest/## 
 
-### Explanation:
-
-This FFmpeg command creates a video (`output.mp4`) by overlaying a scaled image (`images/image_1.jpg`) over a blank colored canvas with specific timing, scaling, and animation effects.
-
-Let’s break the command into its components to demystify its functionality:
-
----
-
-### Component Breakdown:
-
-1. **`ffmpeg`**:
-   - This is the command-line tool used for processing multimedia files, such as video and audio.
-
----
-
-2. **`-f lavfi -i color=s=340x360`**:
-   - `-f lavfi`: Specifies that the input is a "lavfi" (libavfilter) virtual device.
-   - `-i color=s=340x360`: Generates a blank video frame of a **color input** with a size (resolution) of `340x360` pixels. By default, the frame is usually black unless specified otherwise using `color=c=<color>` (e.g., `color=c=red`).
-
-   **Purpose**: This serves as the blank background for the video.
-
----
-
-3. **`-loop 1 -t 0.08 -i images/image_1.jpg`**:
-   - `-loop 1`: Instructs FFmpeg to loop the input image (`image_1.jpg`) indefinitely. Without this option, FFmpeg would only treat the image as a single frame.
-   - `-t 0.08`: Limits the playback of this image to 0.08 seconds. This ensures that it doesn't loop indefinitely and creates short animation frames.
-   - `-i images/image_1.jpg`: Defines the input image file.
-
-   **Purpose**: Makes the image repeatedly available for overlay.
-
----
-
-4. **`-filter_complex`**:
-   - This flag allows defining a filter pipeline for complex video/audio processing. Here, it contains a pipeline that applies scaling, timing, animation, and compositing to the input image and background.
-
----
-
-5. **`[1:v]scale=340:-2`**:
-   - `scale=340:-2`: Scales the second input (image) to a width of 340 pixels while maintaining its original aspect ratio. The height is calculated automatically (`-2`) based on the aspect ratio.
-   
-   **Purpose**: Prepares the image to match the desired video resolution by resizing it.
-
----
-
-6. **`setpts=if(eq(N\,0)\,0\,1+1/0.02/TB)`**:
-   - `setpts`: Stands for "set presentation timestamp." This adjusts the timestamps (timing) of frames to control animation or timing effects.
-   - `if(eq(N\,0)\,0\,1+1/0.02/TB)`: This logic is as follows:
-     - `eq(N,0)`: Checks if the frame number (`N`) is the first frame. If `N=0`, its timestamp (`pts`) is set to `0`.
-     - Otherwise, it increments the timestamp based on a time step of `1/0.02/TB`, where `TB` is the "time base" of the video.
-   - **Purpose:** Achieves a custom frame timing that controls how quickly or slowly the image progresses in the animation.
-
----
-
-7. **`fps=24[fg]`**:
-   - `fps=24`: Adjusts the frame rate of the image stream to match 24 frames per second (standard cinematic FPS).
-   - `[fg]`: Creates a temporary name or label for the output of this filter chain.
-
-   **Purpose**: Ensures that the animated image has consistent, smooth framerate output.
-
----
-
-8. **`[0:v][fg]overlay=y=-'t*h*0.02':eof_action=endall[v]`**:
-   - `[0:v][fg]overlay`: Combines the video streams: the blank background from `[0:v]` and the animated foreground image `[fg]`. Overlays one on top of the other.
-   - `y=-'t*h*0.02'`: Animates the vertical position (`y`) of the foreground image over time:
-     - `t`: Refers to the current timestamp of the video in seconds.
-     - `h`: Represents the height of the foreground (image).
-     - `0.02`: Controls the speed of the movement. The image moves upwards over time (`y` decreasing) based on this factor.
-   - `eof_action=endall`: Ensures that the output video ends when either the foreground or background streams finish.
-
-   **Purpose**: Animates the image by making it slide upwards over the blank background canvas.
-
----
-
-9. **`-map "[v]"`**:
-   - Selects the finalized video stream (`[v]`) from the overlay filter chain to be written to the output file.
-
-   **Purpose**: Ensures the correct video stream is written as output.
-
----
-
-10. **`output.mp4`**:
-    - The name of the output file. This will be a video file encoded in the default MP4 video format.
-
----
-
-### Example: Simplifying the Process
-
-**Command Breakdown in Steps**:
-1. Generate blank video background (`color=s=340x360`).
-2. Import the image (`images/image_1.jpg`), resize it, and repeat it within a short duration.
-3. Animate the picture to slide upward using the `overlay` filter with `y=-'t*h*0.02'`.
-4. Combine the processed video streams.
-5. Save the final video (`output.mp4`).
-
----
-
-### References:
-- FFmpeg Documentation for `lavfi`: https://ffmpeg.org/ffmpeg-filters.html
-- Understanding the `overlay` filter: https://ffmpeg.org/ffmpeg-filters.html#overlay
-- Scaling in FFmpeg: https://ffmpeg.org/ffmpeg-scaler.html
+That’s a high-level overview of how CMake works. Is there anything else you'd like to know about?
