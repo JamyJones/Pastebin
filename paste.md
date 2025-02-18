@@ -1,109 +1,147 @@
-## Summary: Importance of Learning CMake Even While Using GitHub Actions
----  
-CMake is a versatile, cross-platform tool primarily used to manage build processes in software development. While GitHub Actions automates workflows (e.g., CI/CD pipelines), CMake provides integral build configuration and compilation operations. If you're wondering why learning CMake is still relevant despite relying heavily on GitHub Actions in development workflows, this explanation will help clarify. 
+## Summary: How Computer GUI Works and Building Frameworks for Android <br>
+---
+
+**Understanding** how computer GUIs (Graphical User Interfaces) work and exploring alternative frameworks apart from Android's standard Java interface for GUI development can offer insights into building custom frameworks for Android. Here's an in-depth explanation broken down into sections.
 
 ---
 
-### 1. **CMake's Primary Purpose: Build Systems vs CI/CD**  
-CMake and GitHub Actions serve different purposes:
-- **CMake**: A tool to **generate build files**. Its primary role is managing cross-platform builds (e.g., creating Makefiles for Unix builds or Visual Studio project files for Windows). It simplifies dealing with dependencies, modules, and custom configurations.
-    - Typical use: Defining how to build, configure, and link your software.
-    - Example: Creating a `CMakeLists.txt` file to define how your project should be compiled.  
+### Explanation:
+1. **How a Computer GUI Works**:
+   - A **GUI (Graphical User Interface)** provides a visual way for users to interact with software through elements like buttons, menus, and sliders instead of typing commands. It is typically created using libraries that provide an abstraction over low-level drawing routines and event handling.
+   - GUIs rely on the following key components:
+     - **Rendering Engine**: Draws visual elements on the screen such as shapes, windows, or text.
+     - **Event Loop**: Constantly listens for user inputs like mouse clicks, swipes, or keystrokes and handles them accordingly.
+     - **Widget Toolkit**: Provides pre-built widgets like buttons, labels, or text boxes that developers can use to build the interface.
+     - **Backend System Interaction**: Handles interaction with the device's operating system for graphical rendering, multi-threading, and resource usage.
 
-- **GitHub Actions**: A tool to **automate CI/CD workflows**, which often include running CMake commands. 
-    - Typical use: Automating tests, builds, or deployments as part of a pipeline.
-    - Example: Running CMake commands in a workflow file to build and test the project on multiple platforms.
-
-Even though GitHub Actions can execute build commands (like CMake or Make), understanding the build system itself (CMake) is crucial because **actionable workflows cannot exist without properly configured build systems**.  
-
----
-
-### 2. **Cross-Platform Builds and Handling Complexity**  
-CMake is widely used in projects that need to run across several platforms. By learning CMake, you can:
-- Write cross-platform build configurations.
-- Handle OS-specific systems like Windows, Linux, or macOS seamlessly.  
-- Specify how dependencies (e.g., libraries or third-party modules) are introduced into the build process.
-
-If you're unfamiliar with tools like CMake, you are limited in how you define and debug cross-platform build issues. These configurations are often written in `CMakeLists.txt`, which GitHub Actions then references.
+   On **Android**, the GUI runs on top of **Android Frameworks** and uses **SurfaceFlinger**, which communicates with hardware to draw UI components.
 
 ---
 
-### 3. **Integration with GitHub Actions**  
-GitHub Actions often relies on low-level tools like CMake to execute tasks. For example:
-- In a workflow file (`.github/workflows/build.yml`), you might run:
-    ```yaml
-    - name: Configure CMake
-      run: cmake -S . -B build
-    - name: Build the project
-      run: cmake --build build
-    ```
-    Here, **CMake** is invoked to configure and compile the code before running tests.  
-    **Why learn?** If you don't understand CMake, debugging pipeline failures would be harder (e.g., wrong dependency setup in `CMakeLists.txt`, incorrect flags, etc.).
+2. **Standard GUI Frameworks for Android**:
+   - **Android Framework with Java/Kotlin**:
+     - Android offers built-in libraries to design GUI using Java or Kotlin.
+     - Layouts are defined using XML files, and logic is written in Java/Kotlin.
+     - The Android SDK provides tools like Activities, Views (Button, TextView, etc.), and Fragments for modeling UI screens.
+
+   - **Alternative Frameworks**:
+     Android supports additional frameworks and libraries like:
+     - **Flutter (Dart)**:
+       - Flutter, developed by Google, uses the Dart language.
+       - It provides a highly optimized rendering engine and allows building cross-platform applications (Android, iOS, Web) with a single codebase.
+     - **React Native (JavaScript)**:
+       - Developed by Facebook, React Native lets developers use JavaScript or TypeScript for building Android apps.
+       - It bridges JavaScript to Android-native components through a JavaScript runtime.
+     - **Unity (C#)**:
+       - Primarily for gaming, Unity can also create interactive GUIs for applications on Android.
+     - **Jetpack Compose (Android)**:
+       - A newer declarative UI framework by Google that simplifies building UIs by reducing boilerplate code in Kotlin.
 
 ---
 
-### 4. **Mastery Improves Debugging and Customization**  
-When pipelines fail in GitHub Actions, the problem often arises from the core tools used for building or testing (like CMake). For instance:
-- **Issue**: Your build workflow fails with "missing library" error.  
-    - **Without CMake knowledge**: You can't effectively debug the `CMakeLists.txt` file.  
-    - **With CMake knowledge**: You can inspect the CMake configuration to resolve dependency issues or revise settings.
-  
-Additionally, advanced customizations (e.g., custom build commands or linking special libraries) are much easier when you know how CMake works.
+3. **Building a GUI Framework Like Android's Native Libraries**:
+   If you're curious about building a custom framework like the Android GUI system, here's what you need to know:
+
+   **Core Components of a GUI Framework**:
+   - **Rendering Engine**:
+     - Utilize OpenGL ES, Vulkan, or similar rendering APIs to draw graphics on hardware.
+     - Android uses OpenGL ES as a low-level API for rendering graphics through SurfaceFlinger.
+   - **Event System**:
+     - An event-handling system listens for user inputs (touch, swipe, or gestures) via a listener architecture.
+     - Use input libraries such as the Linux event system or an abstraction over the Android `MotionEvent` system.
+   - **Widget Abstraction**:
+     - Design a set of reusable components like buttons, lists, and containers.
+     - Each widget would encapsulate its state (e.g., a `Button` would internally manage "pressed" and "released" states).
+   - **Layout System**:
+     - Create a way to arrange GUI elements on the screen, similar to Android's LinearLayout, RelativeLayout, etc.
+     - Implement a tree-based structure for nesting and organizing layouts.
+
+   **Steps to Build One**:
+   - Learn **OpenGL ES** or **Vulkan** for rendering to create your graphics engine.
+   - Use **Java Native Interface (JNI)** if integrating with native code or C++.
+   - Design a basic rendering pipeline for low-level graphics (geometric drawing, textures, etc.).
+   - Build abstraction classes for GUI components and interactions.
+   - Create management tools like an event loop and screen navigation handlers.
+
+   Here's what each subcomponent might look like in code:
+   ```java
+   // EventHandler Interface
+   interface EventHandler {
+       void onTouchEvent(TouchEvent event);
+   }
+
+   // Basic GUI Component
+   class Button implements EventHandler {
+       private String label;
+       private boolean isPressed;
+
+       public Button(String text) {
+           this.label = text;
+           this.isPressed = false;
+       }
+
+       // Override to handle events
+       @Override
+       public void onTouchEvent(TouchEvent event) {
+           if (event.isTapInside(this.bounds)) {
+               isPressed = true;
+               System.out.println(label + " clicked");
+           }
+       }
+
+       public void draw(Canvas canvas) {
+           canvas.drawRectangle(bounds, isPressed ? Color.GRAY : Color.WHITE);
+           canvas.drawText(label, bounds.centerX(), bounds.centerY());
+       }
+   }
+   ```
 
 ---
 
-### 5. **Improved Collaboration in Development Teams**  
-Many development teams and projects use CMake for their build systems. If you're working in collaborative environments where CMake defines the core builds, understanding it allows you to:
-- Contribute effectively.
-- Reduce reliance on others to resolve CMake-related issues.
-- Leverage GitHub Actions better, as you'll have full control of build systems.
+4. **Challenges & Recommendations**:
+   - **Performance Considerations**:
+     - Frameworks like Android's are highly optimized, including GPU acceleration and efficient memory usage.
+     - Writing a custom rendering pipeline from scratch requires knowledge of **Graphics Programming** and **Hardware Acceleration**.
+   - **Cross-Platform or Android Specific**:
+     - Decide whether your framework will target only Android or support other platforms. For cross-platform, look at Flutter.
+   - **Compatibility with Android UI Standards**:
+     - Follow Material Design Guidelines when designing customized widgets and layouts for Android apps.
 
 ---
 
-### Practical Example  
-Here’s how GitHub Actions and CMake interplay in practice:
+### Example:
+A **simple custom GUI element** like a rounded rectangle button could resemble this:
+```java
+package my.custom.gui;
 
-**`CMakeLists.txt` (CMake Build File):**
-```cmake
-cmake_minimum_required(VERSION 3.15) # Set minimum CMake version.
-project(MyApp LANGUAGES CXX)          # Define the project and programming language.
+import android.graphics.Canvas;
+import android.graphics.Paint;
 
-set(CMAKE_CXX_STANDARD 17)           # Specify C++ standard to use.
-add_executable(MyApp main.cpp)        # Add an executable target for the main file.
+public class RoundedButton {
+    private String text;
+    private Paint paint;
+
+    public RoundedButton(String text) {
+        this.text = text;
+        this.paint = new Paint();
+        paint.setStyle(Paint.Style.FILL);
+        paint.setColor(0xFF6200EE); // A shade of purple
+    }
+
+    public void draw(Canvas canvas, int x, int y, int width, int height) {
+        // Draw button background
+        canvas.drawRoundRect(x, y, x + width, y + height, 16, 16, paint);
+        // Draw text
+        paint.setColor(0xFFFFFFFF); // White text
+        paint.setTextSize(24);
+        canvas.drawText(text, x + (width / 4), y + (height / 2), paint);
+    }
+}
 ```
-
-**GitHub Actions Workflow (`build.yml`):**
-```yaml
-name: Build and Test
-on: push
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Install dependencies
-        run: sudo apt-get update && sudo apt-get install cmake -y
-
-      - name: Configure with CMake
-        run: cmake -S . -B build
-
-      - name: Build project
-        run: cmake --build build
-
-      - name: Run tests
-        run: ctest --test-dir build
-```
-
-**Key Takeaway**: Without CMake knowledge, understanding or debugging this workflow would be nearly impossible. 
-
 ---
 
-### References 
-## 
-- https://cmake.org/
-- https://docs.github.com/en/actions
-- https://cliutils.gitlab.io/modern-cmake/
-## 
+### References:
+- Documentation on Android Graphics: https://developer.android.com/guide/topics/graphics/overview
+- OpenGL ES Programming Guide: https://www.khronos.org/opengles/
+- Flutter SDK: https://flutter.dev/
+- React Native: https://reactnative.dev/
