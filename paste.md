@@ -1,29 +1,23 @@
-## Alternative WebViews for Android Applications
+## Summary: Alternative WebViews for Android Applications
 ---
 **Explanation:**
 ---
-**Bromite SystemWebView:**
+**Bromite SystemWebView**
 - **Description:** Built on the Chromium project, Bromite SystemWebView prioritizes privacy and security.
-- **Features:** Includes ad-blocking and fingerprinting protection.
+- **Features:** Ad-blocking, fingerprinting protection.
 - **Compatibility:** Requires a rooted device.
-
 ---
-**LineageOS WebView:**
-- **Description:** Comes pre-installed on LineageOS custom ROMs.
-- **Features:** Offers a balance of functionality and simplicity.
+**LineageOS WebView**
+- **Description:** Comes pre-installed on LineageOS custom ROMs, offering a good balance of functionality and simplicity.
 - **Compatibility:** Might not be compatible with all stock Android devices.
-
 ---
-**WebView Ungoogled:**
+**WebView Ungoogled**
 - **Description:** Strives to remove Google-specific components from Chromium for increased privacy.
-- **Features:** Focuses on privacy without special requirements for installation.
-
+- **Compatibility:** No special requirements to install.
 ---
-**Mulch SystemWebView:**
+**Mulch SystemWebView**
 - **Description:** A security-hardened WebView from DivestOS.
-- **Features:** Enhanced security features.
-- **Compatibility:** Requires specific support in the ROM framework.
-
+- **Compatibility:** Must be one of the supported WebViews hardcoded in the framework package.
 ---
 **Example:**
 ```java
@@ -44,14 +38,15 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 - **Explanation:**
-  - `import android.webkit.WebView;` and `import android.webkit.WebViewClient;`: Import the necessary classes from the `android.webkit` package.
-  - `WebView webView = findViewById(R.id.webview);`: Initialize the WebView by finding it in the layout.
-  - `webView.setWebViewClient(new WebViewClient());`: Set a WebViewClient to handle page navigation within the WebView.
-  - `webView.loadUrl("https://www.example.com");`: Load a URL into the WebView.
-
+  - `import android.webkit.WebView;`: Imports the WebView class from the Android SDK.
+  - `import android.webkit.WebViewClient;`: Imports the WebViewClient class to handle web page navigation.
+  - `public class MainActivity extends AppCompatActivity {`: Defines the main activity class.
+  - `protected void onCreate(Bundle savedInstanceState) {`: The onCreate method is called when the activity is first created.
+  - `setContentView(R.layout.activity_main);`: Sets the layout for the activity.
+  - `WebView webView = findViewById(R.id.webview);`: Finds the WebView element in the layout.
+  - `webView.setWebViewClient(new WebViewClient());`: Sets a WebViewClient to handle web page navigation within the WebView.
+  - `webView.loadUrl("https://www.example.com");`: Loads the specified URL in the WebView.
 ---
 **References:**
 ## https://repairspotter.com/phones/android-system-webview-alternatives ##
 ## https://alternativeto.net/software/android-system-webview/ ##
-
-I hope this helps! If you have any more questions or need further assistance, feel free to ask.
