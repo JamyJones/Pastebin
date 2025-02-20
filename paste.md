@@ -1,52 +1,47 @@
-## Summary: Alternative WebViews for Android Applications
----
-**Explanation:**
----
-**Bromite SystemWebView**
-- **Description:** Built on the Chromium project, Bromite SystemWebView prioritizes privacy and security.
-- **Features:** Ad-blocking, fingerprinting protection.
-- **Compatibility:** Requires a rooted device.
----
-**LineageOS WebView**
-- **Description:** Comes pre-installed on LineageOS custom ROMs, offering a good balance of functionality and simplicity.
-- **Compatibility:** Might not be compatible with all stock Android devices.
----
-**WebView Ungoogled**
-- **Description:** Strives to remove Google-specific components from Chromium for increased privacy.
-- **Compatibility:** No special requirements to install.
----
-**Mulch SystemWebView**
-- **Description:** A security-hardened WebView from DivestOS.
-- **Compatibility:** Must be one of the supported WebViews hardcoded in the framework package.
----
-**Example:**
+## Summary
+Integrating Mulch SystemWebView into your Android app involves installing the Mulch SystemWebView package and configuring your app to use it.
+
+## Explanation
+1. **Install Mulch SystemWebView**: 
+   - Download the latest release of Mulch SystemWebView from F-Droid or GitLab.
+   - Install it as you would a regular app.
+
+2. **Configure WebView Implementation**: 
+   - Navigate to **Settings > Developer options > WebView implementation** and select the Mulch SystemWebView package.
+   - Alternatively, run the following command: `adb shell cmd webviewupdate set-webview-implementation us.spotco.mulch_wv`.
+
+3. **Update Your App**: 
+   - Ensure your app uses the updated WebView implementation.
+   - You may need to modify your app's code to specify the use of Mulch SystemWebView.
+
+## Example
+Here's a simple example of how to set up a WebView in your Android app:
+
 ```java
-// Example of using Bromite SystemWebView in an Android application
+// Import the necessary libraries
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 public class MainActivity extends AppCompatActivity {
+    private WebView webView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        WebView webView = findViewById(R.id.webview);
+        webView = findViewById(R.id.webView);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("https://www.example.com");
+        webView.loadUrl("https://example.com");
     }
 }
 ```
-- **Explanation:**
-  - `import android.webkit.WebView;`: Imports the WebView class from the Android SDK.
-  - `import android.webkit.WebViewClient;`: Imports the WebViewClient class to handle web page navigation.
-  - `public class MainActivity extends AppCompatActivity {`: Defines the main activity class.
-  - `protected void onCreate(Bundle savedInstanceState) {`: The onCreate method is called when the activity is first created.
-  - `setContentView(R.layout.activity_main);`: Sets the layout for the activity.
-  - `WebView webView = findViewById(R.id.webview);`: Finds the WebView element in the layout.
-  - `webView.setWebViewClient(new WebViewClient());`: Sets a WebViewClient to handle web page navigation within the WebView.
-  - `webView.loadUrl("https://www.example.com");`: Loads the specified URL in the WebView.
----
-**References:**
-## https://repairspotter.com/phones/android-system-webview-alternatives ##
-## https://alternativeto.net/software/android-system-webview/ ##
+
+In this example, replace `"https://example.com"` with the URL you want to load in the WebView.
+
+## References
+- [Mulch SystemWebView Overlay on GitHub](https://github.com/A4Alpha/mulch-webview-overlay)
+- [F-Droid Forum Discussion](https://forum.f-droid.org/t/i-cant-install-mulch-webview/28829)
+- [How to install Mulch System WebView on /e/OS community](https://community.e.foundation/t/how-to-install-mulch-system-webview/60560)
+
+Does this help you get started with integrating Mulch SystemWebView into your app?
