@@ -1,1 +1,1 @@
-Hello! How can I assist you today? 😊
+Hello! 😊 How can I assist you today?
