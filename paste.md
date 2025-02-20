@@ -1,92 +1,86 @@
-## Summary: Fixing the `CANNOT LINK EXECUTABLE` error caused by a missing or unresolved symbol<br>
-This error indicates that the program cannot find the symbol `_ZTTNSt6__ndk119basic_istringstream...` during runtime. It typically occurs when the necessary runtime libraries or a compatible C++ STL implementation (e.g., libc++ or ndk-STL) are not properly linked or mismatched.
+## Summary: `__aeabi_memcpy` Function in Embedded Systems (ARM Architecture)
+---
+`__aeabi_memcpy` is a low-level memory manipulation function often found in the context of ARM architectures, particularly in embedded systems. It is part of the ARM EABI (Embedded Application Binary Interface) and pertains to copying a block of memory from one location to another.
 
 ---
 
 ### Explanation:
-
-#### 1. **Understanding the Error and Symbol**  
-   - `_ZTTNSt6__ndk119basic_istringstream...`: This symbol is part of the C++ Standard Library, specifically related to `std::istringstream`. The `basic_istringstream` template processes input streams from strings, and the error points to an issue in resolving the corresponding STL implementation.
-   - **Common Causes**:
-     - **Missing or incompatible STL library**: You may be using a standard library (e.g., `libc++`, `libstdc++`, or NDK's STL) that is either not correctly linked or mismatched.
-     - **ABI (Application Binary Interface) incompatibility**: The symbol name starts with `_Z`, hinting at C++ name mangling. ABI mismatches (e.g., different compilers, flags) could lead to this error.
-     - **Android NDK version mismatches**: If you are building for Android using the NDK, the issue may stem from incompatible NDK versions or a missing STL library.
+1. **What is `__aeabi_memcpy`?**
+   - `__aeabi_memcpy` is a **runtime library function** implemented in ARM's C or C++ standard libraries for memory copying operations.
+   - Under the hood, it's used to perform functionality similar to the C standard library function `memcpy` but is optimized for ARM's architecture in embedded or low-level programming environments.
+   - The function is invoked by ARM compilers (e.g., GCC, Clang, or ARMCC) during the compilation process to replace certain instances of `memcpy` in scenarios that require optimized code sequences.
 
 ---
 
-#### 2. **Fixing the Problem in an Android NDK Context**
+2. **Usage of `__aeabi_memcpy`:**
+   - The function is used to **copy a fixed size of data** from a source address to a destination address.
+   - The declaration generally looks like this:
+     ```c
+     void __aeabi_memcpy(void *dest, const void *src, size_t n);
+     ```
+     - `dest`: A pointer to the destination memory block.
+     - `src`: A pointer to the source memory block.
+     - `n`: The number of bytes to copy.
 
-If you are targeting an Android environment, here’s how to resolve this issue:
-
-##### a. **Verify the STL Library Configured**:
-Ensure that you are using a proper C++ Standard Library:
-- In your `CMakeLists.txt` or `Android.mk`, specify which STL implementation to use. `c++_shared` is commonly preferred for modern Android development.
-
-For **CMakeLists.txt**:
-```cmake
-# Example of enabling libc++ in your build
-set(CMAKE_CXX_STANDARD 17)  # Ensure C++17 or compatible version for the library
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -stdlib=libc++")
-
-# Link the C++ standard library
-find_library(CPP_STL libc++_shared PATHS ${ANDROID_NDK}/sources/cxx-stl/llvm-libc++/libs)
-target_link_libraries(your_target ${CPP_STL})
-```
-
-For **Android.mk**:
-```make
-# Specify libc++ (modern C++ library) in the Android NDK
-APP_STL := c++_shared
-```
+   - It is generally not directly called by the user; instead, it is an intermediate implementation used by the system (invoked indirectly by functions like `memcpy`).
 
 ---
 
-##### b. **Align NDK Version**
-- If using the Android NDK, ensure you are using a compatible or supported version of the NDK (r21 or later for libc++ support). Check your `ndkVersion` in the `build.gradle` file:
-```gradle
-android {
-    ndkVersion "21.4.7075529"
-}
-```
+3. **Why `__aeabi_memcpy` instead of `memcpy`?**
+   - **Optimized for ARM Embedded Systems**: The function is designed to work efficiently with ARM processor instructions, leveraging hardware-specific optimizations not present in the generic `memcpy`.
+   - **Compiler-Generated Code**: ARM compilers may generate calls to `__aeabi_memcpy` instead of `memcpy` when the compiler deems it more efficient for inline replacement.
+   - **Small, Embedded Systems**: In embedded systems with limited resources, streamlining memory operations is crucial, hence `__aeabi_memcpy` fits ARM's EABI requirements.
 
 ---
 
-#### 3. **Providing the Proper Runtime Libraries at Execution**
-- If you require a shared standard C++ library, ensure that the runtime (`libc++_shared.so`) is:
-  1. Bundled within the `libs`/`apk` folder.
-  2. Properly loaded on the target device during runtime.
-
-Ensure the native libraries (`.so` files) include the correct library by validating the symbols using a utility like `readelf`:
-```bash
-readelf -Ws libyourlibrary.so | grep basic_istringstream
-```
+4. **Variants of `__aeabi_memcpy`:**
+   - There are related functions in ARM's EABI that serve similar purposes:
+     - `__aeabi_memcpy4`: Specifically ensures memory operations are done in 4-byte aligned blocks.
+     - `__aeabi_memcpy8`: Operates in 8-byte blocks for alignment considerations.
+     - `__aeabi_memclr`: Clears a block of memory instead of copying.
+   - These variants help achieve even more efficiency based on how the memory is being used.
 
 ---
 
-#### 4. **When Using Other Compilers (e.g., Clang vs GCC)**
-- Mismatched compilers or even compiler flags can cause ABI incompatibility. Ensure:
-  - Consistent compiler toolchains across your dependencies and project.
-  - Use `-std=c++17` or a relevant C++ standard across all compilers involved.
-  - Check for proper name mangling using `nm` or `readelf` tools.
-
-Example for Clang while building:
-```bash
-clang++ -std=c++17 -stdlib=libc++ -o your_program your_source.cpp
-```
+5. **When is it Used?**
+   - When compiling your code for ARM CPUs or in embedded environments, the compiler may automatically replace high-level memory operations like `memcpy` with calls to `__aeabi_memcpy` for efficiency.
+   - It is often seen in the disassembly or low-level debug traces during the debugging phase of embedded application development.
 
 ---
 
-### Example:
+### Example: Assembly Call to `__aeabi_memcpy`
 
-Let’s fix the error by building a project with the correct NDK configuration:
+Here’s how a high-level C operation like `memcpy` might translate:
 
-**CMakeLists.txt**:
-```cmake
-cmake_minimum_required(VERSION 3.10)
+```c
+char src[10] = "Hello";
+char dest[10];
+memcpy(dest, src, 5);
+```
 
-# Set project name
-project(FixSymbolError)
+After compilation for ARM architecture, a disassembler might show something like this:
 
-#
+```asm
+MOV r0, r1          ; Copy `src` address to r1
+MOV r1, r2          ; Copy `dest` address to r2
+MOV r2, #5          ; Length (5 bytes) in r2
+BL __aeabi_memcpy   ; Branch to the `__aeabi_memcpy` runtime function
+```
+
+This reflects how the compiler replaces `memcpy` with `__aeabi_memcpy` for optimized operation.
+
+---
+
+### Key Points for Developers:
+1. **Do Not Manually Invoke It**:
+    - This function is usually not meant to be called directly in your code.
+2. **Understand It For Debugging**:
+    - If it appears in debugging or disassembly, remember that it’s simply an optimized implementation of memory copying for ARM systems.
+3. **Use `memcpy` in Source Code**:
+    - Keep using high-level constructs like `memcpy`. The compiler will decide whether to call `__aeabi_memcpy` based on performance needs.
+
+---
+
+## References:
+- For more details on ARM EABI specifications: `http://infocenter.arm.com/`
+- ARM Compiler User Guide
