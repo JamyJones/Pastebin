@@ -1,35 +1,23 @@
-## Summary: Marrying a Spouse in China
----
+## Summary: Recommended Books to Learn Chinese
+---  
+Here are five highly recommended books for learning Chinese that cater to different levels of proficiency, from beginners to more advanced learners.
 
-**Explanation:**
+1. **"Integrated Chinese" by Tao-chung Yao and Yuehua Liu**  
+This series is widely used in universities and offers a structured approach to learning Chinese. It combines vocabulary, grammar, exercises, and cultural notes. The series includes textbooks, workbooks, and character workbooks.
 
-Understanding Cultural Nuances
----
-Marrying someone from another country, such as China, requires more than just learning the language. Cultural understanding and respect are key components in building a meaningful relationship. It's important to immerse yourself in Chinese customs, traditions, and social norms.
+2. **"New Practical Chinese Reader" by Liu Xun**  
+This book is designed for beginners and offers a good blend of language and culture. It contains dialogues and exercises that progressively build language skills and understanding of Chinese culture.
 
-Language Proficiency
----
-Learning Chinese can definitely help in connecting with potential partners and understanding their culture better. It shows respect and a genuine interest in the country and its people. However, fluency in the language alone is not sufficient to find a spouse.
+3. **"Chinese Made Easy" by Yamin Ma and Xinying Li**  
+This series focuses on simplifying the learning process for beginners. It features clear explanations, practice exercises, and illustrations to help readers grasp concepts easily.
 
-Legal and Immigration Considerations
----
-If you intend to marry someone from China, you'll also need to be aware of legal procedures. This includes understanding visa requirements, marriage laws in both countries, and any necessary documentation.
+4. **"Mandarin Chinese Sentence Patterns for Beginners" by Yi Ren**  
+This book introduces readers to essential sentence structures and patterns in Mandarin Chinese, which is crucial for understanding how to form sentences and communicate effectively.
 
-Building Relationships
----
-Building a meaningful relationship requires time, effort, and mutual understanding. Learning Chinese can be an advantage in communication, but relationships are built on shared values, interests, and emotional connection.
+5. **"HSK Standard Course" by Jiang Liping and others**  
+This series targets those preparing for the HSK (Hanyu Shuiping Kaoshi or Chinese Proficiency Test) and provides comprehensive lessons across different HSK levels, along with vocabulary and grammar exercises.
 
-**Example:**
-
-If you are an English speaker who has learned Chinese and wishes to marry a Chinese national, you might:
-
-- Take Chinese language classes to become proficient.
-- Learn about Chinese cultural practices, holidays, and family dynamics.
-- Participate in cultural exchange programs or travel to China.
-- Build relationships through social activities, work, or mutual interests.
-- Follow legal procedures for marriage in both China and your home country.
-
-**References:**
-
-## https://travel.state.gov/content/travel/en/us-visas/immigrate/family-immigration/bring-spouse-to-live-in-us.html ##
-## https://www.chinalawblog.com/2021/07/how-to-get-married-in-china-as-an-expat.html ##
+---  
+## References  
+## https://www.goodreads.com/list/show/29368.Top_Chinese_Language_Learning_Books  
+## https://www.chinahighlights.com/travelguide/chinese-books.htm  
