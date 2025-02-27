@@ -1,126 +1,19 @@
-## Summary: Understanding Interfaces in Java
+## Saying Hello in Chinese <br>
+---<br>
+To greet someone in Chinese, you can use the phrase: **你好** (nǐ hǎo).<br>
+1<br>
+**你好** (nǐ hǎo): This is the most common way to say "hello" in Chinese. It is used in both formal and informal situations. The word **你** (nǐ) means "you," and **好** (hǎo) means "good" or "well." Together, they form a greeting that literally translates to "you good." <br>
+---<br>
+2<br>
+**您好** (nín hǎo): This is a more polite and formal way to say "hello." The word **您** (nín) is a respectful form of "you." It's often used when addressing someone older or of higher status. <br>
+---<br>
+3<br>
+**早上好** (zǎo shàng hǎo): This phrase means "good morning." **早上** (zǎo shàng) means "morning," and **好** (hǎo) means "good." <br>
+---<br>
+## Example:
+你好吗？(nǐ hǎo ma?): This means "How are you?" It uses **你好** (nǐ hǎo) followed by the question particle **吗** (ma) to turn it into a question.
 ---
-
-Interfaces in Java are a crucial part of the language's approach to abstraction and polymorphism. They allow for a contract that classes can implement, which promotes flexibility and reusability in your code.
-
-1
----
-### What is an Interface?
-An **interface** in Java is a reference type, similar to a class, that can contain only constants, method signatures, default methods, static methods, and nested types. Interfaces cannot contain instance fields or constructors. The methods defined in an interface are abstract by default.
-
-For example:
-```java
-public interface Animal {
-    void eat();
-    void sleep();
-}
-```
-
-- **Public interface Animal**: This defines a new interface named `Animal`.
-- **void eat() and void sleep()**: These are abstract methods, meaning any class that implements the `Animal` interface must provide a concrete implementation of these methods.
-
-2
----
-### Implementing Interfaces
-When a class implements an interface, it agrees to implement all the methods defined by that interface. A class can implement multiple interfaces, which supports a form of multiple inheritance.
-
-Example:
-```java
-public class Dog implements Animal {
-    @Override
-    public void eat() {
-        System.out.println("Dog is eating");
-    }
-
-    @Override
-    public void sleep() {
-        System.out.println("Dog is sleeping");
-    }
-}
-```
-
-- **public class Dog implements Animal**: The `Dog` class implements the `Animal` interface, agreeing to define the `eat` and `sleep` methods.
-- **@Override**: This annotation indicates that the method is overriding a method declared in the interface.
-
-3
----
-### Advantages of Interfaces
-- **Abstraction**: Interfaces provide a way to define methods without specifying how they work, allowing different implementations.
-- **Multiple Inheritance**: A class can implement multiple interfaces, which enables the use of functionalities from various types.
-- **Loose Coupling**: By coding to an interface rather than a class, systems can be more flexible and easier to maintain.
-
-4
----
-### Default Methods in Interfaces (Java 8 and later)
-Java 8 introduced **default methods** in interfaces. This allows you to add new methods to an interface without breaking the existing implementations.
-
-Example:
-```java
-public interface Animal {
-    void eat();
-    void sleep();
-
-    default void run() {
-        System.out.println("Animal is running");
-    }
-}
-```
-
-- **default void run()**: This provides a default implementation for the `run` method. Classes implementing the `Animal` interface can use this method without having to provide an implementation.
-
-5
----
-### Using Interfaces with Other Concepts
-Interfaces can also be used with abstract classes and lambda expressions (in functional programming). A common use case is defining a callback mechanism.
-
-Example of a functional interface:
-```java
-@FunctionalInterface
-public interface Greeting {
-    void sayHello(String name);
-}
-```
-
-- **@FunctionalInterface**: This annotation indicates that the interface can be used with lambda expressions and should have exactly one abstract method.
-
----
-### Example of Using Interfaces
-Here's a full example demonstrating an interface with two implementations:
-
-```java
-public interface Animal {
-    void sound();
-}
-
-public class Cat implements Animal {
-    @Override
-    public void sound() {
-        System.out.println("Meow");
-    }
-}
-
-public class Cow implements Animal {
-    @Override
-    public void sound() {
-        System.out.println("Moo");
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Animal cat = new Cat();
-        Animal cow = new Cow();
-        
-        cat.sound(); // Outputs: Meow
-        cow.sound(); // Outputs: Moo
-    }
-}
-```
-In this example:
-- Two classes, `Cat` and `Cow`, implement the `Animal` interface, providing their own implementation of the `sound` method.
-- The `Main` class demonstrates polymorphism by referencing `Animal` types.
-
----
-## References
-## https://docs.oracle.com/javase/tutorial/java/concepts/interface.html
-## https://www.javatpoint.com/interfaces-in-java
+## References:
+## 
+    ## https://chinesepod.com/blog/how-to-say-hello-in-mandarin
+    ## https://www.digmandarin.com/ways-to-say-hello-in-chinese.html
