@@ -1,62 +1,71 @@
-## summary FFmpeg Command for Audio Processing <br>
----<br>
-This command utilizes FFmpeg to process audio files. It combines two audio tracks (`input.mp3` and `temp.mp3`) with a delay applied to the second track and normalizes their loudness levels before mixing them together and saving the result as `output.mp3`. 
+## Setting Up a GitHub Workflow to Checkout a Different Repository and Trigger on Push
 
-### Breakdown of the Command
-1<br>
-The command is stored in a list called `ffmpeg_command`, which contains the components for running FFmpeg:
-```python
-ffmpeg_command = [
-    'ffmpeg',
-    ...
-]
+---
+
+**Explanation:**
+
+**1. Defining the Workflow:**
+You need to define a workflow file in the `.github/workflows` directory of your primary repository. This YAML file will contain all the necessary configurations for your GitHub Actions.
+
+---
+
+**2. Using `actions/checkout` for Different Repository:**
+You can use the `actions/checkout@v2` action to checkout different repositories within your workflow. You need to specify the repository name, ref (branch or tag), and token for authentication.
+
+---
+
+**3. Configuring the Workflow to Trigger on Push:**
+You can configure the workflow to trigger on a push event to a different repository by specifying the repository and the branch or tag you want to monitor.
+
+---
+
+**Example:**
+
+Here's a sample YAML workflow file that demonstrates these steps:
+
+```yaml
+name: Checkout Different Repository on Push
+
+on:
+  push:
+    branches:
+      - main  # The branch you want to monitor in the primary repository
+
+jobs:
+  checkout:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Primary Repository
+      uses: actions/checkout@v2
+
+    - name: Checkout Different Repository
+      uses: actions/checkout@v2
+      with:
+        repository: 'username/different-repository'  # Replace with the actual repo name
+        ref: 'main'  # Branch or tag to checkout
+        token: ${{ secrets.GITHUB_TOKEN }}  # Authentication token
 ```
-Here, `ffmpeg` is the command-line tool used for processing audio and video files.
 
-2<br>
-The input files are specified with the `-i` option:
-```python
-'-i', 'input.mp3',
-'-i', 'temp.mp3',
-```
-This tells FFmpeg to take both `input.mp3` and `temp.mp3` as input audio sources.
+**1. Defining the Workflow:**
+- **`.github/workflows/checkout.yml`**: This is the path where you define your GitHub Actions workflow file.
 
-3<br>
-The `-filter_complex` option is key to applying complex filters:
-```python
-'-filter_complex',
-f'[1:a]adelay={delay_ms}|{delay_ms},loudnorm[voice];[0:a]loudnorm[voice];[voice]amix=inputs=2:duration=longest[audio_out]',
-```
-- **`[1:a]adelay={delay_ms}|{delay_ms}`**: This applies a delay (in milliseconds) to the audio stream coming from `temp.mp3` (index 1). The pipe `|` indicates that the delay is applied to both channels of the audio.
-- **`loudnorm[voice]`**: This normalizes the loudness of the delayed audio from `temp.mp3` and labels it as `[voice]`.
-- **`[0:a]loudnorm[voice]`**: This normalizes the loudness of the original audio from `input.mp3` (index 0) and also labels it as `[voice]`.
-  
-The results from the delay and loudness normalization are mixed together:
-```python
-[voice]amix=inputs=2:duration=longest[audio_out]
-```
-- **`amix=inputs=2`**: Mixes the streams from both sources, specifying that there are two input streams.
-- **`duration=longest`**: The output will take the duration of the longest input stream, ensuring no audio is cut off.
-- **`[audio_out]`**: Labels the mixed output stream.
+**2. Using `actions/checkout` for Different Repository:**
+- **`uses: actions/checkout@v2`**: This action checks out the repository so that you can run your scripts or tests.
+- **`repository: 'username/different-repository'`**: Replace with the actual name of the repository you want to checkout.
+- **`ref: 'main'`**: Specifies the branch or tag you want to checkout.
+- **`token: ${{ secrets.GITHUB_TOKEN }}`**: Authentication token to access the repository.
 
-4<br>
-The final output mapping and file format specification:
-```python
-'-map', '[audio_out]',
-'output.mp3'
-```
-- **`-map [audio_out]`**: This tells FFmpeg to select the mixed audio stream labeled `[audio_out]` to be written to the output file.
-- **`'output.mp3'`**: Indicates that the resulting mixed audio should be saved in a new file named `output.mp3`.
+**3. Configuring the Workflow to Trigger on Push:**
+- **`on: push`**: Specifies that the workflow should be triggered on a push event.
+- **`branches: - main`**: Specifies the branch in the primary repository to monitor for push events.
 
-### Example: 
-If `delay_ms` is set to 1000 (1 second), the command will delay the audio from `temp.mp3` by 1 second before mixing it with `input.mp3`, normalizing the loudness levels of both tracks before creating the final `output.mp3`.
+---
 
-### Additional Notes:
-- Make sure that FFmpeg is installed and accessible from your command line to execute this command.
-- This command allows for sophisticated audio mixing techniques, especially useful in audio production and editing contexts.
+**References:**
+##https://docs.github.com/en/actions/learn-github-actions##  
+##https://github.com/actions/checkout##  
 
-## references
-## https://ffmpeg.org/ffmpeg-all.html
-## https://ffmpeg.org/ffmpeg-filters.html#amix
-## https://ffmpeg.org/ffmpeg-filters.html#adelay
-## https://ffmpeg.org/ffmpeg-filters.html#loudnorm
+---
+
+Feel free to ask if you have any more questions or need further assistance!
