@@ -1,34 +1,21 @@
-## Summary: Existence of sects similar to those portrayed in Donghua
+## Strict Societies Around the World <br>
+---<br>
+The most strict societies in the world are often characterized by stringent laws, heavy regulations, and significant control over personal freedoms. Countries like North Korea, Iran, and Singapore are frequently cited as having some of the strictest laws governing their citizens and the behavior expected within their societies.
 
----
+1<br>
+North Korea stands out as one of the strictest societies globally. The government exerts extreme control over all facets of life, including media, travel, and personal relationships. Violations of the laws can lead to harsh punishments, including forced labor. The country has a very limited form of international interaction, significantly restricting tourism and the presence of outsiders.
 
-**Explanation:**
+2<br>
+Iran implements strict social conduct laws influenced by Islamic Sharia Law. Citizens face expectations regarding dress codes and public behavior, particularly women who are required to adhere to a strict dress code. The legal system supports corporal punishment for various offenses, reinforcing a society governed by its religious doctrines.
 
-1. **What are Sects in Donghua?**  
-   In Donghua (Chinese animated series), sects are often portrayed as organizations or groups dedicated to martial arts, cultivation, or mystical practices. These sects are hierarchical, with masters, disciples, and elders, and they often have unique philosophies, techniques, and rivalries. Examples include sects from popular series like *Battle Through the Heavens* or *A Will Eternal*.
+3<br>
+Singapore is renowned for its high level of public order and cleanliness, maintained through strict laws and penalties. Citizens can receive hefty fines for minor infractions such as littering or chewing gum in public. The country's legal system emphasizes deterrence, contributing to a disciplined and orderly society.
 
----
+---<br>
+Example: In North Korea, citizens are monitored continuously, and travel restrictions are severe. For instance, media cannot portray anything negative about the government, and interactions with foreigners are heavily regulated. Individuals caught violating these norms may face imprisonment or worse, reflecting the overarching control the state wields over daily life. This can be seen in various aspects, from strict dress codes to comprehensive censorship.
 
-2. **Do Such Sects Exist in Reality?**  
-   While the sects in Donghua are fictional and often exaggerated for storytelling, they are inspired by real-world organizations in Chinese history and culture. Historically, there were martial arts schools, Taoist and Buddhist monasteries, and secret societies in China that shared some similarities with these fictional sects. These groups often focused on martial arts training, spiritual cultivation, or philosophical teachings.
-
-   However, the mystical powers and dramatic rivalries depicted in Donghua are purely fictional. Real-world sects or schools were more grounded in practical skills, religious practices, or community-building.
-
----
-
-3. **Modern-Day Equivalents:**  
-   Today, martial arts schools and spiritual organizations still exist, but they are more structured and regulated. They focus on teaching traditional practices like Kung Fu, Tai Chi, or meditation rather than the fantastical elements seen in Donghua.
-
----
-
-**Example:**  
-   A real-world example would be the Shaolin Monastery, famous for its martial arts training and spiritual teachings. While it doesn't have the dramatic flair of Donghua sects, it has inspired many fictional portrayals.
-
----
-
-**References:**  
-##  
-https://www.reddit.com/r/MoDaoZuShi/comments/v064zb/clans_vs_sects_what_about_yunmengjiang/  
-https://www.youtube.com/watch?v=xKSRW2dRIsc  
-https://cksub.org/  
-##  
+---<br>
+## references: 
+## https://financesonline.com/10-countries-with-the-strictest-laws-in-the-world/ 
+## https://www.thelawyerportal.com/blog/which-country-has-the-strictest-laws/ 
+## https://teamboma.com/history/most-strictest-countries-with-the-laws 
