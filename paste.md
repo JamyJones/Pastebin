@@ -1,78 +1,76 @@
-## Summary
-The given `FFmpeg` command is used to process two audio files (`input.mp3` and `temp.mp3`), apply specific filters (including delay and normalization), and combine them into a single output file (`output.mp3`). While it works, it takes a long time due to the complexity of the operations performed in the `-filter_complex` section. Below is a detailed breakdown of the reasons behind the slow performance.
+## Summary: Using the `loudnorm` Filter in FFmpeg
 
 ---
 
-### Explanation
+### Explanation:
 
-**1. Use of `-filter_complex`**  
-   - The `-filter_complex` option in FFmpeg allows chaining multiple filters into a single complex operation. While versatile, it is computationally intensive because:
-     - Each filter (e.g., `adelay`, `loudnorm`, and `amix`) processes the audio frame by frame.
-     - The complexity grows with the number of filters and the input file's length.
+**1. Introduction to `loudnorm` Filter:**
+The `loudnorm` filter in FFmpeg is used for loudness normalization according to the EBU R128 standard. This filter is particularly useful for ensuring consistent loudness levels across different audio files.
 
 ---
 
-**2. `adelay` Filter**  
-   - **What it does**: The `adelay` filter delays the audio of the second input (`temp.mp3`) by `delay_ms` milliseconds. The `|` separates the delay for the left and right channels (in stereo audio). For instance:
-     ```plaintext
-     adelay=1000|1000
-     ```
-     delays audio by 1000 ms (1 second) for both channels.
-   - **Why it slows down**: For large delay values, it has to buffer a significant amount of audio data, which increases memory usage and processing time.
-
----
-
-**3. `loudnorm` Filter**  
-   - **What it does**: This filter normalizes the loudness of the audio to comply with standard levels.
-   - **Why it slows down**: Loudness normalization requires analysis of the entire audio to compute the necessary adjustments. This process is time-intensive, especially for long audio files.
-
----
-
-**4. `amix` Filter**  
-   - **What it does**: The `amix` filter mixes two audio streams (`base` and `delayed`) together. The `inputs=2` specifies the number of input streams, and `duration=longest` ensures the output lasts as long as the longer input.
-   - **Why it slows down**: Mixing audio streams frame by frame, especially when combined with prior filters, can lead to a bottleneck in performance.
-
----
-
-**5. Input-Output Operations**  
-   - **Input**: Reading the audio streams from `input.mp3` and `temp.mp3`.
-   - **Output**: Writing the processed audio stream to `output.mp3`.
-   - If the storage medium (e.g., hard drive or SSD) has slow read/write speeds, this can contribute to the overall processing time.
-
----
-
-**6. Single-Threaded Processing**  
-   - By default, FFmpeg runs these operations in a single thread. With multiple filters involved, utilizing only one core of a CPU can significantly slow down the process, especially for high-bitrate or long audio files.
-
----
-
-**Example**
-Here’s an alternative FFmpeg command to speed up the process by splitting tasks:
-```python
-ffmpeg_command = [
-    'ffmpeg',
-    '-i', 'input.mp3',
-    '-i', 'temp.mp3',
-    '-filter_complex',
-    f'[1:a]adelay={delay_ms}|{delay_ms},loudnorm[delayed];'
-    f'[0:a]loudnorm[base];'
-    f'[base][delayed]amix=inputs=2:duration=longest[audio_out]',
-    '-map', '[audio_out]', '-threads', '4', 'output.mp3'
-]
+**2. Basic Usage:**
+To apply the `loudnorm` filter, you can use the following command:
+```bash
+ffmpeg -i input.wav -filter:a loudnorm output.wav
 ```
-- The `-threads` option tells FFmpeg to use multiple CPU threads, potentially reducing processing time.
+This command takes an input audio file (`input.wav`), applies the `loudnorm` filter, and outputs the normalized audio to `output.wav`.
 
 ---
 
-### Recommendations to Speed It Up:
-1. **Pre-process Steps**: Apply `adelay` and `loudnorm` in separate steps, writing intermediate results to files, and then mix them:
-   - Break the single `-filter_complex` operation into smaller, isolated steps.
-2. **Downsample Input Files**: Lower the audio bitrate or sample rate for temporary processing.
-3. **Adjust Threading**: Use `-threads` to utilize multicore CPUs.
-4. **Use Faster Storage**: Read and write files from an SSD instead of an HDD to reduce I/O latency.
-5. **Parallel Execution**: Split operations across multiple scripts or processes.
+**3. Two-Pass Normalization:**
+For more accurate results, it's recommended to use the `loudnorm` filter in a two-pass mode. The first pass analyzes the audio properties, and the second pass applies the normalization based on the analysis.
+
+**First Pass:**
+```bash
+ffmpeg -i input.wav -af loudnorm=I=-23:TP=-2:LRA=7:print_format=json -f null -
+```
+This command analyzes the input audio and prints the measured values in JSON format.
+
+**Second Pass:**
+```bash
+ffmpeg -i input.wav -af loudnorm=I=-23:TP=-2:LRA=7:measured_I=-23:measured_TP=-2:measured_LRA=7:measured_thresh=-34.02:offset=-0.23:linear=true:print_format=summary output.wav
+```
+In the second pass, you use the measured values from the first pass to apply the normalization.
 
 ---
 
-References:
-## https://ffmpeg.org/ ##
+**4. Explanation of Parameters:**
+- `I`: Integrated loudness target (in LUFS).
+- `TP`: True peak target (in dBTP).
+- `LRA`: Loudness range target (in LU).
+- `measured_I`, `measured_TP`, `measured_LRA`, `measured_thresh`, `offset`: Values obtained from the first pass.
+- `linear`: Enables linear normalization.
+
+---
+
+### Example:
+
+**Example Command:**
+```bash
+ffmpeg -i input.wav -af loudnorm=I=-23:TP=-2:LRA=7:print_format=json -f null -
+```
+**Explanation:**
+- `-i input.wav`: Specifies the input file.
+- `-af loudnorm=I=-23:TP=-2:LRA=7:print_format=json`: Applies the `loudnorm` filter with specified parameters and prints the output in JSON format.
+- `-f null -`: Discards the output, as this is only for analysis.
+
+**Second Pass Example:**
+```bash
+ffmpeg -i input.wav -af loudnorm=I=-23:TP=-2:LRA=7:measured_I=-23:measured_TP=-2:measured_LRA=7:measured_thresh=-34.02:offset=-0.23:linear=true:print_format=summary output.wav
+```
+**Explanation:**
+- `-i input.wav`: Specifies the input file.
+- `-af loudnorm=I=-23:TP=-2:LRA=7:measured_I=-23:measured_TP=-2:measured_LRA=7:measured_thresh=-34.02:offset=-0.23:linear=true:print_format=summary`: Applies the `loudnorm` filter with measured values from the first pass.
+- `output.wav`: Specifies the output file.
+
+---
+
+### References:
+## https://trac.ffmpeg.org/wiki/AudioVolume ##
+## https://superuser.com/questions/323119/how-can-i-normalize-audio-using-ffmpeg ##
+## https://wiki.tnonline.net/w/Blog/Audio_normalization_with_FFmpeg ##
+
+---
+
+I hope this helps! If you have any more questions or need further clarification, feel free to ask.
