@@ -1,106 +1,117 @@
 ## Common Foods in Chinese
+
 ---
-Here is a list of 100 common foods in Chinese, along with their Chinese characters and pronunciations:
+Here is a list of **100 common foods** in Chinese, along with their **pronunciations** and **Chinese characters**.
 
-1. **Tea** - 茶 (chá)
-2. **Coffee** - 咖啡 (kāfēi)
-3. **Rice** - 米饭 (mǐfàn)
-4. **Noodles** - 面条 (miàntiáo)
-5. **Bread** - 面包 (miànbāo)
-6. **Chicken** - 鸡肉 (jīròu)
-7. **Beef** - 牛肉 (niúròu)
-8. **Pork** - 猪肉 (zhūròu)
-9. **Fish** - 鱼 (yú)
-10. **Shrimp** - 虾 (xiā)
-11. **Egg** - 蛋 (dàn)
-12. **Vegetable** - 蔬菜 (shūcài)
-13. **Fruit** - 水果 (shuǐguǒ)
-14. **Apple** - 苹果 (píngguǒ)
-15. **Banana** - 香蕉 (xiāngjiāo)
-16. **Orange** - 橙子 (chéngzi)
-17. **Lemon** - 柠檬 (níngméng)
-18. **Grapes** - 葡萄 (pútáo)
-19. **Carrot** - 胡萝卜 (húluóbo)
-20. **Potato** - 土豆 (tǔdòu)
-21. **Tomato** - 西红柿 (xīhóngshì)
-22. **Cucumber** - 黄瓜 (huángguā)
-23. **Lettuce** - 生菜 (shēngcài)
-24. **Onion** - 洋葱 (yángcōng)
-25. **Garlic** - 大蒜 (dàsuàn)
-26. **Sauce** - 酱 (jiàng)
-27. **Salt** - 盐 (yán)
-28. **Pepper** - 胡椒 (hújiāo)
-29. **Sugar** - 糖 (táng)
-30. **Chili** - 辣椒 (làjiāo)
-31. **Honey** - 蜂蜜 (fēngmì)
-32. **Soy Sauce** - 酱油 (jiàngyóu)
-33. **Vinegar** - 醋 (cù)
-34. **Oil** - 油 (yóu)
-35. **Butter** - 黄油 (huángyóu)
-36. **Cheese** - 奶酪 (nǎilào)
-37. **Yogurt** - 酸奶 (suānnǎi)
-38. **Pasta** - 意大利面 (yìdàlìmiàn)
-39. **Pizza** - 比萨 (bǐsà)
-40. **Sandwich** - 三明治 (sān míngzhì)
-41. **Dessert** - 甜点 (tiándiǎn)
-42. **Cake** - 蛋糕 (dàngāo)
-43. **Cookie** - 饼干 (bǐnggān)
-44. **Gelato** - 意大利冰淇淋 (yìdàlì bīngqílín)
-45. **Ice Cream** - 冰淇淋 (bīngqílín)
-46. **Candy** - 糖果 (tángguǒ)
-47. **Chocolate** - 巧克力 (qiǎokèlì)
-48. **Popcorn** - 爆米花 (bàomǐhuā)
-49. **Peanuts** - 花生 (huāshēng)
-50. **Chips** - 薯片 (shǔpiàn)
-51. **Sausage** - 香肠 (xiāngcháng)
-52. **Bacon** - 培根 (péigēn)
-53. **Salad** - 沙拉 (shālā)
-54. **Bamboo Shoots** - 竹笋 (zhúsǔn)
-55. **Mushroom** - 蘑菇 (mógū)
-56. **Tofu** - 豆腐 (dòufu)
-57. **Cabbage** - 甘蓝 (gānlán)
-58. **Spinach** - 菠菜 (bōcài)
-59. **Broccoli** - 西兰花 (xīlánhuā)
-60. **Pumpkin** - 南瓜 (nánguā)
-61. **Corn** - 玉米 (yùmǐ)
-62. **Rice Cake** - 粽子 (zòngzi)
-63. **Udon** - 乌冬面 (wūdōngmiàn)
-64. **Sushi** - 寿司 (shòusī)
-65. **Dumplings** - 饺子 (jiǎozi)
-66. **Spring Rolls** - 春卷 (chūnjuǎn)
-67. **Fried Rice** - 炒饭 (chǎofàn)
-68. **Hot Pot** - 火锅 (huǒguō)
-69. **Steak** - 牛排 (niúpái)
-70. **Lamb** - 羊肉 (yángròu)
-71. **Duck** - 鸭肉 (yāròu)
-72. **Crab** - 螃蟹 (pángxiè)
-73. **Clam** - 蛤蜊 (gélǐ)
-74. **Oyster** - 生蚝 (shēngháo)
-75. **Seaweed** - 海带 (hǎidài)
-76. **Bubble Tea** - 珍珠奶茶 (zhēnzhū nǎichá)
-77. **Coconut** - 椰子 (yēzi)
-78. **Mango** - 芒果 (mángguǒ)
-79. **Melon** - 瓜 (guā)
-80. **Pineapple** - 菠萝 (bōluó)
-81. **Peach** - 桃子 (táozi)
-82. **Apricot** - 杏子 (xìngzi)
-83. **Kiwi** - 猕猴桃 (míhóutáo)
-84. **Date** - 枣 (zǎo)
-85. **Fig** - 无花果 (wúhuāguǒ)
-86. **Durian** - 榴莲 (liúlián)
-87. **Lychee** - 荔枝 (lìzhī)
-88. **Pomegranate** - 石榴 (shíliú)
-89. **Nut** - 坚果 (jiānguǒ)
-90. **Sesame** - 芝麻 (zhīmá)
-91. **Chickpeas** - 鹰嘴豆 (yīngzuǐdòu)
-92. **Quinoa** - 荞麦 (qiáomài)
-93. **Barley** - 大麦 (dàmài)
-94. **Millet** - 小米 (xiǎomǐ)
-95. **Flour** - 面粉 (miànfěn)
-96. **Semolina** -粗麦粉 (cūmàifěn)
-97. **Rice Noodles** - 米粉 (mǐfěn)
-98. **Peking Duck** - 北京烤鸭 (běijīng kǎoyā)
-99. **Naan** - 印度饼 (yìndù bǐng)
-100. **Pita Bread** - 皮塔饼 (pítǎ bǐng)
+1.  Tea - **chá** - 茶  
+2.  Coffee - **kāfēi** - 咖啡  
+3.  Rice - **mǐfàn** - 米饭  
+4.  Noodles - **miàntiáo** - 面条  
+5.  Dumplings - **jiǎozi** - 饺子  
+6.  Chicken - **jīròu** - 鸡肉  
+7.  Beef - **niúròu** - 牛肉  
+8.  Pork - **zhūròu** - 猪肉  
+9.  Fish - **yú** - 鱼  
+10. Eggs - **dàn** - 蛋  
 
-Enjoy your culinary journey in Chinese! If you need more information or additional translations, feel free to ask!
+11. Bread - **mànqí** - 面包  
+12. Butter - **huǒguō** - 黄油  
+13. Soup - **tāng** - 汤  
+14. Salad - **shālā** - 沙拉  
+15. Vegetable - **shūcài** - 蔬菜  
+16. Fruit - **shuǐguǒ** - 水果  
+17. Potato - **tǔdòu** - 土豆  
+18. Tomato - **xiāngjiāo** - 西红柿  
+19. Carrot - **húluóbo** - 胡萝卜  
+20. Onion - **yángcōng** - 洋葱  
+
+21. Garlic - **suàn** - 蒜  
+22. Ginger - **jiāng** - 姜  
+23. Cucumber - **huangguo** - 黄瓜  
+24. Pepper - **jīnghuā** - 胡椒  
+25. Chili - **làjiāo** - 辣椒  
+26. Lettuce - **shūcài** - 生菜  
+27. Corn - **yùmǐ** - 玉米  
+28. Broccoli - **jiānghuā** - 西兰花  
+29. Spinach - **bōcài** - 菠菜  
+30. Peas - **dòuzi** - 豆子  
+
+31. Tofu - **dòufu** - 豆腐  
+32. Soy Sauce - **jiàngyóu** - 酱油  
+33. Vinegar - **cù** - 醋  
+34. Salt - **yán** - 盐  
+35. Sugar - **táng** - 糖  
+36. Honey - **fēngmì** - 蜂蜜  
+37. Jam - **果酱** - guǒjiàng  
+38. Ice Cream - **bīngqílín** - 冰淇淋  
+39. Cake - **dàngāo** - 蛋糕  
+40. Cookies - **bǐnggān** - 饼干  
+
+41. Chocolate - **qiǎokèlì** - 巧克力  
+42. Candy - **táng** - 糖果  
+43. Chips - **zhābǐng** - 薯片  
+44. Snack - **xiǎokān** - 小吃  
+45. Candy - **tángguǒ** - 糖果  
+46. Popcorn - **pào mǐ** - 爆米花  
+47. Nuts - **ròu jī** -坚果  
+48. Seafood - **hǎixiān** - 海鲜  
+49. Shrimp - **xiā** - 虾  
+50. Crab - **pángxiè** - 螃蟹  
+
+51. Clams - **hǎixiān** - 贝类  
+52. Octopus - **zhāngyú** - 章鱼  
+53. Sushi - **shā sù** - 寿司  
+54. Dim Sum - **diǎnxīn** - 点心  
+55. Hot Pot - **huǒguō** - 火锅  
+56. Peking Duck - **běijīng kǎoyā** - 北京烤鸭  
+57. Fried Rice - **chǎofàn** - 炒饭  
+58. Stir Fry - **chǎo** - 炒  
+59. Spring Roll - **chūnjuǎn** - 春卷  
+60. Pancake - **bǐng** - 饼  
+
+61. Pizza - **pīsà** - 披萨  
+62. Hamburger - **hànbǎo** - 汉堡  
+63. Spaghetti - **yìdàlì miàn** - 意大利面  
+64. Tortilla - **tāngmǐ** - 玉米饼  
+65. Ice Tea - **bīng chá** - 冰茶  
+66. Carbonated Drink - **tāngyǐn** - 碳酸饮料  
+67. Juice - **zhòu** - 果汁  
+68. Milk - **niúnǎi** - 牛奶  
+69. Yogurt - **yǎnshī** - 酸奶  
+70. Cereal - **gǔliáng** - 谷物  
+
+71. Cheese - **nǎiyóu** - 奶酪  
+72. Raisins - **mǔhuātāng** - 葡萄干  
+73. Salad Dressing - **shālā liángjiāo** - 沙拉酱  
+74. Avocado - **kāngguǒ** - 鳄梨  
+75. Balsamic Vinegar - **bālsámǐc cù** - 意大利香醋  
+76. Cherries - **yīngtáo** - 樱桃  
+77. Grapes - **pútáo** - 葡萄  
+78. Melon - **xīguā** - 西瓜  
+79. Pineapple - **fènglì** - 菠萝  
+80. Banana - **xiāngjiāo** - 香蕉  
+
+81. Papaya - **mùguǒ** - 木瓜  
+82. Guava - **qǔguǒ** - 番石榴  
+83. Dragon Fruit - **huǒlóngguǒ** - 火龙果  
+84. Passion Fruit - **xīnyuánguǒ** - 百香果  
+85. Dried Fish - **yú gān** - 鱼干  
+86. Dried Meat - **ròu gān** - 肉干  
+87. Sausage - **chángshēng ròu** - 香肠  
+88. Ham - **huǒshā ròu** - 火腿  
+89. Beef Jerky - **niú ròu gān** - 牛肉干  
+90. Oatmeal - **yàomǐ** - 燕麦  
+
+91. Muesli - **mǔyīng bǐng** - 燕麦片 
+92. Tacos - **dàgǔguō** - 墨西哥卷饼  
+93. Samosa - **sàomǔsà** - 塞满肉的饺子  
+94. Burrito - **bùrìtè** - 墨西哥卷饼  
+95. Gnocchi - **niǔqì** - 意大利小圆饺子  
+96. Dashi - **gānchūn*** - 鸟肉高汤  
+97. Biryani - **bǐlìyǎnǐ** - 印度米饭  
+98. Risotto - **lǔ hǎi fàn** - 意大利米  
+99. Sauerkraut - **suānlàbāo** - 酸菜  
+100. Chili Con Carne - **là jiāo ròu** - 辣椒肉  
+
+---
+These names will help you communicate better when enjoying Chinese cuisine. Feel free to ask if you need more information on any specific food!
