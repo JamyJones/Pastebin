@@ -1,125 +1,1146 @@
-## Summary: Using the `loudnorm` filter in ffmpeg
+data: {"content":"","role":"assistant"}
 
----
+data: {"content":"##"}
 
-To address the issue of volume variations in your audio, you can use the `loudnorm` filter in `ffmpeg`. The `loudnorm` filter is an EBU R128 loudness normalization filter that helps to balance the audio levels in your tracks.
+data: {"content":" Summary"}
 
-1. **Description of `loudnorm` Filter**:
-The `loudnorm` filter is used to normalize the loudness of audio tracks to a specific target loudness level. This ensures that the audio maintains a consistent volume throughout the entire track. The `loudnorm` filter is part of the ffmpeg package, so you don't need to install any additional modules.
+data: {"content":":"}
 
----
+data: {"content":" How"}
 
-2. **Integrating `loudnorm` Filter in the Script**:
-In your Python script, you need to modify the `ffmpeg_command` to include the `loudnorm` filter. Here is an updated version of your script that integrates the `loudnorm` filter:
+data: {"content":" to"}
 
-```python
-import pysrt
-import edge_tts
-from pydub import AudioSegment
-from datetime import timedelta
-import re
-import subprocess
+data: {"content":" Say"}
 
-def seconds_to_hhmmss(seconds):
-    hours = seconds // 3600
-    minutes = (seconds % 3600) // 60
-    seconds = seconds % 60
-    return f"{int(hours):02}:{int(minutes):02}:{int(seconds):02}"
+data: {"content":" \""}
 
-VOICE = "en-US-GuyNeural"
-srt_range_process=input()
-begin_at,end_at,discardedTimeAfterSeek,start_time_original_audio,duration_full_audio=srt_range_process.split('-')
-def clean_srt(input_file, output_file):
-    with open(input_file, 'r', encoding='utf-8') as file:
-        content = file.read()
+data: {"content":"Food"}
 
-    # Remove <font> tags and their contents
-    cleaned_content = re.sub(r'<font[^>]*>|<\/font>', '', content)
+data: {"content":"\""}
 
-    with open(output_file, 'w', encoding='utf-8') as file:
-        file.write(cleaned_content)
+data: {"content":" in"}
 
-clean_srt('transcript.en.srt', 'cleaned_transcript.srt')
+data: {"content":" Chinese"}
 
-# Load the .srt file
-subs = pysrt.open('cleaned_transcript.srt')
+data: {"content":"  \n"}
 
-# Helper function to convert timestamp to seconds
-def timestamp_to_seconds(timestamp):
-    return timestamp.hours * 3600 + timestamp.minutes * 60 + timestamp.seconds + timestamp.milliseconds / 1000.0
+data: {"content":"---"}
 
-# Process each subtitle
-speeches = []
-speech_delay = []
-delay_labels = []
-count = 0
-speech_count = 1
-logs=open('logs.txt','a')
-for sub in subs:
-    if count < int(begin_at):
-        count += 1
-        continue
-    if count > int(end_at):
-        break
+data: {"content":"  \n"}
 
-    start_time = timestamp_to_seconds(sub.start)
-    start_time = start_time - int(discardedTimeAfterSeek)
-    end_time = timestamp_to_seconds(sub.end)
-    end_time = end_time - int(discardedTimeAfterSeek)
-    duration = end_time - start_time
+data: {"content":"###"}
 
-    # Convert subtitle text to speech
-    tts = edge_tts.Communicate(sub.text, VOICE)
-    tts.save_sync(f'temp{count}.mp3')
-    # Use ffmpeg to mute the audio at the specified timestamps and overlay the new audio
-    delay_ms = start_time * 1000  # Convert start time to milliseconds
-    label_delay = f"[d{speech_count}]"
-    delay_labels.append(label_delay)
-    speeches.extend(['-i', f'temp{count}.mp3'])
-    speech_delay.append(f'[{speech_count}:a]adelay={delay_ms}|{delay_ms},volume=3.0{label_delay};')
-    print("Done: " + sub.text)
-    message = f'\n the speech that says "{sub.text}" is to be inserted starting at {seconds_to_hhmmss(start_time)} and ended at {seconds_to_hhmmss(end_time)} making it play for {seconds_to_hhmmss(duration)} for which the audio is {seconds_to_hhmmss(int(duration_full_audio))} long'
-    logs.write(message)
-    count += 1
-    speech_count += 1
+data: {"content":" Explanation"}
 
-# Construct the filter_complex string
-filter_complex_str = f"[0:a]volume=1.5[base];" + ''.join(speech_delay) + f"[base]{''.join(delay_labels)}amix=inputs={len(delay_labels)+1}:duration=longest, loudnorm=I=-16:LRA=11:TP=-1.5[audio_out]"
+data: {"content":":"}
 
-# Complete ffmpeg command
-ffmpeg_command = ['ffmpeg','-ss',f'{start_time_original_audio}' ,'-i', 'input1.opus'] + speeches + ['-filter_complex', "'"+filter_complex_str+"'", '-map', '[audio_out]', '-threads', '4','-t',f'{duration_full_audio}', 'output.mp3']
-logs.close()
-# Write the command to a shell script correctly
-with open('run_ffmpeg.sh', 'a') as f:
-    f.write(' '.join(ffmpeg_command))
-```
+data: {"content":"    \n"}
 
----
+data: {"content":"1"}
 
-### Explanation:
-1. **`loudnorm` Filter Parameters**:
-   - `I=-16`: Target integrated loudness level set to -16 LUFS.
-   - `LRA=11`: Target loudness range set to 11 LU.
-   - `TP=-1.5`: Target true peak level set to -1.5 dB.
+data: {"content":"."}
 
----
+data: {"content":" How"}
 
-2. **Integrating `loudnorm` in Filter Complex String**:
-   - The `filter_complex_str` now includes the `loudnorm` filter at the end, which ensures that the entire audio output is normalized.
-   - The `loudnorm` filter is appended to the filter chain after the `amix` filter using a comma `,` separator.
+data: {"content":" to"}
 
----
+data: {"content":" Say"}
 
-### Example:
-Below is an example of how to use the `loudnorm` filter in the `ffmpeg` command:
+data: {"content":" and"}
 
-```sh
-ffmpeg -i input.mp3 -af loudnorm=I=-16:LRA=11:TP=-1.5 output.mp3
-```
+data: {"content":" Write"}
 
----
+data: {"content":" \""}
 
-## References:
-## https://ffmpeg.org/ffmpeg-filters.html#loudnorm ##
+data: {"content":"Food"}
 
-I hope this helps! If you have any other questions or need further assistance, feel free to ask.
+data: {"content":"\""}
+
+data: {"content":" in"}
+
+data: {"content":" Chinese"}
+
+data: {"content":"  \n"}
+
+data: {"content":"  "}
+
+data: {"content":" The"}
+
+data: {"content":" general"}
+
+data: {"content":" term"}
+
+data: {"content":" for"}
+
+data: {"content":" **"}
+
+data: {"content":"food"}
+
+data: {"content":"**"}
+
+data: {"content":" in"}
+
+data: {"content":" Chinese"}
+
+data: {"content":" is"}
+
+data: {"content":" written"}
+
+data: {"content":" as"}
+
+data: {"content":" **"}
+
+data: {"content":"食"}
+
+data: {"content":"物"}
+
+data: {"content":"**"}
+
+data: {"content":" and"}
+
+data: {"content":" pronounced"}
+
+data: {"content":" as"}
+
+data: {"content":" **"}
+
+data: {"content":"Sh"}
+
+data: {"content":"í"}
+
+data: {"content":"w"}
+
+data: {"content":"ù"}
+
+data: {"content":"**"}
+
+data: {"content":"."}
+
+data: {"content":" Here's"}
+
+data: {"content":" a"}
+
+data: {"content":" breakdown"}
+
+data: {"content":":"}
+
+data: {"content":"  \n"}
+
+data: {"content":"  "}
+
+data: {"content":" -"}
+
+data: {"content":" **"}
+
+data: {"content":"食"}
+
+data: {"content":"**"}
+
+data: {"content":" ("}
+
+data: {"content":"Sh"}
+
+data: {"content":"í"}
+
+data: {"content":")"}
+
+data: {"content":" means"}
+
+data: {"content":" \""}
+
+data: {"content":"to"}
+
+data: {"content":" eat"}
+
+data: {"content":"\""}
+
+data: {"content":" or"}
+
+data: {"content":" \""}
+
+data: {"content":"food"}
+
+data: {"content":"\"."}
+
+data: {"content":"  \n"}
+
+data: {"content":"  "}
+
+data: {"content":" -"}
+
+data: {"content":" **"}
+
+data: {"content":"物"}
+
+data: {"content":"**"}
+
+data: {"content":" ("}
+
+data: {"content":"W"}
+
+data: {"content":"ù"}
+
+data: {"content":")"}
+
+data: {"content":" means"}
+
+data: {"content":" \""}
+
+data: {"content":"thing"}
+
+data: {"content":"\""}
+
+data: {"content":" or"}
+
+data: {"content":" \""}
+
+data: {"content":"object"}
+
+data: {"content":"\"."}
+
+data: {"content":"  \n\n"}
+
+data: {"content":"  "}
+
+data: {"content":" Together"}
+
+data: {"content":","}
+
+data: {"content":" **"}
+
+data: {"content":"食"}
+
+data: {"content":"物"}
+
+data: {"content":" ("}
+
+data: {"content":"Sh"}
+
+data: {"content":"í"}
+
+data: {"content":"w"}
+
+data: {"content":"ù"}
+
+data: {"content":")**"}
+
+data: {"content":" literally"}
+
+data: {"content":" means"}
+
+data: {"content":" \""}
+
+data: {"content":"things"}
+
+data: {"content":" to"}
+
+data: {"content":" eat"}
+
+data: {"content":"\""}
+
+data: {"content":" or"}
+
+data: {"content":" \""}
+
+data: {"content":"food"}
+
+data: {"content":"\"."}
+
+data: {"content":"  \n\n"}
+
+data: {"content":"2"}
+
+data: {"content":"."}
+
+data: {"content":" Alternative"}
+
+data: {"content":" Terms"}
+
+data: {"content":" for"}
+
+data: {"content":" Food"}
+
+data: {"content":":"}
+
+data: {"content":"  \n"}
+
+data: {"content":"  "}
+
+data: {"content":" -"}
+
+data: {"content":" **"}
+
+data: {"content":"饭"}
+
+data: {"content":"**"}
+
+data: {"content":" ("}
+
+data: {"content":"F"}
+
+data: {"content":"àn"}
+
+data: {"content":"):"}
+
+data: {"content":" Pron"}
+
+data: {"content":"ounced"}
+
+data: {"content":" as"}
+
+data: {"content":" **"}
+
+data: {"content":"F"}
+
+data: {"content":"àn"}
+
+data: {"content":"**,"}
+
+data: {"content":" which"}
+
+data: {"content":" means"}
+
+data: {"content":" \""}
+
+data: {"content":"meal"}
+
+data: {"content":"\""}
+
+data: {"content":" or"}
+
+data: {"content":" \""}
+
+data: {"content":"c"}
+
+data: {"content":"ooked"}
+
+data: {"content":" food"}
+
+data: {"content":"\"."}
+
+data: {"content":" It's"}
+
+data: {"content":" often"}
+
+data: {"content":" used"}
+
+data: {"content":" in"}
+
+data: {"content":" collo"}
+
+data: {"content":"quial"}
+
+data: {"content":" phrases"}
+
+data: {"content":" like"}
+
+data: {"content":" \"**"}
+
+data: {"content":"吃"}
+
+data: {"content":"饭"}
+
+data: {"content":" ("}
+
+data: {"content":"Ch"}
+
+data: {"content":"ī"}
+
+data: {"content":"f"}
+
+data: {"content":"àn"}
+
+data: {"content":")**"}
+
+data: {"content":"\","}
+
+data: {"content":" meaning"}
+
+data: {"content":" \""}
+
+data: {"content":"to"}
+
+data: {"content":" eat"}
+
+data: {"content":" a"}
+
+data: {"content":" meal"}
+
+data: {"content":"\"."}
+
+data: {"content":"  \n"}
+
+data: {"content":"  "}
+
+data: {"content":" -"}
+
+data: {"content":" **"}
+
+data: {"content":"菜"}
+
+data: {"content":"**"}
+
+data: {"content":" ("}
+
+data: {"content":"C"}
+
+data: {"content":"ài"}
+
+data: {"content":"):"}
+
+data: {"content":" Pron"}
+
+data: {"content":"ounced"}
+
+data: {"content":" as"}
+
+data: {"content":" **"}
+
+data: {"content":"C"}
+
+data: {"content":"ài"}
+
+data: {"content":"**,"}
+
+data: {"content":" meaning"}
+
+data: {"content":" \""}
+
+data: {"content":"dish"}
+
+data: {"content":"\""}
+
+data: {"content":" or"}
+
+data: {"content":" \""}
+
+data: {"content":"c"}
+
+data: {"content":"uisine"}
+
+data: {"content":"\"."}
+
+data: {"content":" This"}
+
+data: {"content":" is"}
+
+data: {"content":" a"}
+
+data: {"content":" specific"}
+
+data: {"content":" term"}
+
+data: {"content":" for"}
+
+data: {"content":" the"}
+
+data: {"content":" prepared"}
+
+data: {"content":" dishes"}
+
+data: {"content":" of"}
+
+data: {"content":" a"}
+
+data: {"content":" meal"}
+
+data: {"content":"."}
+
+data: {"content":"  \n\n"}
+
+data: {"content":"  "}
+
+data: {"content":" Thus"}
+
+data: {"content":","}
+
+data: {"content":" the"}
+
+data: {"content":" context"}
+
+data: {"content":" of"}
+
+data: {"content":" what"}
+
+data: {"content":" you"}
+
+data: {"content":" are"}
+
+data: {"content":" trying"}
+
+data: {"content":" to"}
+
+data: {"content":" say"}
+
+data: {"content":" may"}
+
+data: {"content":" affect"}
+
+data: {"content":" the"}
+
+data: {"content":" word"}
+
+data: {"content":" choice"}
+
+data: {"content":".\n\n"}
+
+data: {"content":"---"}
+
+data: {"content":"  \n"}
+
+data: {"content":"###"}
+
+data: {"content":" Example"}
+
+data: {"content":" Sent"}
+
+data: {"content":"ences"}
+
+data: {"content":":"}
+
+data: {"content":"  \n"}
+
+data: {"content":"Here"}
+
+data: {"content":" are"}
+
+data: {"content":" five"}
+
+data: {"content":" real"}
+
+data: {"content":"-world"}
+
+data: {"content":" example"}
+
+data: {"content":" sentences"}
+
+data: {"content":" using"}
+
+data: {"content":" the"}
+
+data: {"content":" word"}
+
+data: {"content":" **"}
+
+data: {"content":"food"}
+
+data: {"content":"**"}
+
+data: {"content":" in"}
+
+data: {"content":" different"}
+
+data: {"content":" contexts"}
+
+data: {"content":":"}
+
+data: {"content":"  \n\n"}
+
+data: {"content":"1"}
+
+data: {"content":"."}
+
+data: {"content":" **"}
+
+data: {"content":"我"}
+
+data: {"content":"喜欢"}
+
+data: {"content":"吃"}
+
+data: {"content":"中国"}
+
+data: {"content":"食"}
+
+data: {"content":"物"}
+
+data: {"content":"。"}
+
+data: {"content":"**"}
+
+data: {"content":"  \n"}
+
+data: {"content":"  "}
+
+data: {"content":" -"}
+
+data: {"content":" _"}
+
+data: {"content":"P"}
+
+data: {"content":"inyin"}
+
+data: {"content":"_:"}
+
+data: {"content":" W"}
+
+data: {"content":"ǒ"}
+
+data: {"content":" x"}
+
+data: {"content":"ǐ"}
+
+data: {"content":"hu"}
+
+data: {"content":"ān"}
+
+data: {"content":" ch"}
+
+data: {"content":"ī"}
+
+data: {"content":" Zh"}
+
+data: {"content":"ō"}
+
+data: {"content":"ng"}
+
+data: {"content":"gu"}
+
+data: {"content":"ó"}
+
+data: {"content":" sh"}
+
+data: {"content":"í"}
+
+data: {"content":"w"}
+
+data: {"content":"ù"}
+
+data: {"content":"."}
+
+data: {"content":"  \n"}
+
+data: {"content":"  "}
+
+data: {"content":" -"}
+
+data: {"content":" _"}
+
+data: {"content":"English"}
+
+data: {"content":" Translation"}
+
+data: {"content":"_:"}
+
+data: {"content":" I"}
+
+data: {"content":" like"}
+
+data: {"content":" eating"}
+
+data: {"content":" Chinese"}
+
+data: {"content":" food"}
+
+data: {"content":"."}
+
+data: {"content":"  \n\n"}
+
+data: {"content":"2"}
+
+data: {"content":"."}
+
+data: {"content":" **"}
+
+data: {"content":"今天"}
+
+data: {"content":"的"}
+
+data: {"content":"饭"}
+
+data: {"content":"很好"}
+
+data: {"content":"吃"}
+
+data: {"content":"！"}
+
+data: {"content":"**"}
+
+data: {"content":"  \n"}
+
+data: {"content":"  "}
+
+data: {"content":" -"}
+
+data: {"content":" _"}
+
+data: {"content":"P"}
+
+data: {"content":"inyin"}
+
+data: {"content":"_:"}
+
+data: {"content":" J"}
+
+data: {"content":"ī"}
+
+data: {"content":"nti"}
+
+data: {"content":"ān"}
+
+data: {"content":" de"}
+
+data: {"content":" f"}
+
+data: {"content":"àn"}
+
+data: {"content":" h"}
+
+data: {"content":"ě"}
+
+data: {"content":"n"}
+
+data: {"content":" h"}
+
+data: {"content":"ǎ"}
+
+data: {"content":"och"}
+
+data: {"content":"ī"}
+
+data: {"content":"!"}
+
+data: {"content":"  \n"}
+
+data: {"content":"  "}
+
+data: {"content":" -"}
+
+data: {"content":" _"}
+
+data: {"content":"English"}
+
+data: {"content":" Translation"}
+
+data: {"content":"_:"}
+
+data: {"content":" Today's"}
+
+data: {"content":" meal"}
+
+data: {"content":" is"}
+
+data: {"content":" very"}
+
+data: {"content":" delicious"}
+
+data: {"content":"!"}
+
+data: {"content":"  \n\n"}
+
+data: {"content":"3"}
+
+data: {"content":"."}
+
+data: {"content":" **"}
+
+data: {"content":"请"}
+
+data: {"content":"问"}
+
+data: {"content":"这里"}
+
+data: {"content":"的"}
+
+data: {"content":"菜"}
+
+data: {"content":"有什么"}
+
+data: {"content":"特色"}
+
+data: {"content":"？"}
+
+data: {"content":"**"}
+
+data: {"content":"  \n"}
+
+data: {"content":"  "}
+
+data: {"content":" -"}
+
+data: {"content":" _"}
+
+data: {"content":"P"}
+
+data: {"content":"inyin"}
+
+data: {"content":"_:"}
+
+data: {"content":" Q"}
+
+data: {"content":"ǐ"}
+
+data: {"content":"ng"}
+
+data: {"content":" w"}
+
+data: {"content":"èn"}
+
+data: {"content":" zh"}
+
+data: {"content":"èl"}
+
+data: {"content":"ǐ"}
+
+data: {"content":" de"}
+
+data: {"content":" c"}
+
+data: {"content":"ài"}
+
+data: {"content":" y"}
+
+data: {"content":"ǒ"}
+
+data: {"content":"u"}
+
+data: {"content":" sh"}
+
+data: {"content":"én"}
+
+data: {"content":"me"}
+
+data: {"content":" t"}
+
+data: {"content":"ès"}
+
+data: {"content":"è"}
+
+data: {"content":"?"}
+
+data: {"content":"  \n"}
+
+data: {"content":"  "}
+
+data: {"content":" -"}
+
+data: {"content":" _"}
+
+data: {"content":"English"}
+
+data: {"content":" Translation"}
+
+data: {"content":"_:"}
+
+data: {"content":" Exc"}
+
+data: {"content":"use"}
+
+data: {"content":" me"}
+
+data: {"content":","}
+
+data: {"content":" what"}
+
+data: {"content":" are"}
+
+data: {"content":" the"}
+
+data: {"content":" specialties"}
+
+data: {"content":" of"}
+
+data: {"content":" this"}
+
+data: {"content":" place"}
+
+data: {"content":"?"}
+
+data: {"content":"  \n\n"}
+
+data: {"content":"4"}
+
+data: {"content":"."}
+
+data: {"content":" **"}
+
+data: {"content":"妈妈"}
+
+data: {"content":"每天"}
+
+data: {"content":"为"}
+
+data: {"content":"我们"}
+
+data: {"content":"准备"}
+
+data: {"content":"食"}
+
+data: {"content":"物"}
+
+data: {"content":"。"}
+
+data: {"content":"**"}
+
+data: {"content":"  \n"}
+
+data: {"content":"  "}
+
+data: {"content":" -"}
+
+data: {"content":" _"}
+
+data: {"content":"P"}
+
+data: {"content":"inyin"}
+
+data: {"content":"_:"}
+
+data: {"content":" Mā"}
+
+data: {"content":"ma"}
+
+data: {"content":" mě"}
+
+data: {"content":"iti"}
+
+data: {"content":"ān"}
+
+data: {"content":" w"}
+
+data: {"content":"èi"}
+
+data: {"content":" w"}
+
+data: {"content":"ǒ"}
+
+data: {"content":"men"}
+
+data: {"content":" zh"}
+
+data: {"content":"ǔ"}
+
+data: {"content":"nb"}
+
+data: {"content":"èi"}
+
+data: {"content":" sh"}
+
+data: {"content":"í"}
+
+data: {"content":"w"}
+
+data: {"content":"ù"}
+
+data: {"content":"."}
+
+data: {"content":"  \n"}
+
+data: {"content":"  "}
+
+data: {"content":" -"}
+
+data: {"content":" _"}
+
+data: {"content":"English"}
+
+data: {"content":" Translation"}
+
+data: {"content":"_:"}
+
+data: {"content":" Mom"}
+
+data: {"content":" prepares"}
+
+data: {"content":" food"}
+
+data: {"content":" for"}
+
+data: {"content":" us"}
+
+data: {"content":" every"}
+
+data: {"content":" day"}
+
+data: {"content":"."}
+
+data: {"content":"  \n\n"}
+
+data: {"content":"5"}
+
+data: {"content":"."}
+
+data: {"content":" **"}
+
+data: {"content":"我"}
+
+data: {"content":"去"}
+
+data: {"content":"市场"}
+
+data: {"content":"买"}
+
+data: {"content":"了一"}
+
+data: {"content":"些"}
+
+data: {"content":"食"}
+
+data: {"content":"物"}
+
+data: {"content":"。"}
+
+data: {"content":"**"}
+
+data: {"content":"  \n"}
+
+data: {"content":"  "}
+
+data: {"content":" -"}
+
+data: {"content":" _"}
+
+data: {"content":"P"}
+
+data: {"content":"inyin"}
+
+data: {"content":"_:"}
+
+data: {"content":" W"}
+
+data: {"content":"ǒ"}
+
+data: {"content":" q"}
+
+data: {"content":"ù"}
+
+data: {"content":" sh"}
+
+data: {"content":"ì"}
+
+data: {"content":"ch"}
+
+data: {"content":"ǎ"}
+
+data: {"content":"ng"}
+
+data: {"content":" m"}
+
+data: {"content":"ǎ"}
+
+data: {"content":"ile"}
+
+data: {"content":" y"}
+
+data: {"content":"ī"}
+
+data: {"content":"xi"}
+
+data: {"content":"ē"}
+
+data: {"content":" sh"}
+
+data: {"content":"í"}
+
+data: {"content":"w"}
+
+data: {"content":"ù"}
+
+data: {"content":"."}
+
+data: {"content":"  \n"}
+
+data: {"content":"  "}
+
+data: {"content":" -"}
+
+data: {"content":" _"}
+
+data: {"content":"English"}
+
+data: {"content":" Translation"}
+
+data: {"content":"_:"}
+
+data: {"content":" I"}
+
+data: {"content":" went"}
+
+data: {"content":" to"}
+
+data: {"content":" the"}
+
+data: {"content":" market"}
+
+data: {"content":" and"}
+
+data: {"content":" bought"}
+
+data: {"content":" some"}
+
+data: {"content":" food"}
+
+data: {"content":"."}
+
+data: {"content":"  \n\n"}
+
+data: {"content":"---"}
+
+data: {"content":"  \n"}
+
+data: {"content":"References"}
+
+data: {"content":":"}
+
+data: {"content":"  \n"}
+
+data: {"content":"##"}
+
+data: {"content":" https"}
+
+data: {"content":"://"}
+
+data: {"content":"ch"}
+
+data: {"content":"inese"}
+
+data: {"content":".y"}
+
+data: {"content":"abla"}
+
+data: {"content":".com"}
+
+data: {"content":"/ch"}
+
+data: {"content":"inese"}
+
+data: {"content":"-"}
+
+data: {"content":"english"}
+
+data: {"content":"-p"}
+
+data: {"content":"inyin"}
+
+data: {"content":"-d"}
+
+data: {"content":"ictionary"}
+
+data: {"content":".php"}
+
+data: {"content":"  \n"}
+
+data: {"content":"##"}
+
+data: {"content":" https"}
+
+data: {"content":"://"}
+
+data: {"content":"www"}
+
+data: {"content":".m"}
+
+data: {"content":"dbg"}
+
+data: {"content":".net"}
+
+data: {"content":"/ch"}
+
+data: {"content":"inese"}
+
+data: {"content":"/d"}
+
+data: {"content":"ictionary"}
+
+data: {}
+
