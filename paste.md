@@ -1,35 +1,33 @@
-## Basic Chinese Interactions<br>
----<br>
-Here are ten complete sentences to help you learn basic interactions in Chinese, including pronunciation and writing in Chinese characters:
+Here are **10 complete Chinese sentences** that you can use for basic interactions, including their pronunciations and Chinese characters:
 
-1. 你好！你好吗？(Nǐ hǎo! Nǐ hǎo ma?)<br>
-   **Translation:** Hello! How are you?
+1. 你好吗？(Nǐ hǎo ma?)  
+   *How are you?*
 
-2. 我叫玛丽。(Wǒ jiào Mǎlì.)<br>
-   **Translation:** My name is Mary.
+2. 我很好，谢谢！(Wǒ hěn hǎo, xièxiè!)  
+   *I am fine, thank you!*
 
-3. 你来自哪里？(Nǐ láizì nǎlǐ?)<br>
-   **Translation:** Where are you from?
+3. 你叫什么名字？(Nǐ jiào shénme míngzì?)  
+   *What is your name?*
 
-4. 我来自美国。(Wǒ láizì Měiguó.)<br>
-   **Translation:** I am from the United States.
+4. 我叫小王。(Wǒ jiào Xiǎo Wáng.)  
+   *My name is Xiao Wang.*
 
-5. 你喜欢什么颜色？(Nǐ xǐhuān shénme yánsè?)<br>
-   **Translation:** What color do you like?
+5. 你来自哪里？(Nǐ láizì nǎlǐ?)  
+   *Where are you from?*
 
-6. 我喜欢蓝色。(Wǒ xǐhuān lánsè.)<br>
-   **Translation:** I like blue.
+6. 我来自美国。(Wǒ láizì Měiguó.)  
+   *I am from the United States.*
 
-7. 你会说中文吗？(Nǐ huì shuō zhōngwén ma?)<br>
-   **Translation:** Can you speak Chinese?
+7. 你会说英语吗？(Nǐ huì shuō yīngyǔ ma?)  
+   *Can you speak English?*
 
-8. 我会说一点中文。(Wǒ huì shuō yīdiǎn zhōngwén.)<br>
-   **Translation:** I can speak a little Chinese.
+8. 我会说一点点中文。(Wǒ huì shuō yīdiǎndiǎn zhōngwén.)  
+   *I can speak a little Chinese.*
 
-9. 谢谢你的帮助！(Xièxiè nǐ de bāngzhù!)<br>
-   **Translation:** Thank you for your help!
+9. 请问洗手间在哪里？(Qǐngwèn xǐshǒujiān zài nǎlǐ?)  
+   *Excuse me, where is the restroom?*
 
-10. 再见，祝你有美好的一天！(Zàijiàn, zhù nǐ yǒu měihǎo de yītiān!)<br>
-    **Translation:** Goodbye, wish you have a wonderful day!
+10. 晚安，祝你有个好梦！(Wǎn'ān, zhù nǐ yǒu gè hǎo mèng!)  
+    *Good night, wish you sweet dreams!*
 
-These sentences will provide a good foundation for engaging in basic conversations in Chinese. Happy learning!
+These sentences cover basic greetings, introductions, and polite inquiries that are commonly used in everyday conversations.
