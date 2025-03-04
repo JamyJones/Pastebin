@@ -1,19 +1,9 @@
-## Basic Chinese Sentence
----
+## Basic Chinese Interaction Sentence<br>
+---<br>
+**Sentence:** 你好，我叫[你的名字]，很高兴见到你。你今天过得怎么样？希望我们能成为好朋友！<br>
 
-**Here’s a complete sentence in Chinese that you can practice for learning basic interactions:**
+**Pronunciation:** Nǐ hǎo, wǒ jiào [nǐ de míngzì], hěn gāoxìng jiàn dào nǐ. Nǐ jīntiān guò dé zěnme yàng? Xīwàng wǒmen néng chéngwéi hǎo péngyǒu!<br>
 
-- **Sentence in Pinyin (Pronunciation):**
-  Nǐ hǎo! Wǒ jiào [Your Name], hěn gāoxìng rènshì nǐ. Wǒ xiǎng xuéxí zhōngwén, nǐ yǒu shé me jiànyì ma?
+**Translation:** Hello, my name is [your name], nice to meet you. How was your day today? I hope we can become good friends!<br>
 
-- **Sentence in Chinese Characters:**
-  你好！我叫 [Your Name]，很高兴认识你。我想学习中文，你有什么建议吗？
-
----
-
-**Translation:**
-Hello! My name is [Your Name], nice to meet you. I want to learn Chinese, do you have any suggestions?
-
----
-
-Feel free to replace [Your Name] with your actual name. This sentence will help you introduce yourself and express your interest in learning Chinese. Happy learning! 🌟
+Feel free to replace "[你的名字]" ([nǐ de míngzì]) with your actual name to personalize the sentence!
