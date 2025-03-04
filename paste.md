@@ -1,51 +1,59 @@
-## Summary: Learn Chinese Vocabulary and Everyday Usage  
+## Common Food and Phrases in Chinese <br>
+---<br>
+Chinese cuisine is diverse and rich in flavors. Here are some common foods with their names in Chinese characters, along with pronunciation.
 
----
+1. Tea - 茶 (chá) 
+2. Coffee - 咖啡 (Kāfēi)
+3. Rice - 米饭 (mǐfàn) 
+4. Noodles - 面条 (miàntiáo) 
+5. Dumplings - 饺子 (jiǎozi)  
+6. Chicken - 鸡肉 (jīròu) 
+7. Beef - 牛肉 (niúròu) 
+8. Pork - 猪肉 (zhūròu) 
+9. Fish - 鱼 (yú) 
+10. Bread - 面包 (miànbāo)
 
-### Explanation: How Things are Said in Chinese  
+---<br>
+Here are more phrases related to food in Chinese, along with translations:
 
-1. **Tea (chá)**  
-   - Pronunciation: chá  
-   - Chinese Character: 茶  
+**1. 我想要一杯茶。**  
+   *(Wǒ xiǎng yào yī bēi chá.)*  
+   "I would like a cup of tea."
 
-2. **Coffee (Kāfēi)**  
-   - Pronunciation: Kāfēi  
-   - Chinese Character: 咖啡  
+**2. 请给我一些米饭。**  
+   *(Qǐng gěi wǒ yīxiē mǐfàn.)*  
+   "Please give me some rice."
 
----
+**3. 这道菜很好吃。**  
+   *(Zhè dào cài hěn hǎo chī.)*  
+   "This dish is very delicious."
 
-### Five Sentences with Real-World Usage  
+**4. 你喜欢喝咖啡吗？**  
+   *(Nǐ xǐhuān hē kāfēi ma?)*  
+   "Do you like to drink coffee?"
 
-1. 我想喝茶。  
-   *Translation*: I want to drink tea.  
+**5. 我不吃猪肉。**  
+   *(Wǒ bù chī zhūròu.)*  
+   "I do not eat pork."
 
-2. 请给我一杯咖啡。  
-   *Translation*: Please give me a cup of coffee.  
+---<br>
 
-3. 我喜欢中餐。  
-   *Translation*: I like Chinese food.  
+**100 Common Foods in Chinese:**
 
-4. 这个苹果很好吃。  
-   *Translation*: This apple is very delicious.  
+- 煎饼 (jiān bǐng) - Chinese pancake  
+- 烤鸭 (kǎo yā) - Peking duck  
+- 螃蟹 (pángxiè) - Crab  
+- 炒米饭 (chǎo mǐfàn) - Fried rice  
+- 炖肉 (dùn ròu) - Stewed meat  
+- 酸辣汤 (suān là tāng) - Hot and sour soup  
+- 沙拉 (shālā) - Salad  
+- 包子 (bāozi) - Steamed buns  
+- 凉面 (liáng miàn) - Cold noodles  
+- 鳝鱼 (shànyú) - Eel
 
-5. 你今天想吃什么？  
-   *Translation*: What do you want to eat today?  
-
----
-
-### 10 Common Foods in Chinese  
-
-1. 米饭 (Mǐfàn) - Rice  
-2. 面条 (Miàntiáo) - Noodles  
-3. 包子 (Bāozi) - Steamed buns  
-4. 饺子 (Jiǎozi) - Dumplings  
-5. 鸡肉 (Jīròu) - Chicken  
-6. 牛肉 (Niúròu) - Beef  
-7. 鱼 (Yú) - Fish  
-8. 蔬菜 (Shūcài) - Vegetables  
-9. 豆腐 (Dòufu) - Tofu  
-10. 水果 (Shuǐguǒ) - Fruits  
-
----
-
-Enjoy practicing! If you'd like to dive deeper into phrases or specific topics, feel free to ask! 😊
+### Reference Links
+## www.tasteatlas.com/best-rated-dishes-in-china  
+## en.wikipedia.org/wiki/List_of_Chinese_dishes  
+## www.chefspencil.com/most-popular-chinese-foods/  
+## cinnamonsociety.com/recipes/blog/100-chinese-foods-to-try-before-you-die  
+## chopstickchronicles.com/chinese-foods/  
