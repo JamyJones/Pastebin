@@ -1,159 +1,228 @@
-## Flashcard 1: 你 (nǐ)
-Front:  
-**你 (nǐ)**  
-Back:  
-**Meaning:** You  
-Example Sentence: **你好吗？(nǐ hǎo ma?)** - Are you good?  
-Audio: Pronunciation: [Audio for nǐ]
+## Summary: Flashcards for Common Morning Interactions in Chinese
 
-Engagement:  
-- Fill in the blank: 我 _____ (nǐ) 要吃早饭。  
-- Multiple-choice: What does "你" mean?  
-  a) Me  
-  b) You  
-  c) He
+**Flashcard 1:**
+---
+**Front:** 你 (nǐ) 
+**Pinyin:** nǐ
+
+**Back:** 
+**English Meaning:** You
+
+**Example:** 
+**Chinese:** 你好吗？
+**Pinyin:** Nǐ hǎo ma?
+**English:** How are you?
+
+**Audio:** (nǐ)
+
+**Engagement:** 
+**Fill-in-the-Blank:** 
+**你__？** (nǐ __ ma?) 
+**Options:** 
+- 好 (hǎo)
+- 吗 (ma)
+- 是 (shì)
 
 ---
+**Flashcard 2:**
+---
+**Front:** 早上好 (zǎo shàng hǎo)
+**Pinyin:** zǎo shàng hǎo
 
-## Flashcard 2: 早 (zǎo)
-Front:  
-**早 (zǎo)**  
-Back:  
-**Meaning:** Morning  
-Example Sentence: **早上好！(zǎo shàng hǎo!)** - Good morning!  
-Audio: Pronunciation: [Audio for zǎo]
+**Back:** 
+**English Meaning:** Good Morning
 
-Engagement:  
-- Fill in the blank: _____ (zǎo) 起床。  
-- Matching: Match the English word "Morning" to its Chinese character.
+**Example:** 
+**Chinese:** 早上好！
+**Pinyin:** Zǎo shàng hǎo!
+**English:** Good Morning!
 
+**Audio:** (zǎo shàng hǎo)
+
+**Engagement:** 
+**Multiple-Choice:** 
+What is the English meaning of 早上好 (zǎo shàng hǎo)?
+**Options:**
+- Good Morning
+- Good Night
+- Good Afternoon
 ---
 
-## Flashcard 3: 吃 (chī)
-Front:  
-**吃 (chī)**  
-Back:  
-**Meaning:** Eat  
-Example Sentence: **我想吃早饭。(wǒ xiǎng chī zǎo fàn.)** - I want to eat breakfast.  
-Audio: Pronunciation: [Audio for chī]
+**Flashcard 3:**
+---
+**Front:** 你吃了吗? (nǐ chī le ma)
+**Pinyin:** nǐ chī le ma
 
-Engagement:  
-- Fill in the blank: 我 _____ (chī) 果汁。  
-- Multiple-choice: What does "吃" mean?  
-  a) Drink  
-  b) Eat  
-  c) Sleep
+**Back:** 
+**English Meaning:** Have you eaten?
+
+**Example:** 
+**Chinese:** 你吃了吗？
+**Pinyin:** Nǐ chī le ma?
+**English:** Have you eaten?
+
+**Audio:** (nǐ chī le ma)
+
+**Engagement:** 
+**Fill-in-the-Blank:** 
+**你__了吗？**
+**Options:**
+- 吃 (chī)
+- 是 (shì)
+- 有 (yǒu)
 
 ---
+**Flashcard 4:**
+---
+**Front:** 早饭 (zǎo fàn)
+**Pinyin:** zǎo fàn
 
-## Flashcard 4: 喝 (hē)
-Front:  
-**喝 (hē)**  
-Back:  
-**Meaning:** Drink  
-Example Sentence: **我喝水。(wǒ hē shuǐ.)** - I drink water.  
-Audio: Pronunciation: [Audio for hē]
+**Back:** 
+**English Meaning:** Breakfast
 
-Engagement:  
-- Fill in the blank: 你 _____ (hē) 咖啡吗？  
-- Matching: Match the English word "Drink" to its Chinese character.
+**Example:** 
+**Chinese:** 我吃早饭了。
+**Pinyin:** Wǒ chī zǎo fàn le.
+**English:** I ate breakfast.
+
+**Audio:** (zǎo fàn)
+
+**Engagement:** 
+**Multiple-Choice:** 
+What does 早饭 (zǎo fàn) mean?
+**Options:**
+- Lunch
+- Breakfast
+- Dinner
 
 ---
+**Flashcard 5:**
+---
+**Front:** 喝 (hē)
+**Pinyin:** hē
 
-## Flashcard 5: 茶 (chá)
-Front:  
-**茶 (chá)**  
-Back:  
-**Meaning:** Tea  
-Example Sentence: **我喜欢喝茶。(wǒ xǐ huān hē chá.)** - I like to drink tea.  
-Audio: Pronunciation: [Audio for chá]
+**Back:** 
+**English Meaning:** Drink
 
-Engagement:  
-- Fill in the blank: 你_____ (chá) 在早上喝吗？  
-- Multiple-choice: What does "茶" mean?  
-  a) Coffee  
-  b) Juice  
-  c) Tea
+**Example:** 
+**Chinese:** 你想喝茶吗？
+**Pinyin:** Nǐ xiǎng hē chá ma?
+**English:** Do you want to drink tea?
+
+**Audio:** (hē)
+
+**Engagement:** 
+**Fill-in-the-Blank:** 
+**你想__茶吗？**
+**Options:**
+- 喝 (hē)
+- 吃 (chī)
+- 看 (kàn)
 
 ---
+**Flashcard 6:**
+---
+**Front:** 茶 (chá)
+**Pinyin:** chá
 
-## Flashcard 6: 书 (shū)
-Front:  
-**书 (shū)**  
-Back:  
-**Meaning:** Book  
-Example Sentence: **我在读书。(wǒ zài dú shū.)** - I am reading a book.  
-Audio: Pronunciation: [Audio for shū]
+**Back:** 
+**English Meaning:** Tea
 
-Engagement:  
-- Fill in the blank: 我 _____ (shū) 在早上。  
-- Matching: Match the English word "Book" to its Chinese character.
+**Example:** 
+**Chinese:** 这是我的茶。
+**Pinyin:** Zhè shì wǒ de chá.
+**English:** This is my tea.
+
+**Audio:** (chá)
+
+**Engagement:** 
+**Multiple-Choice:** 
+What does 茶 (chá) mean?
+**Options:**
+- Coffee
+- Water
+- Tea
 
 ---
+**Flashcard 7:**
+---
+**Front:** 起床 (qǐ chuáng)
+**Pinyin:** qǐ chuáng
 
-## Flashcard 7: 工作 (gōng zuò)
-Front:  
-**工作 (gōng zuò)**  
-Back:  
-**Meaning:** Work  
-Example Sentence: **我早上工作。(wǒ zǎo shàng gōng zuò.)** - I work in the morning.  
-Audio: Pronunciation: [Audio for gōng zuò]
+**Back:** 
+**English Meaning:** Get up (from bed)
 
-Engagement:  
-- Fill in the blank: 你 _____ (gōng zuò) 什么？  
-- Multiple-choice: What does "工作" mean?  
-  a) Play  
-  b) Work  
-  c) Study
+**Example:** 
+**Chinese:** 我早上七点起床。
+**Pinyin:** Wǒ zǎo shàng qī diǎn qǐ chuáng.
+**English:** I get up at 7 AM.
+
+**Audio:** (qǐ chuáng)
+
+**Engagement:** 
+**Fill-in-the-Blank:** 
+**我早上七点__。**
+**Options:**
+- 起床 (qǐ chuáng)
+- 吃饭 (chī fàn)
+- 喝茶 (hē chá)
 
 ---
+**Flashcard 8:**
+---
+**Front:** 出门 (chū mén)
+**Pinyin:** chū mén
 
-## Flashcard 8: 去 (qù)
-Front:  
-**去 (qù)**  
-Back:  
-**Meaning:** Go  
-Example Sentence: **我去上班。(wǒ qù shàng bān.)** - I go to work.  
-Audio: Pronunciation: [Audio for qù]
+**Back:** 
+**English Meaning:** Go out
 
-Engagement:  
-- Fill in the blank: 我要 _____ (qù) 零食。  
-- Matching: Match the English word "Go" to its Chinese character.
+**Example:** 
+**Chinese:** 我每天早上八点出门。
+**Pinyin:** Wǒ měi tiān zǎo shàng bā diǎn chū mén.
+**English:** I go out every morning at 8 AM.
+
+**Audio:** (chū mén)
+
+**Engagement:** 
+**Multiple-Choice:** 
+What does 出门 (chū mén) mean?
+**Options:**
+- Stay in
+- Go out
+- Sleep
 
 ---
+**Flashcard 9:**
+---
+**Front:** 上班 (shàng bān)
+**Pinyin:** shàng bān
 
-## Flashcard 9: 睡觉 (shuì jiào)
-Front:  
-**睡觉 (shuì jiào)**  
-Back:  
-**Meaning:** Sleep  
-Example Sentence: **我晚上睡觉。(wǒ wǎn shàng shuì jiào.)** - I sleep at night.  
-Audio: Pronunciation: [Audio for shuì jiào]
+**Back:** 
+**English Meaning:** Go to work
 
-Engagement:  
-- Fill in the blank: 你_____ (shuì jiào) 几个小时？  
-- Multiple-choice: What does "睡觉" mean?  
-  a) Eat  
-  b) Sleep  
-  c) Work
+**Example:** 
+**Chinese:** 我们一起上班吧。
+**Pinyin:** Wǒ men yī qǐ shàng bān ba.
+**English:** Let's go to work together.
+
+**Audio:** (shàng bān)
+
+**Engagement:** 
+**Fill-in-the-Blank:** 
+**我们一起__吧。**
+**Options:**
+- 吃饭 (chī fàn)
+- 喝茶 (hē chá)
+- 上班 (shàng bān)
 
 ---
-
-## Flashcard 10: 明天 (míng tiān)
-Front:  
-**明天 (míng tiān)**  
-Back:  
-**Meaning:** Tomorrow  
-Example Sentence: **明天见！(míng tiān jiàn!)** - See you tomorrow!  
-Audio: Pronunciation: [Audio for míng tiān]
-
-Engagement:  
-- Fill in the blank: _____ (míng tiān), 我有工作。  
-- Matching: Match the English word "Tomorrow" to its Chinese character.
-
+**Flashcard 10:**
 ---
+**Front:** 刷牙 (shuā yá)
+**Pinyin:** shuā yá
 
-## References
-## http://www.chinese-tools.com  
-## https://www.mdbg.net/chinese/dictionary?page=worddict  
-## https://www.chineseclass101.com
+**Back:** 
+**English Meaning:** Brush teeth
+
+**Example:** 
+**
