@@ -1,176 +1,235 @@
-## Summary: Flashcards for Common Morning Interactions in Chinese Mandarin<br>
----<br>
-
-### Flashcard 1
+## Flashcard 1: 你 (nǐ)  
+---  
 **Front:**  
-你 (nǐ) <br> 
+- Chinese Character: **你**  
+- Pinyin: **nǐ**  
+
 **Back:**  
-You  
-**Example:**  
-你早! (Nǐ zǎo!) <br>  
-(You early!) - Good morning!  
+- English Meaning: **You**  
+
+**Example Sentence:**  
+- Chinese: **你好吗？**  
+- Pinyin: **Nǐ hǎo ma?**  
+- English Translation: **How are you?**  
+
 **Audio:**  
-nǐ  
+- Pronunciation: **nǐ**  
+
 **Engagement:**  
-Fill in the blank:  
-_____ (nǐ) 早! (Good morning!)
+- Fill-in-the-Blank:  
+  - **_____好吗？**
+  - Possible Answers: (A) 你 (B) 他 (C) 她  
+---  
 
----
-
-### Flashcard 2
+## Flashcard 2: 早上好 (zǎoshang hǎo)  
+---  
 **Front:**  
-早上好 (zǎoshang hǎo) <br> 
+- Chinese Character: **早上好**  
+- Pinyin: **zǎoshang hǎo**  
+
 **Back:**  
-Good morning  
-**Example:**  
-早上好, 今天的天气很好! (Zǎoshang hǎo, jīntiān de tiānqì hěn hǎo!) <br>  
-(Good morning, today’s weather is nice!)  
+- English Meaning: **Good morning**  
+
+**Example Sentence:**  
+- Chinese: **早上好！今天天气很好。**  
+- Pinyin: **Zǎoshang hǎo! Jīntiān tiānqì hěn hǎo.**  
+- English Translation: **Good morning! The weather is nice today.**  
+
 **Audio:**  
-zǎoshang hǎo  
+- Pronunciation: **zǎoshang hǎo**  
+
 **Engagement:**  
-Multiple-choice:  
-What does "早上好" mean?  
-A) Good night  
-B) Good morning  
-C) Hi  
-*(Correct answer: B)*
+- Multiple Choice:  
+  What does **早上好** mean?  
+  (A) Good night (B) Good morning (C) Good afternoon  
+---  
 
----
-
-### Flashcard 3
+## Flashcard 3: 吃 (chī)  
+---  
 **Front:**  
-吃 (chī) <br> 
+- Chinese Character: **吃**  
+- Pinyin: **chī**  
+
 **Back:**  
-To eat  
-**Example:**  
-你吃了吗? (Nǐ chī le ma?) <br>  
-(Have you eaten?)  
+- English Meaning: **To eat**  
+
+**Example Sentence:**  
+- Chinese: **你想吃什么？**  
+- Pinyin: **Nǐ xiǎng chī shénme?**  
+- English Translation: **What do you want to eat?**  
+
 **Audio:**  
-chī  
+- Pronunciation: **chī**  
+
 **Engagement:**  
-Matching exercise:  
-Match the English meaning to the Chinese:  
-1. To eat - _____ (chī)
+- Fill-in-the-Blank:  
+  - **今天我们要_____。**  
+  - Possible Answers: (A) 睡觉 (B) 吃饭 (C) 学习  
+---  
 
----
-
-### Flashcard 4
+## Flashcard 4: 喝 (hē)  
+---  
 **Front:**  
-早餐 (zǎocān) <br> 
+- Chinese Character: **喝**  
+- Pinyin: **hē**  
+
 **Back:**  
-Breakfast  
-**Example:**  
-我想吃早餐 (Wǒ xiǎng chī zǎocān) <br>  
-(I want to eat breakfast)  
+- English Meaning: **To drink**  
+
+**Example Sentence:**  
+- Chinese: **你喝水了吗？**  
+- Pinyin: **Nǐ hē shuǐ le ma?**  
+- English Translation: **Did you drink water?**  
+
 **Audio:**  
-zǎocān  
+- Pronunciation: **hē**  
+
 **Engagement:**  
-Fill in the blank:  
-我想吃 _____ (I want to eat breakfast).
+- Matching Exercise:  
+  Match the character with its meaning:  
+  - (1) 喝 (A) To eat  
+  - (2) 吃 (B) To drink  
+---  
 
----
-
-### Flashcard 5
+## Flashcard 5: 饭 (fàn)  
+---  
 **Front:**  
-喝 (hē) <br> 
+- Chinese Character: **饭**  
+- Pinyin: **fàn**  
+
 **Back:**  
-To drink  
-**Example:**  
-你喝水了吗? (Nǐ hē shuǐ le ma?) <br>  
-(Have you drunk water?)  
+- English Meaning: **Rice/meal**  
+
+**Example Sentence:**  
+- Chinese: **我要吃饭。**  
+- Pinyin: **Wǒ yào chī fàn.**  
+- English Translation: **I want to eat a meal.**  
+
 **Audio:**  
-hē  
+- Pronunciation: **fàn**  
+
 **Engagement:**  
-True or False:  
-喝 means "to eat". (False)
+- Multiple Choice:  
+  What does **饭** refer to?  
+  (A) Breakfast (B) Rice/meal (C) Dinner  
+---  
 
----
-
-### Flashcard 6
+## Flashcard 6: 谢谢 (xièxiè)  
+---  
 **Front:**  
-水 (shuǐ) <br> 
+- Chinese Character: **谢谢**  
+- Pinyin: **xièxiè**  
+
 **Back:**  
-Water  
-**Example:**  
-请给我水 (Qǐng gěi wǒ shuǐ) <br>  
-(Please give me water)  
+- English Meaning: **Thank you**  
+
+**Example Sentence:**  
+- Chinese: **谢谢你的帮助。**  
+- Pinyin: **Xièxiè nǐ de bāngzhù.**  
+- English Translation: **Thank you for your help.**  
+
 **Audio:**  
-shuǐ  
+- Pronunciation: **xièxiè**  
+
 **Engagement:**  
-Multiple-choice:  
-What does "水" mean?  
-A) Fire  
-B) Water  
-C) Air  
-*(Correct answer: B)*
+- Fill-in-the-Blank:  
+  - **_____你的关心。**  
+  - Possible Answers: (A) 请 (B) 谢谢 (C) 对不起  
+---  
 
----
-
-### Flashcard 7
+## Flashcard 7: 再见 (zàijiàn)  
+---  
 **Front:**  
-洗脸 (xǐ liǎn) <br> 
+- Chinese Character: **再见**  
+- Pinyin: **zàijiàn**  
+
 **Back:**  
-To wash face  
-**Example:**  
-你洗脸了吗? (Nǐ xǐ liǎn le ma?) <br>  
-(Did you wash your face?)  
+- English Meaning: **Goodbye**  
+
+**Example Sentence:**  
+- Chinese: **再见，明天见！**  
+- Pinyin: **Zàijiàn, míngtiān jiàn!**  
+- English Translation: **Goodbye, see you tomorrow!**  
+
 **Audio:**  
-xǐ liǎn  
+- Pronunciation: **zàijiàn**  
+
 **Engagement:**  
-Fill in the blank:  
-你 _____ (xǐ liǎn)了吗? (Did you wash your face?)
+- Multiple Choice:  
+  What does **再见** mean?  
+  (A) See you later (B) Goodbye (C) Good afternoon  
+---  
 
----
-
-### Flashcard 8
+## Flashcard 8: 现在 (xiànzài)  
+---  
 **Front:**  
-刷牙 (shuā yá) <br> 
+- Chinese Character: **现在**  
+- Pinyin: **xiànzài**  
+
 **Back:**  
-To brush teeth  
-**Example:**  
-我去刷牙 (Wǒ qù shuā yá) <br>  
-(I am going to brush my teeth)  
+- English Meaning: **Now**  
+
+**Example Sentence:**  
+- Chinese: **我现在很忙。**  
+- Pinyin: **Wǒ xiànzài hěn máng.**  
+- English Translation: **I am busy now.**  
+
 **Audio:**  
-shuā yá  
+- Pronunciation: **xiànzài**  
+
 **Engagement:**  
-Matching exercise:  
-Match the English meaning to the Chinese:  
-1. To brush teeth - _____ (shuā yá)
+- Fill-in-the-Blank:  
+  - **我们_____去吧。**  
+  - Possible Answers: (A) 现在 (B) 明天 (C) 昨天  
+---  
 
----
-
-### Flashcard 9
+## Flashcard 9: 起床 (qǐchuáng)  
+---  
 **Front:**  
-换衣服 (huàn yīfú) <br> 
+- Chinese Character: **起床**  
+- Pinyin: **qǐchuáng**  
+
 **Back:**  
-To change clothes  
-**Example:**  
-他在换衣服 (Tā zài huàn yīfú) <br>  
-(He is changing clothes)  
+- English Meaning: **To get up**  
+
+**Example Sentence:**  
+- Chinese: **你什么时候起床？**  
+- Pinyin: **Nǐ shénme shíhòu qǐchuáng?**  
+- English Translation: **When do you get up?**  
+
 **Audio:**  
-huàn yīfú  
+- Pronunciation: **qǐchuáng**  
+
 **Engagement:**  
-True or False:  
-换衣服 means "to change shoes". (False)
+- Matching Exercise:  
+  Match the Chinese phrase with its meaning:  
+  - (1) 起床 (A) To get up  
+  - (2) 睡觉 (B) To sleep  
+---  
 
----
-
-### Flashcard 10
+## Flashcard 10: 洗澡 (xǐzǎo)  
+---  
 **Front:**  
-走 (zǒu) <br> 
+- Chinese Character: **洗澡**  
+- Pinyin: **xǐzǎo**  
+
 **Back:**  
-To walk  
-**Example:**  
-我们一起走吧 (Wǒmen yīqǐ zǒu ba) <br>  
-(Let's walk together)  
+- English Meaning: **To take a shower**  
+
+**Example Sentence:**  
+- Chinese: **我每天洗澡。**  
+- Pinyin: **Wǒ měitiān xǐzǎo.**  
+- English Translation: **I take a shower every day.**  
+
 **Audio:**  
-zǒu  
+- Pronunciation: **xǐzǎo**  
+
 **Engagement:**  
-Fill in the blank:  
-我们一起 _____ (Let's walk together).
+- Multiple Choice:  
+  What does **洗澡** mean?  
+  (A) To wash hands (B) To take a bath/show (C) To swim  
+---  
 
----
-
-## References
-## https://www.mdbg.net/chinese/dictionary
-## https://www.chineseclass101.com/
+## References:  
+## https://www.mdbg.net/chinese/dictionary  
+## https://www.chinese-tools.com/
