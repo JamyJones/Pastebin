@@ -1,22 +1,54 @@
-## Flashcard Prompt for Learning Chinese Mandarin <br>
+## Flashcard Creation for Learning Chinese Mandarin <br>
 ---<br>
-I want you to act as a flashcard creator to help me learn Chinese Mandarin. I am an English native speaker and have just started learning Chinese. Please create very good, interactive, and engaging flashcards. Each flashcard should have the following elements:
 
-**Front**: The flashcard should display the Chinese character '你' along with its pinyin transcription 'nǐ'.
+**Front:** 
+```
+Chinese Character: 你
+Pinyin: nǐ
+``` <br>
+---
 
-**Back**: Provide the English meaning of the character '你', which is "you".
+**Back:**
+```
+Meaning: You
+``` <br>
+---
 
-**Example**: Include a simple sentence using the character: 
-- **Chinese**: 你好吗？ 
-- **Pinyin**: nǐ hǎo ma? 
-- **English Translation**: How are you?
+**Example:**
+```
+Chinese Characters: 你好吗？
+Pinyin: nǐ hǎo ma?
+English Translation: How are you?
+``` <br>
+---
 
-**Audio**: Add the character representation for the pronunciation of '你' (nǐ). 
+**Audio:**
+To pronounce the Chinese character '你', use the TTS engine to read the character.
 
-**Engagement**: Include interactive activities such as:
-- Fill-in-the-blank: "___ 好吗？" (Meaning: "___ are you?")
-- Multiple-choice: 
-  - A) They
-  - B) You
-  - C) He
-  - Correct Answer: B) You
+---
+
+**Engagement:**
+
+*Fill-in-the-Blank Sentence:* 
+Complete the sentence with the appropriate Chinese character:
+```
+_____ 好吗？ (nǐ hǎo ma?)
+```
+
+*Matching Exercise:*
+Match the following pinyin with their corresponding Chinese characters:
+```
+1. 你 (a. nǐ)
+2. 好 (b. hǎo)
+3. 吗 (c. ma)
+```
+
+*Multiple-Choice Question:*
+What is the meaning of '你'?
+```
+a. You
+b. Hello
+c. How
+```
+
+This interactive flashcard follows the guidelines you provided and aims to help you learn and retain the Chinese character '你'. Feel free to let me know if you need more flashcards or any other assistance!
