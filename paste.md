@@ -1,228 +1,838 @@
-## Summary: Flashcards for Common Morning Interactions in Chinese
+data: {"role":"assistant","content":"","refusal":null}
 
-**Flashcard 1:**
----
-**Front:** 你 (nǐ) 
-**Pinyin:** nǐ
+data: {"content":"##"}
 
-**Back:** 
-**English Meaning:** You
+data: {"content":" Summary"}
 
-**Example:** 
-**Chinese:** 你好吗？
-**Pinyin:** Nǐ hǎo ma?
-**English:** How are you?
+data: {"content":":"}
 
-**Audio:** (nǐ)
+data: {"content":" Flash"}
 
-**Engagement:** 
-**Fill-in-the-Blank:** 
-**你__？** (nǐ __ ma?) 
-**Options:** 
-- 好 (hǎo)
-- 吗 (ma)
-- 是 (shì)
+data: {"content":"cards"}
 
----
-**Flashcard 2:**
----
-**Front:** 早上好 (zǎo shàng hǎo)
-**Pinyin:** zǎo shàng hǎo
+data: {"content":" for"}
 
-**Back:** 
-**English Meaning:** Good Morning
+data: {"content":" Common"}
 
-**Example:** 
-**Chinese:** 早上好！
-**Pinyin:** Zǎo shàng hǎo!
-**English:** Good Morning!
+data: {"content":" Morning"}
 
-**Audio:** (zǎo shàng hǎo)
+data: {"content":" Inter"}
 
-**Engagement:** 
-**Multiple-Choice:** 
-What is the English meaning of 早上好 (zǎo shàng hǎo)?
-**Options:**
-- Good Morning
-- Good Night
-- Good Afternoon
----
+data: {"content":"actions"}
 
-**Flashcard 3:**
----
-**Front:** 你吃了吗? (nǐ chī le ma)
-**Pinyin:** nǐ chī le ma
+data: {"content":" in"}
 
-**Back:** 
-**English Meaning:** Have you eaten?
+data: {"content":" Mandarin"}
 
-**Example:** 
-**Chinese:** 你吃了吗？
-**Pinyin:** Nǐ chī le ma?
-**English:** Have you eaten?
+data: {"content":" <"}
 
-**Audio:** (nǐ chī le ma)
+data: {"content":"br"}
 
-**Engagement:** 
-**Fill-in-the-Blank:** 
-**你__了吗？**
-**Options:**
-- 吃 (chī)
-- 是 (shì)
-- 有 (yǒu)
+data: {"content":">\n"}
 
----
-**Flashcard 4:**
----
-**Front:** 早饭 (zǎo fàn)
-**Pinyin:** zǎo fàn
+data: {"content":"Below"}
 
-**Back:** 
-**English Meaning:** Breakfast
+data: {"content":" are"}
 
-**Example:** 
-**Chinese:** 我吃早饭了。
-**Pinyin:** Wǒ chī zǎo fàn le.
-**English:** I ate breakfast.
+data: {"content":" "}
 
-**Audio:** (zǎo fàn)
+data: {"content":"10"}
 
-**Engagement:** 
-**Multiple-Choice:** 
-What does 早饭 (zǎo fàn) mean?
-**Options:**
-- Lunch
-- Breakfast
-- Dinner
+data: {"content":" flash"}
 
----
-**Flashcard 5:**
----
-**Front:** 喝 (hē)
-**Pinyin:** hē
+data: {"content":"cards"}
 
-**Back:** 
-**English Meaning:** Drink
+data: {"content":" designed"}
 
-**Example:** 
-**Chinese:** 你想喝茶吗？
-**Pinyin:** Nǐ xiǎng hē chá ma?
-**English:** Do you want to drink tea?
+data: {"content":" to"}
 
-**Audio:** (hē)
+data: {"content":" enhance"}
 
-**Engagement:** 
-**Fill-in-the-Blank:** 
-**你想__茶吗？**
-**Options:**
-- 喝 (hē)
-- 吃 (chī)
-- 看 (kàn)
+data: {"content":" your"}
 
----
-**Flashcard 6:**
----
-**Front:** 茶 (chá)
-**Pinyin:** chá
+data: {"content":" learning"}
 
-**Back:** 
-**English Meaning:** Tea
+data: {"content":" experience"}
 
-**Example:** 
-**Chinese:** 这是我的茶。
-**Pinyin:** Zhè shì wǒ de chá.
-**English:** This is my tea.
+data: {"content":" for"}
 
-**Audio:** (chá)
+data: {"content":" common"}
 
-**Engagement:** 
-**Multiple-Choice:** 
-What does 茶 (chá) mean?
-**Options:**
-- Coffee
-- Water
-- Tea
+data: {"content":" morning"}
 
----
-**Flashcard 7:**
----
-**Front:** 起床 (qǐ chuáng)
-**Pinyin:** qǐ chuáng
+data: {"content":" interactions"}
 
-**Back:** 
-**English Meaning:** Get up (from bed)
+data: {"content":" in"}
 
-**Example:** 
-**Chinese:** 我早上七点起床。
-**Pinyin:** Wǒ zǎo shàng qī diǎn qǐ chuáng.
-**English:** I get up at 7 AM.
+data: {"content":" Mandarin"}
 
-**Audio:** (qǐ chuáng)
+data: {"content":","}
 
-**Engagement:** 
-**Fill-in-the-Blank:** 
-**我早上七点__。**
-**Options:**
-- 起床 (qǐ chuáng)
-- 吃饭 (chī fàn)
-- 喝茶 (hē chá)
+data: {"content":" creating"}
 
----
-**Flashcard 8:**
----
-**Front:** 出门 (chū mén)
-**Pinyin:** chū mén
+data: {"content":" an"}
 
-**Back:** 
-**English Meaning:** Go out
+data: {"content":" engaging"}
 
-**Example:** 
-**Chinese:** 我每天早上八点出门。
-**Pinyin:** Wǒ měi tiān zǎo shàng bā diǎn chū mén.
-**English:** I go out every morning at 8 AM.
+data: {"content":" balance"}
 
-**Audio:** (chū mén)
+data: {"content":" of"}
 
-**Engagement:** 
-**Multiple-Choice:** 
-What does 出门 (chū mén) mean?
-**Options:**
-- Stay in
-- Go out
-- Sleep
+data: {"content":" visuals"}
 
----
-**Flashcard 9:**
----
-**Front:** 上班 (shàng bān)
-**Pinyin:** shàng bān
+data: {"content":","}
 
-**Back:** 
-**English Meaning:** Go to work
+data: {"content":" examples"}
 
-**Example:** 
-**Chinese:** 我们一起上班吧。
-**Pinyin:** Wǒ men yī qǐ shàng bān ba.
-**English:** Let's go to work together.
+data: {"content":","}
 
-**Audio:** (shàng bān)
+data: {"content":" and"}
 
-**Engagement:** 
-**Fill-in-the-Blank:** 
-**我们一起__吧。**
-**Options:**
-- 吃饭 (chī fàn)
-- 喝茶 (hē chá)
-- 上班 (shàng bān)
+data: {"content":" activities"}
 
----
-**Flashcard 10:**
----
-**Front:** 刷牙 (shuā yá)
-**Pinyin:** shuā yá
+data: {"content":".\n\n"}
 
-**Back:** 
-**English Meaning:** Brush teeth
+data: {"content":"---\n\n"}
 
-**Example:** 
-**
+data: {"content":"###"}
+
+data: {"content":" **"}
+
+data: {"content":"Flash"}
+
+data: {"content":"card"}
+
+data: {"content":" "}
+
+data: {"content":"1"}
+
+data: {"content":":"}
+
+data: {"content":"**\n"}
+
+data: {"content":"**"}
+
+data: {"content":"Front"}
+
+data: {"content":":**"}
+
+data: {"content":" "}
+
+data: {"content":"你"}
+
+data: {"content":" ("}
+
+data: {"content":"n"}
+
+data: {"content":"ǐ"}
+
+data: {"content":")"}
+
+data: {"content":"  \n"}
+
+data: {"content":"**"}
+
+data: {"content":"Back"}
+
+data: {"content":":**"}
+
+data: {"content":" You"}
+
+data: {"content":" ("}
+
+data: {"content":"inform"}
+
+data: {"content":"al"}
+
+data: {"content":")"}
+
+data: {"content":"  \n\n"}
+
+data: {"content":"**"}
+
+data: {"content":"Example"}
+
+data: {"content":":**"}
+
+data: {"content":"  \n"}
+
+data: {"content":"-"}
+
+data: {"content":" "}
+
+data: {"content":"你好"}
+
+data: {"content":"！"}
+
+data: {"content":"("}
+
+data: {"content":"N"}
+
+data: {"content":"ǐ"}
+
+data: {"content":" h"}
+
+data: {"content":"ǎ"}
+
+data: {"content":"o"}
+
+data: {"content":"!)"}
+
+data: {"content":" –"}
+
+data: {"content":" Hello"}
+
+data: {"content":"!"}
+
+data: {"content":"  \n"}
+
+data: {"content":"-"}
+
+data: {"content":" **"}
+
+data: {"content":"English"}
+
+data: {"content":" Translation"}
+
+data: {"content":":**"}
+
+data: {"content":" Hello"}
+
+data: {"content":"!"}
+
+data: {"content":"  \n\n"}
+
+data: {"content":"**"}
+
+data: {"content":"Audio"}
+
+data: {"content":" Pron"}
+
+data: {"content":"unciation"}
+
+data: {"content":":**"}
+
+data: {"content":" Using"}
+
+data: {"content":" T"}
+
+data: {"content":"TS"}
+
+data: {"content":" playback"}
+
+data: {"content":" to"}
+
+data: {"content":" hear"}
+
+data: {"content":" \""}
+
+data: {"content":"n"}
+
+data: {"content":"ǐ"}
+
+data: {"content":".\"\n\n"}
+
+data: {"content":"**"}
+
+data: {"content":"Eng"}
+
+data: {"content":"agement"}
+
+data: {"content":" Activity"}
+
+data: {"content":":**"}
+
+data: {"content":"  \n"}
+
+data: {"content":"Fill"}
+
+data: {"content":"-in"}
+
+data: {"content":"-the"}
+
+data: {"content":"-"}
+
+data: {"content":"blank"}
+
+data: {"content":":"}
+
+data: {"content":"  \n"}
+
+data: {"content":"_"}
+
+data: {"content":"好"}
+
+data: {"content":"！"}
+
+data: {"content":" ("}
+
+data: {"content":" ___"}
+
+data: {"content":" h"}
+
+data: {"content":"ǎ"}
+
+data: {"content":"o"}
+
+data: {"content":"!)"}
+
+data: {"content":" –"}
+
+data: {"content":" Hello"}
+
+data: {"content":"!"}
+
+data: {"content":"  \n"}
+
+data: {"content":"**"}
+
+data: {"content":"Options"}
+
+data: {"content":":**"}
+
+data: {"content":"  \n"}
+
+data: {"content":"a"}
+
+data: {"content":")"}
+
+data: {"content":" 他"}
+
+data: {"content":" ("}
+
+data: {"content":"t"}
+
+data: {"content":"ā"}
+
+data: {"content":")"}
+
+data: {"content":"  \n"}
+
+data: {"content":"b"}
+
+data: {"content":")"}
+
+data: {"content":" "}
+
+data: {"content":"你"}
+
+data: {"content":" ("}
+
+data: {"content":"n"}
+
+data: {"content":"ǐ"}
+
+data: {"content":")"}
+
+data: {"content":"  \n"}
+
+data: {"content":"c"}
+
+data: {"content":")"}
+
+data: {"content":" 她"}
+
+data: {"content":" ("}
+
+data: {"content":"t"}
+
+data: {"content":"ā"}
+
+data: {"content":")"}
+
+data: {"content":"  \n\n"}
+
+data: {"content":"---\n\n"}
+
+data: {"content":"###"}
+
+data: {"content":" **"}
+
+data: {"content":"Flash"}
+
+data: {"content":"card"}
+
+data: {"content":" "}
+
+data: {"content":"2"}
+
+data: {"content":":"}
+
+data: {"content":"**\n"}
+
+data: {"content":"**"}
+
+data: {"content":"Front"}
+
+data: {"content":":**"}
+
+data: {"content":" "}
+
+data: {"content":"早"}
+
+data: {"content":"上"}
+
+data: {"content":"好"}
+
+data: {"content":" ("}
+
+data: {"content":"z"}
+
+data: {"content":"ǎ"}
+
+data: {"content":"osh"}
+
+data: {"content":"àng"}
+
+data: {"content":" h"}
+
+data: {"content":"ǎ"}
+
+data: {"content":"o"}
+
+data: {"content":")"}
+
+data: {"content":"  \n"}
+
+data: {"content":"**"}
+
+data: {"content":"Back"}
+
+data: {"content":":**"}
+
+data: {"content":" Good"}
+
+data: {"content":" morning"}
+
+data: {"content":"  \n\n"}
+
+data: {"content":"**"}
+
+data: {"content":"Example"}
+
+data: {"content":":**"}
+
+data: {"content":"  \n"}
+
+data: {"content":"-"}
+
+data: {"content":" "}
+
+data: {"content":"早"}
+
+data: {"content":"上"}
+
+data: {"content":"好"}
+
+data: {"content":"！"}
+
+data: {"content":"("}
+
+data: {"content":"Z"}
+
+data: {"content":"ǎ"}
+
+data: {"content":"osh"}
+
+data: {"content":"àng"}
+
+data: {"content":" h"}
+
+data: {"content":"ǎ"}
+
+data: {"content":"o"}
+
+data: {"content":"!)"}
+
+data: {"content":" –"}
+
+data: {"content":" Good"}
+
+data: {"content":" morning"}
+
+data: {"content":"!"}
+
+data: {"content":"  \n"}
+
+data: {"content":"-"}
+
+data: {"content":" **"}
+
+data: {"content":"English"}
+
+data: {"content":" Translation"}
+
+data: {"content":":**"}
+
+data: {"content":" Good"}
+
+data: {"content":" morning"}
+
+data: {"content":"!"}
+
+data: {"content":"  \n\n"}
+
+data: {"content":"**"}
+
+data: {"content":"Audio"}
+
+data: {"content":" Pron"}
+
+data: {"content":"unciation"}
+
+data: {"content":":**"}
+
+data: {"content":" Listen"}
+
+data: {"content":" to"}
+
+data: {"content":" \""}
+
+data: {"content":"z"}
+
+data: {"content":"ǎ"}
+
+data: {"content":"osh"}
+
+data: {"content":"àng"}
+
+data: {"content":" h"}
+
+data: {"content":"ǎ"}
+
+data: {"content":"o"}
+
+data: {"content":".\"\n\n"}
+
+data: {"content":"**"}
+
+data: {"content":"Eng"}
+
+data: {"content":"agement"}
+
+data: {"content":" Activity"}
+
+data: {"content":":**"}
+
+data: {"content":"  \n"}
+
+data: {"content":"Match"}
+
+data: {"content":" the"}
+
+data: {"content":" correct"}
+
+data: {"content":" greeting"}
+
+data: {"content":":"}
+
+data: {"content":"  \n"}
+
+data: {"content":"1"}
+
+data: {"content":"."}
+
+data: {"content":" Good"}
+
+data: {"content":" morning"}
+
+data: {"content":":"}
+
+data: {"content":" a"}
+
+data: {"content":")"}
+
+data: {"content":" "}
+
+data: {"content":"你好"}
+
+data: {"content":" b"}
+
+data: {"content":")"}
+
+data: {"content":" "}
+
+data: {"content":"早"}
+
+data: {"content":"上"}
+
+data: {"content":"好"}
+
+data: {"content":" c"}
+
+data: {"content":")"}
+
+data: {"content":" 晚"}
+
+data: {"content":"上"}
+
+data: {"content":"好"}
+
+data: {"content":"  \n\n"}
+
+data: {"content":"---\n\n"}
+
+data: {"content":"###"}
+
+data: {"content":" **"}
+
+data: {"content":"Flash"}
+
+data: {"content":"card"}
+
+data: {"content":" "}
+
+data: {"content":"3"}
+
+data: {"content":":"}
+
+data: {"content":"**\n"}
+
+data: {"content":"**"}
+
+data: {"content":"Front"}
+
+data: {"content":":**"}
+
+data: {"content":" 晚"}
+
+data: {"content":"上"}
+
+data: {"content":"好"}
+
+data: {"content":" ("}
+
+data: {"content":"w"}
+
+data: {"content":"ǎ"}
+
+data: {"content":"n"}
+
+data: {"content":"sh"}
+
+data: {"content":"àng"}
+
+data: {"content":" h"}
+
+data: {"content":"ǎ"}
+
+data: {"content":"o"}
+
+data: {"content":")"}
+
+data: {"content":"  \n"}
+
+data: {"content":"**"}
+
+data: {"content":"Back"}
+
+data: {"content":":**"}
+
+data: {"content":" Good"}
+
+data: {"content":" evening"}
+
+data: {"content":"  \n\n"}
+
+data: {"content":"**"}
+
+data: {"content":"Example"}
+
+data: {"content":":**"}
+
+data: {"content":"  \n"}
+
+data: {"content":"-"}
+
+data: {"content":" "}
+
+data: {"content":"早"}
+
+data: {"content":"上"}
+
+data: {"content":"好"}
+
+data: {"content":"！"}
+
+data: {"content":"晚上"}
+
+data: {"content":"好"}
+
+data: {"content":"！"}
+
+data: {"content":"("}
+
+data: {"content":"Z"}
+
+data: {"content":"ǎ"}
+
+data: {"content":"osh"}
+
+data: {"content":"àng"}
+
+data: {"content":" h"}
+
+data: {"content":"ǎ"}
+
+data: {"content":"o"}
+
+data: {"content":"!"}
+
+data: {"content":" W"}
+
+data: {"content":"ǎ"}
+
+data: {"content":"n"}
+
+data: {"content":"sh"}
+
+data: {"content":"àng"}
+
+data: {"content":" h"}
+
+data: {"content":"ǎ"}
+
+data: {"content":"o"}
+
+data: {"content":"!)"}
+
+data: {"content":" –"}
+
+data: {"content":" Good"}
+
+data: {"content":" morning"}
+
+data: {"content":"!"}
+
+data: {"content":" Good"}
+
+data: {"content":" evening"}
+
+data: {"content":"!"}
+
+data: {"content":"  \n"}
+
+data: {"content":"-"}
+
+data: {"content":" **"}
+
+data: {"content":"English"}
+
+data: {"content":" Translation"}
+
+data: {"content":":**"}
+
+data: {"content":" Good"}
+
+data: {"content":" morning"}
+
+data: {"content":"!"}
+
+data: {"content":" Good"}
+
+data: {"content":" evening"}
+
+data: {"content":"!"}
+
+data: {"content":"  \n\n"}
+
+data: {"content":"**"}
+
+data: {"content":"Audio"}
+
+data: {"content":" Pron"}
+
+data: {"content":"unciation"}
+
+data: {"content":":**"}
+
+data: {"content":" Play"}
+
+data: {"content":" \""}
+
+data: {"content":"w"}
+
+data: {"content":"ǎ"}
+
+data: {"content":"n"}
+
+data: {"content":"sh"}
+
+data: {"content":"àng"}
+
+data: {"content":" h"}
+
+data: {"content":"ǎ"}
+
+data: {"content":"o"}
+
+data: {"content":".\"\n\n"}
+
+data: {"content":"**"}
+
+data: {"content":"Eng"}
+
+data: {"content":"agement"}
+
+data: {"content":" Activity"}
+
+data: {"content":":**"}
+
+data: {"content":"  \n"}
+
+data: {"content":"Sentence"}
+
+data: {"content":" reorder"}
+
+data: {"content":":"}
+
+data: {"content":"  \n"}
+
+data: {"content":"Arrange"}
+
+data: {"content":" the"}
+
+data: {"content":" words"}
+
+data: {"content":":"}
+
+data: {"content":" w"}
+
+data: {"content":"ǎ"}
+
+data: {"content":"n"}
+
+data: {"content":"sh"}
+
+data: {"content":"àng"}
+
+data: {"content":" /"}
+
+data: {"content":" h"}
+
+data: {"content":"ǎ"}
+
+data: {"content":"o"}
+
+data: {"content":" /"}
+
+data: {"content":" z"}
+
+data: {"content":"ǎ"}
+
+data: {"content":"osh"}
+
+data: {"content":"àng"}
+
+data: {"content":"?"}
+
+data: {"content":"   \n\n"}
+
+data: {"content":"Correct"}
+
+data: {"content":":"}
+
+data: {"content":" "}
+
+data: {}
+
