@@ -1,30 +1,24 @@
-## summary
-Reasons for Inconsistent Volume in Mixed Audio<br>
----<br>
-Explanation: 
-1. **Dynamic Range Variability**<br>
-   The dynamic range is the difference between the quietest and loudest parts of the audio signal. If different tracks in a mix have varying dynamic ranges, the overall volume can seem inconsistent. For instance, a vocal track with a wide dynamic range may be softer than a heavily compressed drum track. To manage this, **compression** can be applied to reduce the dynamic range of certain tracks, making the quieter parts louder and softening the louder parts.
-
-2. **Lack of Proper Mixing Techniques**<br>
-   Mixing techniques such as **panning**, **level balancing**, and **equalization** play a crucial role. If elements are not balanced correctly, where some elements are too loud compared to others, it can create a perceived inconsistency in volume. Applying appropriate **fader adjustments** and using **reference tracks** can help maintain a uniform volume level across the mix.
-
-3. **Effects Processing**<br>
-   The use of audio effects, such as **reverb**, **delay**, or other processing tools, may alter the perceived loudness of a track. For example, adding a lot of reverb can make a sound seem quieter because it stretches the sound over time and space. Using **wet/dry mix levels** helps to balance the effect with the original signal.
-
-4. **Recording Levels**<br>
-   When tracks are recorded, improper gain staging can lead to issues down the line. If some tracks are recorded too hot (too loud) while others are too quiet, inconsistencies can arise in the final mix. To avoid this, ensure that each track is recorded at an appropriate level, generally keeping peaks at around -6 dB to -12 dB.
-
-5. **Volume Automation**<br>
-   If volume automation is applied incorrectly or not at all, sections of the audio may end up sounding out of place in terms of volume. Automating the volume levels throughout the mix can help to keep a consistent loudness by adjusting levels in real time.
-
-6. **Mastering Issues**<br>
-   Finally, if the final master of the track is not properly polished, it can lead to fluctuations in volume. Mastering involves preparing the final mix for distribution, ensuring that it meets industry loudness standards and that volume levels are consistent throughout the track. 
-
----<br>
-Example: If you have a project in a Digital Audio Workstation (DAW) like Ableton or Pro Tools, you could automate the volume level of a vocal track to ensure it stays consistent with the instrumental throughout the song, reducing moments where it gets too quiet compared to other elements in the mix.
-<br>
----<br>
-## References:
-## https://www.soundonsound.com/techniques/dynamic-range-and-dynamics-podcast## 
-## https://www.masteringacademy.com/## 
-## https://www.tunecore.com/blog/2019/01/five-tips-to-achieve-consistent-volume-in-your-music-mix.html##
+## Summary: Audio Inconsistency in Volume with FFmpeg amix Filter <br>
+---
+**Explanation:**<br>
+1. **Volume Normalization Issue**<br>
+The `amix` filter in FFmpeg can cause inconsistencies in volume when mixing multiple audio inputs. This happens because the filter normalizes the volume of each input based on the number of active inputs. As inputs drop out, the volume of the remaining inputs increases, leading to inconsistent volume levels.<br>
+---
+2. **Duration Mismatch**<br>
+When the input files have different durations, the `amix` filter may not handle the volume levels correctly. The volume of the first mixed stream may be lower, while the last one is higher. This is because the filter scales each input's volume by 1/n, where n is the number of active inputs.<br>
+---
+3. **Solution: Normalize Parameter**<br>
+To address this issue, you can use the `normalize` parameter in the `amix` filter. This parameter turns off the constantly changing normalization, ensuring consistent volume levels across all inputs. For example, you can modify your `amix` filter string to include `normalize=0`.<br>
+---
+**Example:**<br>
+Here's an example command to mix multiple audio inputs with consistent volume levels using the `normalize` parameter:<br>
+```bash
+ffmpeg -i input1.mp3 -i input2.mp3 -i input3.mp3 -filter_complex "[0:a]adelay=1000|1000[a0]; [1:a]adelay=2000|2000[a1]; [2:a]adelay=3000|3000[a2]; [a0][a1][a2]amix=inputs=3:normalize=0" -c:a output.mp3
+```
+In this command:
+- `adelay` is used to delay the start of each input to align them.
+- `amix=inputs=3:normalize=0` ensures that the volume levels remain consistent across all inputs.<br>
+---
+**References:**<br>
+## https://stackoverflow.com/questions/35509147/ffmpeg-amix-filter-volume-issue-with-inputs-of-different-duration ##<br>
+## https://www.reddit.com/r/ffmpeg/comments/d63fki/preventing_amixs_volume_normalization_issue/ ##<br>
