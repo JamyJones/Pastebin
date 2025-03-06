@@ -1,8 +1,8 @@
 > Task :app:preDebugBuild UP-TO-DATE
 > Task :app:compileDebugAidl NO-SOURCE
 > Task :app:compileDebugRenderscript NO-SOURCE
-> Task :app:dataBindingMergeDependencyArtifactsDebug
 > Task :app:dataBindingMergeGenClassesDebug
+> Task :app:dataBindingMergeDependencyArtifactsDebug
 > Task :app:generateDebugResValues
 > Task :app:generateDebugResources
 > Task :app:generateDebugBuildConfig
@@ -20,33 +20,96 @@
 > Task :app:generateDebugAssets UP-TO-DATE
 > Task :app:mergeDebugAssets
 > Task :app:compressDebugAssets
-> Task :app:processDebugManifestForPackage
 > Task :app:processDebugJavaRes NO-SOURCE
+> Task :app:processDebugManifestForPackage
 > Task :app:checkDebugDuplicateClasses
 > Task :app:desugarDebugFileDependencies
-> Task :app:processDebugResources FAILED
 > Task :app:mergeDebugJavaResource
+> Task :app:processDebugResources
 > Task :app:mergeExtDexDebug
+> Task :app:compileDebugJavaWithJavac
+> Task :app:compileDebugSources
+> Task :app:mergeLibDexDebug
+> Task :app:dexBuilderDebug
+> Task :app:mergeDebugJniLibFolders
+> Task :app:mergeProjectDexDebug
+> Task :app:mergeDebugNativeLibs
+> Task :app:validateSigningDebug
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:preReleaseBuild UP-TO-DATE
+> Task :app:compileReleaseAidl NO-SOURCE
+> Task :app:compileReleaseRenderscript NO-SOURCE
+> Task :app:dataBindingMergeDependencyArtifactsRelease
+> Task :app:dataBindingMergeGenClassesRelease
+> Task :app:generateReleaseResValues
+> Task :app:generateReleaseResources
+> Task :app:generateReleaseBuildConfig
+> Task :app:javaPreCompileRelease
+> Task :app:writeReleaseApplicationId
+> Task :app:analyticsRecordingRelease
+> Task :app:checkReleaseAarMetadata
+> Task :app:createReleaseCompatibleScreenManifests
+> Task :app:extractDeepLinksRelease
+> Task :app:processReleaseMainManifest
+> Task :app:processReleaseManifest
+> Task :app:packageDebug
+> Task :app:assembleDebug
+> Task :app:processReleaseManifestForPackage
+> Task :app:mergeReleaseJniLibFolders
+> Task :app:mergeReleaseNativeLibs
+> Task :app:mergeReleaseShaders
+> Task :app:stripReleaseDebugSymbols NO-SOURCE
+> Task :app:extractReleaseNativeSymbolTables NO-SOURCE
+> Task :app:mergeReleaseNativeDebugMetadata NO-SOURCE
+> Task :app:compileReleaseShaders NO-SOURCE
+> Task :app:generateReleaseAssets UP-TO-DATE
+> Task :app:mergeReleaseAssets
+> Task :app:compressReleaseAssets
+> Task :app:checkReleaseDuplicateClasses
+> Task :app:desugarReleaseFileDependencies
+> Task :app:processReleaseJavaRes NO-SOURCE
+> Task :app:mergeReleaseJavaResource
+> Task :app:mergeReleaseResources
+> Task :app:mergeExtDexRelease
+> Task :app:collectReleaseDependencies
+> Task :app:dataBindingGenBaseClassesRelease
+> Task :app:sdkReleaseDependencyData
+> Task :app:writeReleaseAppMetadata
+> Task :app:writeReleaseSigningConfigVersions
+> Task :app:preDebugUnitTestBuild UP-TO-DATE
+> Task :app:processDebugUnitTestJavaRes NO-SOURCE
+> Task :app:preReleaseUnitTestBuild UP-TO-DATE
+> Task :app:javaPreCompileDebugUnitTest
+> Task :app:bundleDebugClasses
+> Task :app:processReleaseResources
+> Task :app:javaPreCompileReleaseUnitTest
+> Task :app:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :app:compileReleaseJavaWithJavac
+> Task :app:compileReleaseSources
+> Task :app:lintVitalRelease SKIPPED
+> Task :app:dexBuilderRelease
+> Task :app:mergeDexRelease
 
-FAILURE: Build failed with an exception.
+> Task :app:lint
+Ran lint on variant debug: 18 issues found
+Ran lint on variant release: 18 issues found
+Wrote HTML report to file:///home/runner/work/Heavy-runner/Heavy-runner/app/build/reports/lint-results.html
+Wrote XML report to file:///home/runner/work/Heavy-runner/Heavy-runner/app/build/reports/lint-results.xml
 
-* What went wrong:
-Execution failed for task ':app:processDebugResources'.
-> A failure occurred while executing com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$TaskAction
-   > Android resource linking failed
-     ERROR:/home/runner/work/Heavy-runner/Heavy-runner/app/src/main/res/layout-land/activity_main.xml:45: AAPT: error: '@value/imgBtn_h' is incompatible with attribute layout_height (attr) dimension|enum [fill_parent=4294967295, match_parent=4294967295, wrap_content=4294967294].
-         
-     ERROR:/home/runner/work/Heavy-runner/Heavy-runner/app/src/main/res/layout-land/activity_main.xml:45: AAPT: error: '@value/imgBtn_w' is incompatible with attribute layout_width (attr) dimension|enum [fill_parent=4294967295, match_parent=4294967295, wrap_content=4294967294].
-         
-     ERROR:/home/runner/work/Heavy-runner/Heavy-runner/app/src/main/res/layout-land/activity_main.xml:52: AAPT: error: '@value/imgBtn_h' is incompatible with attribute layout_height (attr) dimension|enum [fill_parent=4294967295, match_parent=4294967295, wrap_content=4294967294].
-         
-     ERROR:/home/runner/work/Heavy-runner/Heavy-runner/app/src/main/res/layout-land/activity_main.xml:52: AAPT: error: '@value/imgBtn_w' is incompatible with attribute layout_width (attr) dimension|enum [fill_parent=4294967295, match_parent=4294967295, wrap_content=4294967294].
-         
+> Task :app:testDebugUnitTest NO-SOURCE
+> Task :app:processReleaseUnitTestJavaRes NO-SOURCE
+> Task :app:bundleReleaseClasses
+> Task :app:compileReleaseUnitTestJavaWithJavac NO-SOURCE
+> Task :app:testReleaseUnitTest NO-SOURCE
+> Task :app:optimizeReleaseResources
+> Task :app:test UP-TO-DATE
+> Task :app:check
+> Task :app:packageRelease
+> Task :app:assembleRelease
+> Task :app:assemble
+> Task :app:build
 
-* Try:
-Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
-
-* Get more help at https://help.gradle.org
-
-BUILD FAILED in 16s
-21 actionable tasks: 21 executed
+BUILD SUCCESSFUL in 21s
+70 actionable tasks: 70 executed
