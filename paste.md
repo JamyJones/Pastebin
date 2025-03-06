@@ -1,50 +1,58 @@
-## Summary: Causes of Volume Change in FFmpeg
+## Summary: Changing Volume with FFmpeg
 
 ---
 
-### Explanation:
+**Explanation:**
 
-**1. Volume Filter Usage**
-- FFmpeg uses the `volume` filter to adjust audio levels. This filter allows you to increase or decrease the volume of an audio stream by specifying a multiplier or decibel value.
-- For example:
-  ```bash
-  ffmpeg -i input.wav -filter:a "volume=1.5" output.wav
-  ```
-  Here, `volume=1.5` increases the volume by 50%.
+**1. Volume Filter:**
+FFmpeg uses the `volume` filter to adjust the audio volume. This filter allows you to increase or decrease the volume by specifying a multiplier or decibel value.
 
----
-
-**2. Encoding and Re-encoding**
-- When you apply the `volume` filter, FFmpeg re-encodes the audio stream. This process can lead to changes in the file size, bitrate, or quality, depending on the encoding settings.
-- If you want to avoid re-encoding, you can use the `-c:a copy` option, but this will not allow volume adjustments.
-
----
-
-**3. Normalization and Loudness**
-- FFmpeg provides tools for normalizing audio, such as the `loudnorm` filter, which adjusts the perceived loudness of the audio to meet specific standards (e.g., EBU R128).
-- Example:
-  ```bash
-  ffmpeg -i input.wav -filter:a loudnorm output.wav
-  ```
-
----
-
-**4. File Format and Codec Limitations**
-- Some audio formats or codecs may not support certain volume adjustments. Ensure that the chosen codec is compatible with the desired changes.
-
----
-
-### Example:
-
-To reduce the volume by 5 decibels:
+**Example:**
 ```bash
-ffmpeg -i input.wav -filter:a "volume=-5dB" output.wav
+ffmpeg -i input.wav -filter:a "volume=0.5" output.wav
 ```
+This command reduces the volume to 50% of the original.
 
 ---
 
-### References:
-## https://trac.ffmpeg.org/wiki/AudioVolume ##
-## https://stackoverflow.com/questions/30188217/how-to-manage-volume-using-ffmpeg ##
+**2. Decibel Adjustment:**
+You can also adjust the volume using decibels. Positive values increase the volume, while negative values decrease it.
 
-Let me know if you'd like further clarification or assistance!
+**Example:**
+```bash
+ffmpeg -i input.wav -filter:a "volume=10dB" output.wav
+```
+This command increases the volume by 10 decibels.
+
+---
+
+**3. Normalization:**
+Normalization adjusts the volume to a standard level. FFmpeg provides filters like `volumedetect` and `loudnorm` for this purpose.
+
+**Example:**
+```bash
+ffmpeg -i input.wav -filter:a volumedetect -f null /dev/null
+```
+This command analyzes the audio file to detect its volume levels.
+
+---
+
+**4. No Re-encoding:**
+To change the volume without re-encoding the video, use the `-c:v copy` option.
+
+**Example:**
+```bash
+ffmpeg -i input.mp4 -af "volume=0.5" -c:v copy output.mp4
+```
+This command adjusts the audio volume while keeping the video stream unchanged.
+
+---
+
+**References:**
+## https://trac.ffmpeg.org/wiki/AudioVolume ##
+## https://stackoverflow.com/questions/60257883/is-it-possible-to-change-volume-with-no-reencode-with-ffmpeg ##
+## https://creatomate.com/blog/how-to-change-the-volume-of-a-media-file-using-ffmpeg ##
+
+---
+
+I hope this helps! If you have any more questions or need further clarification, feel free to ask.
