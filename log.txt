@@ -1,8 +1,8 @@
 > Task :app:preDebugBuild UP-TO-DATE
 > Task :app:compileDebugAidl NO-SOURCE
 > Task :app:compileDebugRenderscript NO-SOURCE
-> Task :app:dataBindingMergeGenClassesDebug
 > Task :app:dataBindingMergeDependencyArtifactsDebug
+> Task :app:dataBindingMergeGenClassesDebug
 > Task :app:generateDebugResValues
 > Task :app:generateDebugResources
 > Task :app:generateDebugBuildConfig
@@ -21,20 +21,19 @@
 > Task :app:mergeDebugAssets
 > Task :app:compressDebugAssets
 > Task :app:processDebugJavaRes NO-SOURCE
-> Task :app:processDebugManifestForPackage
 > Task :app:checkDebugDuplicateClasses
-> Task :app:desugarDebugFileDependencies
 > Task :app:mergeDebugJavaResource
+> Task :app:desugarDebugFileDependencies
+> Task :app:processDebugManifestForPackage
+> Task :app:mergeDebugJniLibFolders
+> Task :app:mergeLibDexDebug
+> Task :app:mergeDebugNativeLibs
 > Task :app:processDebugResources
 > Task :app:mergeExtDexDebug
+> Task :app:validateSigningDebug
 > Task :app:compileDebugJavaWithJavac
 > Task :app:compileDebugSources
-> Task :app:mergeLibDexDebug
 > Task :app:dexBuilderDebug
-> Task :app:mergeDebugJniLibFolders
-> Task :app:mergeProjectDexDebug
-> Task :app:mergeDebugNativeLibs
-> Task :app:validateSigningDebug
 > Task :app:stripDebugDebugSymbols NO-SOURCE
 > Task :app:writeDebugAppMetadata
 > Task :app:writeDebugSigningConfigVersions
@@ -45,6 +44,7 @@
 > Task :app:dataBindingMergeGenClassesRelease
 > Task :app:generateReleaseResValues
 > Task :app:generateReleaseResources
+> Task :app:mergeProjectDexDebug
 > Task :app:generateReleaseBuildConfig
 > Task :app:javaPreCompileRelease
 > Task :app:writeReleaseApplicationId
@@ -54,42 +54,35 @@
 > Task :app:extractDeepLinksRelease
 > Task :app:processReleaseMainManifest
 > Task :app:processReleaseManifest
-> Task :app:packageDebug
-> Task :app:assembleDebug
-> Task :app:processReleaseManifestForPackage
 > Task :app:mergeReleaseJniLibFolders
-> Task :app:mergeReleaseNativeLibs
+> Task :app:processReleaseManifestForPackage
 > Task :app:mergeReleaseShaders
+> Task :app:compileReleaseShaders NO-SOURCE
+> Task :app:generateReleaseAssets UP-TO-DATE
+> Task :app:mergeReleaseNativeLibs
+> Task :app:mergeReleaseAssets
 > Task :app:stripReleaseDebugSymbols NO-SOURCE
 > Task :app:extractReleaseNativeSymbolTables NO-SOURCE
 > Task :app:mergeReleaseNativeDebugMetadata NO-SOURCE
-> Task :app:compileReleaseShaders NO-SOURCE
-> Task :app:generateReleaseAssets UP-TO-DATE
-> Task :app:mergeReleaseAssets
 > Task :app:compressReleaseAssets
 > Task :app:checkReleaseDuplicateClasses
 > Task :app:desugarReleaseFileDependencies
+> Task :app:mergeReleaseResources
+> Task :app:packageDebug
+> Task :app:assembleDebug
+> Task :app:dataBindingGenBaseClassesRelease
+> Task :app:mergeExtDexRelease
 > Task :app:processReleaseJavaRes NO-SOURCE
 > Task :app:mergeReleaseJavaResource
-> Task :app:mergeReleaseResources
-> Task :app:mergeExtDexRelease
 > Task :app:collectReleaseDependencies
-> Task :app:dataBindingGenBaseClassesRelease
-> Task :app:sdkReleaseDependencyData
-> Task :app:writeReleaseAppMetadata
-> Task :app:writeReleaseSigningConfigVersions
-> Task :app:preDebugUnitTestBuild UP-TO-DATE
-> Task :app:processDebugUnitTestJavaRes NO-SOURCE
-> Task :app:preReleaseUnitTestBuild UP-TO-DATE
-> Task :app:javaPreCompileDebugUnitTest
-> Task :app:bundleDebugClasses
 > Task :app:processReleaseResources
-> Task :app:javaPreCompileReleaseUnitTest
-> Task :app:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :app:sdkReleaseDependencyData
 > Task :app:compileReleaseJavaWithJavac
 > Task :app:compileReleaseSources
 > Task :app:lintVitalRelease SKIPPED
 > Task :app:dexBuilderRelease
+> Task :app:writeReleaseAppMetadata
+> Task :app:writeReleaseSigningConfigVersions
 > Task :app:mergeDexRelease
 
 > Task :app:lint
@@ -98,12 +91,19 @@ Ran lint on variant release: 18 issues found
 Wrote HTML report to file:///home/runner/work/Heavy-runner/Heavy-runner/app/build/reports/lint-results.html
 Wrote XML report to file:///home/runner/work/Heavy-runner/Heavy-runner/app/build/reports/lint-results.xml
 
-> Task :app:testDebugUnitTest NO-SOURCE
-> Task :app:processReleaseUnitTestJavaRes NO-SOURCE
+> Task :app:preDebugUnitTestBuild UP-TO-DATE
+> Task :app:processDebugUnitTestJavaRes NO-SOURCE
+> Task :app:javaPreCompileDebugUnitTest
+> Task :app:bundleDebugClasses
+> Task :app:preReleaseUnitTestBuild UP-TO-DATE
 > Task :app:bundleReleaseClasses
+> Task :app:processReleaseUnitTestJavaRes NO-SOURCE
+> Task :app:javaPreCompileReleaseUnitTest
 > Task :app:compileReleaseUnitTestJavaWithJavac NO-SOURCE
 > Task :app:testReleaseUnitTest NO-SOURCE
 > Task :app:optimizeReleaseResources
+> Task :app:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :app:testDebugUnitTest NO-SOURCE
 > Task :app:test UP-TO-DATE
 > Task :app:check
 > Task :app:packageRelease
@@ -111,5 +111,5 @@ Wrote XML report to file:///home/runner/work/Heavy-runner/Heavy-runner/app/build
 > Task :app:assemble
 > Task :app:build
 
-BUILD SUCCESSFUL in 21s
+BUILD SUCCESSFUL in 23s
 70 actionable tasks: 70 executed
