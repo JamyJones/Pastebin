@@ -1,8 +1,8 @@
 > Task :app:preDebugBuild UP-TO-DATE
 > Task :app:compileDebugAidl NO-SOURCE
 > Task :app:compileDebugRenderscript NO-SOURCE
-> Task :app:dataBindingMergeGenClassesDebug
 > Task :app:dataBindingMergeDependencyArtifactsDebug
+> Task :app:dataBindingMergeGenClassesDebug
 > Task :app:generateDebugResValues
 > Task :app:generateDebugResources
 > Task :app:generateDebugBuildConfig
@@ -20,12 +20,12 @@
 > Task :app:generateDebugAssets UP-TO-DATE
 > Task :app:mergeDebugAssets
 > Task :app:compressDebugAssets
-> Task :app:processDebugJavaRes NO-SOURCE
 > Task :app:processDebugManifestForPackage
+> Task :app:processDebugJavaRes NO-SOURCE
 > Task :app:checkDebugDuplicateClasses
-> Task :app:mergeDebugJavaResource
 > Task :app:desugarDebugFileDependencies
 > Task :app:processDebugResources FAILED
+> Task :app:mergeDebugJavaResource
 > Task :app:mergeExtDexDebug
 
 FAILURE: Build failed with an exception.
@@ -48,5 +48,5 @@ Run with --stacktrace option to get the stack trace. Run with --info or --debug 
 
 * Get more help at https://help.gradle.org
 
-BUILD FAILED in 15s
+BUILD FAILED in 16s
 21 actionable tasks: 21 executed
