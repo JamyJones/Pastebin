@@ -1,44 +1,39 @@
-The symbol `__aeabi_memcpy` is typically associated with ARM architecture and is part of the ARM EABI (Embedded Application Binary Interface). This symbol is often found in libraries that provide low-level memory manipulation functions, such as the C standard library (libc) or specific runtime libraries for embedded systems.
+## Summary
+Understanding the output of the command `nm -D libc.so | grep __aeabi_memcpy`
 
-### Finding the Library
+### Explanation:
+The command you ran is used to list symbols from the shared library `libc.so` and filter the results for the `__aeabi_memcpy` symbols. Here’s a breakdown of the command and its output:
 
-1. **Check Existing Libraries**: You can use the `nm` command to search for the symbol in your existing libraries. For example, you can check the standard C library (glibc) or any other libraries you suspect might contain it:
+1. **Command Breakdown**:
+   - `nm`: This command is used to list symbols from object files. In this case, it’s being used on a shared library (`libc.so`).
+   - `-D`: This option tells `nm` to display dynamic symbols, which are used for dynamic linking.
+   - `libc.so`: This is the standard C library in Linux, which contains essential functions for C programming.
+   - `|`: This is a pipe that takes the output of the command on the left (`nm -D libc.so`) and uses it as input for the command on the right (`grep __aeabi_memcpy`).
+   - `grep __aeabi_memcpy`: This filters the output to show only lines that contain the string `__aeabi_memcpy`.
 
-   ```bash
-   nm -D /path/to/library.so | grep __aeabi_memcpy
-   ```
+2. **Output Explanation**:
+   - The output you received consists of two types of symbols: `W` and `T`.
+     - `W`: This indicates a weak symbol. Weak symbols can be overridden by strong symbols of the same name. In your output, `__aeabi_memcpy`, `__aeabi_memcpy4`, and `__aeabi_memcpy8` are weak symbols.
+     - `T`: This indicates a global symbol that is in the text (code) section of the library. The symbols `__aeabi_memcpy`, `__aeabi_memcpy4`, and `__aeabi_memcpy8` are defined here as global functions.
 
-   Replace `/path/to/library.so` with the actual path to the libraries you want to check, such as `/lib/arm-linux-gnueabi/libc.so.6` or similar.
+3. **Symbol Functions**:
+   - `__aeabi_memcpy`: This is a function used for memory copying in ARM architecture. It is part of the ABI (Application Binary Interface) for ARM and is optimized for performance.
+   - The suffixes `4` and `8` indicate that these functions are optimized for copying 4-byte and 8-byte data types, respectively.
 
-2. **Using `find` and `grep`**: If you want to search through all libraries in a directory, you can use:
+### Example:
+If you were to use these functions in your code, you might see something like this:
+```c
+#include <string.h>
 
-   ```bash
-   find /lib /usr/lib -name "*.so*" -exec nm -D {} \; | grep __aeabi_memcpy
-   ```
+void example() {
+    char src[10] = "Hello";
+    char dest[10];
+    __aeabi_memcpy(dest, src, 6); // Copies 6 bytes from src to dest
+}
+```
+In this example, `__aeabi_memcpy` is used to copy data from `src` to `dest`.
 
-### Adding the Library
-
-If you find that the library containing `__aeabi_memcpy` is not present on your system, you may need to install the appropriate library. Here are some steps you can take:
-
-1. **Install the Required Packages**: If you are working on an ARM-based system, you may need to install the ARM version of glibc or other relevant libraries. You can use your package manager (like `apt`, `yum`, or `pacman`) to install the necessary packages.
-
-   For example, on a Debian-based system, you might run:
-
-   ```bash
-   sudo apt-get install libc6-armel
-   ```
-
-2. **Cross-Compiling**: If you are developing for an ARM target on a different architecture (like x86), you may need to set up a cross-compilation environment. This often involves installing a cross-compiler and the corresponding libraries.
-
-3. **Using `patchelf`**: If you have multiple versions of glibc or other libraries, you can use `patchelf` to change the dynamic linker or library paths for your executable. This allows you to specify which version of the library to use.
-
-   Example usage of `patchelf`:
-
-   ```bash
-   patchelf --set-interpreter /path/to/your/ld-linux-armhf.so.3 your_executable
-   patchelf --set-rpath /path/to/your/libs your_executable
-   ```
-
-### Conclusion
-
-To resolve the `CANNOT LINK EXECUTABLE: cannot locate symbol "__aeabi_memcpy"` error, you need to ensure that the library containing this symbol is available on your system. You can search for it using `nm`, install the necessary packages, or use `patchelf` to adjust the library paths if you have multiple versions. If you are cross-compiling, ensure that you have the correct libraries for your target architecture.
+### References:
+## https://man7.org/linux/man-pages/man1/nm.1.html
+## https://en.wikipedia.org/wiki/AABI
+## https://www.arm.com/architecture/abi
