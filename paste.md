@@ -1,20 +1,41 @@
-The output you provided shows the symbol table entries for the `__aeabi_memcpy`, `__aeabi_memcpy4`, and `__aeabi_memcpy8` functions from two different versions of the `libc.so` library: one from your system and one from a new version you downloaded.
-
-Here's a breakdown of the output:
-
-1. **Symbol Types**:
-   - `W`: This indicates that the symbol is a weak symbol. Weak symbols can be overridden by strong symbols of the same name. In your system's `libc.so`, the `__aeabi_memcpy`, `__aeabi_memcpy4`, and `__aeabi_memcpy8` functions are weak symbols.
-   - `T`: This indicates that the symbol is a strong symbol (defined in the text (code) section). In the new `libc.so`, the same functions are strong symbols.
-
-2. **Addresses**:
-   - The addresses (e.g., `000175d6` and `0000cabe`) indicate where these functions are located in memory. The addresses are different between the two libraries, which is expected since they are different versions.
-
-3. **Implications**:
-   - The presence of weak symbols in the system's `libc.so` means that if there are any strong definitions of these functions in other libraries or object files, those strong definitions will take precedence.
-   - The new `libc.so` has strong definitions for these functions, which means that if you link against this new library, it will use these implementations instead of any weak versions that might be present in other libraries.
-
-4. **Considerations**:
-   - If you are considering replacing the system's `libc.so` with the new version, be cautious. `libc.so` is a core component of the system, and replacing it can lead to compatibility issues with existing binaries and libraries that expect the original version.
-   - Make sure to test thoroughly in a safe environment (like a virtual machine or container) before deploying any changes to a production system.
-
-If you have specific questions about the implications of these changes or how to proceed, feel free to ask!
+## Summary: Using `patchelf` to Change the Interpreter/Linker for `libc.so` <br>
+---<br>
+Explanation:<br>
+1<br>
+To change the interpreter/linker for a given shared library (`.so`) to refer to the new `libc.so`, you can use the `patchelf` tool. `patchelf` is a utility for modifying ELF binaries. It allows you to change the interpreter, RPATH, and other properties of ELF binaries.<br>
+---<br>
+2<br>
+First, ensure you have `patchelf` installed on your system. You can install it using your package manager. For example, on a Debian-based system, you can use:<br>
+```bash
+sudo apt-get install patchelf
+```
+---<br>
+3<br>
+Next, use the `patchelf` command with the `--set-interpreter` option to change the interpreter for your shared library. The interpreter is typically the dynamic linker (`ld-linux.so`). Here is the command to change the interpreter to use the new `libc.so`:<br>
+```bash
+patchelf --set-interpreter /path/to/new/libc.so /path/to/your/shared/library.so
+```
+Replace `/path/to/new/libc.so` with the actual path to your new `libc.so` file and `/path/to/your/shared/library.so` with the path to your shared library.<br>
+---<br>
+4<br>
+After running the command, you can verify the change by using the `ldd` command to check the dependencies of your shared library:<br>
+```bash
+ldd /path/to/your/shared/library.so
+```
+This should show the new `libc.so` as the interpreter.<br>
+---<br>
+Example:<br>
+Suppose you have a shared library `libexample.so` and you want to change its interpreter to a new `libc.so` located at `/home/user/new_libc.so`. You would run the following command:<br>
+```bash
+patchelf --set-interpreter /home/user/new_libc.so /home/user/libexample.so
+```
+Then, verify the change with:<br>
+```bash
+ldd /home/user/libexample.so
+```
+---<br>
+References:<br>
+##https://stackoverflow.com/questions/59549978/how-to-use-patchelf-with-set-interpreter##<br>
+##https://stackoverflow.com/questions/847179/multiple-glibc-libraries-on-a-single-host##<br>
+##https://stackoverflow.com/questions/38590573/forcing-elf-binary-to-use-another-libc-so##<br>
+##https://unix.stackexchange.com/questions/122670/using-alternate-libc-with-ld-linux-so-hacks-cleaner-method##<br>
