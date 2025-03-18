@@ -1,3 +1,3 @@
-Chinese translation: 你好，我叫约翰·德尔文，我是中国的新来者，想了解中国的商业如何运作。我也是学习计算机科学的学生，我也希望交中国朋友。好的，再见！  
-Pronunciation: Nǐ hǎo, wǒ jiào Yuēhàn·Dé'ěrwén, wǒ shì Zhōngguó de xīn lái zhě, xiǎng liǎojiě Zhōngguó de shāngyè rúhé yùnzuò. Wǒ yě shì xuéxí jìsuànjī kēxué de xuéshēng, wǒ yě xīwàng jiāo Zhōngguó péngyǒu. Hǎo de, zàijiàn!  
-English translation: Hello, my name is John Delvin, I am new to China and would like to learn how Chinese businesses work. I am also a student studying computer science, and I wish to make Chinese friends too. Ok, bye!
+Chinese translation: 你喜欢酒吗？  
+Pronunciation: Nǐ xǐhuān jiǔ ma?  
+English translation: Do you like alcohol?  
