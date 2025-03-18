@@ -1,3 +1,3 @@
-Chinese translation: 你儿子喜欢猪肉吗？  
-Pronunciation: Nǐ érzi xǐhuān zhūròu ma?  
-English translation: Does your son like pork?  
+Chinese translation: 我妈妈喜欢芒果。  
+Pronunciation: Wǒ māmā xǐhuān mángguǒ.  
+English translation: My mom likes mangos.
