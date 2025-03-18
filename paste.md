@@ -1,1 +1,1 @@
-Understood! Please specify the word count for the sentences, and I will generate them accordingly.
+Sure! I’d be happy to help you create programming practice challenges. Please let me know which programming language you’d like to focus on and the specific concept you want to master. Once I have that information, I can provide you with a set of challenges that progressively increase in difficulty. Looking forward to your response!
