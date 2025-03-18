@@ -1,3 +1,3 @@
-Chinese translation: 非洲人在非洲  
-Pronunciation: Fēi zhōu rén zài Fēi zhōu  
-English translation: African in Africa  
+Chinese translation: 帮助  
+Pronunciation: Bāng zhù  
+English translation: Help  
