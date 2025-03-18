@@ -1,3 +1,3 @@
-Chinese translation: 你  
-Pronunciation: Nǐ  
-English translation: You  
+Chinese translation: 是  
+Pronunciation: Shì  
+English translation: is
