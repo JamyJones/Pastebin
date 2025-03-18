@@ -1,3 +1,3 @@
-Chinese translation: 是  
-Pronunciation: Shì  
-English translation: is
+**Chinese translation:** 是  
+**Pronunciation:** Shì  
+**English translation:** Is  
