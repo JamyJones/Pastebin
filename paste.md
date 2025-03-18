@@ -1,3 +1,3 @@
-Chinese translation: 你喜欢酒吗？  
-Pronunciation: Nǐ xǐhuān jiǔ ma?  
-English translation: Do you like alcohol?  
+Chinese translation: 你女儿喜欢桃子吗？  
+Pronunciation: Nǐ nǚ'ér xǐhuān táozi ma?  
+English translation: Does your daughter like peaches?  
