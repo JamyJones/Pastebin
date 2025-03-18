@@ -1,3 +1,3 @@
-Chinese translation: 我爱你  
-Pronunciation: Wǒ ài nǐ  
-English translation: I love you  
+Chinese translation: 我  
+Pronunciation: Wǒ  
+English translation: I  
