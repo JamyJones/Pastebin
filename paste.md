@@ -1,3 +1,3 @@
-Chinese translation: 我  
-Pronunciation: Wǒ  
-English translation: I  
+Chinese translation: 你  
+Pronunciation: Nǐ  
+English translation: You  
