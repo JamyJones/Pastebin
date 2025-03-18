@@ -1,3 +1,3 @@
-**Chinese translation:** 是  
-**Pronunciation:** Shì  
-**English translation:** Is  
+Chinese translation: 我是  
+Pronunciation: Wǒ shì  
+English translation: I am  
