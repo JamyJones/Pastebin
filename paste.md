@@ -1,9 +1,10 @@
-## How to say "How far is it" in Chinese
-
+## How to say "Can you give me some money" in Chinese?  
 ---
 
-Chinese Characters: 多远  
-Pinyin (Pronunciation): duō yuǎn  
-English Translation: How far is it  
+### Translation in Chinese  
+**Pinyin:** nǐ néng gěi wǒ yīdiǎn qián ma?  
+**Chinese Characters:** 你能给我一点钱吗?  
 
-Let me know if you'd like to practice pronunciation or learn more phrases!
+### English Translation  
+Can you give me some money?  
+---
