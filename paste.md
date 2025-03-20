@@ -1,7 +1,7 @@
-## Summary: Asking "How much does it cost?" in Chinese <br>
----
+## How to Say "How Much Does It Cost" in Chinese
 
-### Chinese Translation
-**Pinyin:** Zhè duōshǎo qián?<br>
-**Chinese Characters:** 这多少钱?<br>
-**English Translation:** How much does it cost?<br>
+**Chinese Characters:** 多少钱  
+**Pinyin:** duō shǎo qián  
+**English Translation:** How much does it cost?  
+
+Feel free to ask for more phrases or words!
