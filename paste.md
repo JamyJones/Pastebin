@@ -1,23 +1,38 @@
-Counting money in Chinese is done using the following terms:
+## Counting Money in Chinese
 
-1. 一 (yī) - one
-2. 二 (èr) - two
-3. 三 (sān) - three
-4. 四 (sì) - four
-5. 五 (wǔ) - five
-6. 六 (liù) - six
-7. 七 (qī) - seven
-8. 八 (bā) - eight
-9. 九 (jiǔ) - nine
-10. 十 (shí) - ten
-11. 百 (bǎi) - hundred
-12. 千 (qiān) - thousand
-13. 万 (wàn) - ten thousand
-14. 元 (yuán) - yuan (currency)
-15. 角 (jiǎo) - jiao (tenth of a yuan)
-16. 分 (fēn) - fen (hundredth of a yuan)
+To count money in Chinese, you can use the following terms:
 
-For example:
-- 一元 (yī yuán) - one yuan
-- 五角 (wǔ jiǎo) - five jiao
-- 三十元 (sān shí yuán) - thirty yuan
+1. **Yuan (元)** - This is the basic unit of currency in China, similar to "dollar" in English.
+   - **Pinyin:** yuán
+   - **Chinese Characters:** 元
+   - **Translation:** Yuan
+
+2. **Jiao (角)** - This is a subunit of the yuan, where 1 yuan equals 10 jiao.
+   - **Pinyin:** jiǎo
+   - **Chinese Characters:** 角
+   - **Translation:** Jiao
+
+3. **Fen (分)** - This is another subunit, where 1 jiao equals 10 fen, making 1 yuan equal 100 fen.
+   - **Pinyin:** fēn
+   - **Chinese Characters:** 分
+   - **Translation:** Fen
+
+### Example of Counting Money
+
+- **10 Yuan**
+  - **Pinyin:** shí yuán
+  - **Chinese Characters:** 十元
+  - **Translation:** Ten Yuan
+
+- **5 Jiao**
+  - **Pinyin:** wǔ jiǎo
+  - **Chinese Characters:** 五角
+  - **Translation:** Five Jiao
+
+- **3 Fen**
+  - **Pinyin:** sān fēn
+  - **Chinese Characters:** 三分
+  - **Translation:** Three Fen
+
+## References
+## https://www.chinese-tools.com/##
