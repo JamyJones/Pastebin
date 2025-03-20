@@ -1,6 +1,9 @@
-"How far is it" in Chinese is:
+## How to say "How far is it" in Chinese
 
-**Pinyin:** "Yuǎn ma?"  
-**Chinese Characters:** "远吗?"  
+---
 
-**English Translation:** "How far is it?"
+Chinese Characters: 多远  
+Pinyin (Pronunciation): duō yuǎn  
+English Translation: How far is it  
+
+Let me know if you'd like to practice pronunciation or learn more phrases!
