@@ -1,4 +1,5 @@
-"How much money do you have" in Chinese is:
+Here’s how you can say "How much money do you have?" in Chinese:
 
-你有多少钱？  
-Nǐ yǒu duōshǎo qián?
+- **Pinyin**: Nǐ yǒu duōshǎo qián?
+- **Chinese Characters**: 你有多少钱？
+- **English Translation**: How much money do you have?
