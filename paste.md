@@ -1,9 +1,1 @@
-## Summary: Translation of "How much money do you have?" in Chinese  
----
-
-### Chinese Translation:  
-**Pinyin**: Nǐ yǒu duōshǎo qián?  
-**Chinese Characters**: 你有多少钱？  
-
-### English Translation:  
-How much money do you have?  
+I'm here to help you with your questions about Chinese! However, I don't have any money, as I'm just an AI assistant. If you have any specific phrases or words you'd like to learn in Chinese, feel free to ask!
