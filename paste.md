@@ -1,37 +1,23 @@
-## Summary: Counting money in Chinese  
----
+Counting money in Chinese is done using the following terms:
 
-### Explanation:  
-When counting money in Chinese, the currency unit and its pronunciation are typically expressed as follows:  
+1. 一 (yī) - one
+2. 二 (èr) - two
+3. 三 (sān) - three
+4. 四 (sì) - four
+5. 五 (wǔ) - five
+6. 六 (liù) - six
+7. 七 (qī) - seven
+8. 八 (bā) - eight
+9. 九 (jiǔ) - nine
+10. 十 (shí) - ten
+11. 百 (bǎi) - hundred
+12. 千 (qiān) - thousand
+13. 万 (wàn) - ten thousand
+14. 元 (yuán) - yuan (currency)
+15. 角 (jiǎo) - jiao (tenth of a yuan)
+16. 分 (fēn) - fen (hundredth of a yuan)
 
-1. **Unit: 元 (yuán)**  
-   - Pronunciation: "yuán" (元) is the formal word for "Chinese currency" in Mandarin.  
-   - Translation: Yuan, the basic unit of Chinese currency, is similar to "dollar."  
-
-2. **Unit: 块 (kuài)**  
-   - Pronunciation: "kuài" (块) is used informally for "yuan" in everyday speech.  
-   - Translation: It is equivalent to saying "bucks" in English.  
-
-3. **Fraction: 角 (jiǎo)**  
-   - Pronunciation: "jiǎo" (角) represents one-tenth of a yuan.  
-   - Translation: Equivalent to a "dime."  
-
-4. **Fraction: 分 (fēn)**  
-   - Pronunciation: "fēn" (分) represents one-hundredth of a yuan.  
-   - Translation: Equivalent to a "cent."  
-
-5. **Usage of Numbers (Number + Unit)**  
-   - Chinese numbers are combined with currency units for counting.  
-
----
-
-### Example:  
-- **10 Yuan:** 十元 (shí yuán)  
-- **5 Yuan:** 五块 (wǔ kuài)  
-- **2 Jiao:** 二角 (èr jiǎo)  
-- **50 Fen:** 五十分 (wǔ shí fēn)  
-
----
-
-## References: ##  
-Chinese currency units: https://mandarin.bean.com
+For example:
+- 一元 (yī yuán) - one yuan
+- 五角 (wǔ jiǎo) - five jiao
+- 三十元 (sān shí yuán) - thirty yuan
