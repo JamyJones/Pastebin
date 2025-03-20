@@ -1,7 +1,6 @@
-To say "How far is it?" in Chinese, you would use:
+"How far is it" in Chinese is:
 
-**English Translation:** How far is it?  
-**Chinese Characters:** 它有多远？  
-**Pinyin:** Tā yǒu duō yuǎn?  
+**Pinyin:** "Yuǎn ma?"  
+**Chinese Characters:** "远吗?"  
 
-Let me know if you want to learn more phrases! 😊
+**English Translation:** "How far is it?"
