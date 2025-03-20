@@ -1,3 +1,14 @@
-"我无论如何都很快乐"  
-Pinyin: "Wǒ wúlùn rúhé dōu hěn kuàilè"  
-Translation: "I am happy regardless."
+## Summary: Translation of "I am happy regardless" into Chinese
+
+---
+
+**Phrase in Chinese**: 
+无论如何我都很开心
+
+**Pinyin (Pronunciation)**: 
+Wúlùn rúhé wǒ dōu hěn kāixīn
+
+**English Translation**: 
+I am happy regardless. 
+
+---
