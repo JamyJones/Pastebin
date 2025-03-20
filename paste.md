@@ -1,14 +1,5 @@
-## Summary: Translation of "I am happy regardless" into Chinese
+"Hey, how was your day?" in Chinese is:
 
----
-
-**Phrase in Chinese**: 
-无论如何我都很开心
-
-**Pinyin (Pronunciation)**: 
-Wúlùn rúhé wǒ dōu hěn kāixīn
-
-**English Translation**: 
-I am happy regardless. 
-
----
+Pinyin: "Hey, nǐ de rìzi zěnme yàng?"  
+Chinese characters: "嘿，你的日子怎么样？"  
+English translation: "Hey, how was your day?"
