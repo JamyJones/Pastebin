@@ -1,7 +1,6 @@
-## Summary: Translation of "Today I feel good" into Chinese
----
+## Summary  
+How to say "I am happy regardless" in Chinese  
 
-### Explanation:
-- **Chinese Characters**: 今天我感觉很好
-- **Pinyin (Pronunciation)**: Jīntiān wǒ gǎnjué hěn hǎo
-- **English Translation**: Today I feel good
+我无论如何都很快乐  
+**Pinyin:** Wǒ wúlùn rúhé dōu hěn kuàilè  
+**English Translation:** I am happy regardless  
