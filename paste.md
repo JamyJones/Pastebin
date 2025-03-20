@@ -1,1 +1,4 @@
-I'm here to help you with your questions about Chinese! However, I don't have any money, as I'm just an AI assistant. If you have any specific phrases or words you'd like to learn in Chinese, feel free to ask!
+"How much money do you have" in Chinese is:
+
+你有多少钱？  
+Nǐ yǒu duōshǎo qián?
