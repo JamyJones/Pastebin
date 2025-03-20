@@ -1,10 +1,4 @@
-## How to say "Can you give me some money" in Chinese?  
----
+"Can you give me some money" in Chinese is:
 
-### Translation in Chinese  
-**Pinyin:** nǐ néng gěi wǒ yīdiǎn qián ma?  
-**Chinese Characters:** 你能给我一点钱吗?  
-
-### English Translation  
-Can you give me some money?  
----
+**Pinyin:** Nǐ néng gěi wǒ yīxiē qián ma?  
+**Chinese Characters:** 你能给我一些钱吗？
