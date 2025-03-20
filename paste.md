@@ -1,5 +1,5 @@
-## Summary: Saying "I am sorry" in Chinese  
----  
-**Chinese Characters:** 对不起  
-**Pinyin (Pronunciation):** Duì bù qǐ  
-**English Translation:** I am sorry  
+"How much does it cost" in Chinese is:
+
+多少钱 (duō shǎo qián) 
+
+Translation: How much does it cost?
