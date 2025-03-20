@@ -1,7 +1,7 @@
-## How to Say "How Much Does It Cost" in Chinese
+To say "How far is it?" in Chinese, you would use:
 
-**Chinese Characters:** 多少钱  
-**Pinyin:** duō shǎo qián  
-**English Translation:** How much does it cost?  
+**English Translation:** How far is it?  
+**Chinese Characters:** 它有多远？  
+**Pinyin:** Tā yǒu duō yuǎn?  
 
-Feel free to ask for more phrases or words!
+Let me know if you want to learn more phrases! 😊
