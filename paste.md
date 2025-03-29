@@ -1,38 +1,25 @@
-## Counting Money in Chinese
-
-To count money in Chinese, you can use the following terms:
-
-1. **Yuan (元)** - This is the basic unit of currency in China, similar to "dollar" in English.
-   - **Pinyin:** yuán
-   - **Chinese Characters:** 元
-   - **Translation:** Yuan
-
-2. **Jiao (角)** - This is a subunit of the yuan, where 1 yuan equals 10 jiao.
-   - **Pinyin:** jiǎo
-   - **Chinese Characters:** 角
-   - **Translation:** Jiao
-
-3. **Fen (分)** - This is another subunit, where 1 jiao equals 10 fen, making 1 yuan equal 100 fen.
-   - **Pinyin:** fēn
-   - **Chinese Characters:** 分
-   - **Translation:** Fen
-
-### Example of Counting Money
-
-- **10 Yuan**
-  - **Pinyin:** shí yuán
-  - **Chinese Characters:** 十元
-  - **Translation:** Ten Yuan
-
-- **5 Jiao**
-  - **Pinyin:** wǔ jiǎo
-  - **Chinese Characters:** 五角
-  - **Translation:** Five Jiao
-
-- **3 Fen**
-  - **Pinyin:** sān fēn
-  - **Chinese Characters:** 三分
-  - **Translation:** Three Fen
-
-## References
-## https://www.chinese-tools.com/##
+## Counting Money in Chinese <br>
+---<br>
+1. One - 一 (yī) <br>
+2. Two - 二 (èr) <br>
+3. Three - 三 (sān) <br>
+4. Four - 四 (sì) <br>
+5. Five - 五 (wǔ) <br>
+6. Six - 六 (liù) <br>
+7. Seven - 七 (qī) <br>
+8. Eight - 八 (bā) <br>
+9. Nine - 九 (jiǔ) <br>
+10. Ten - 十 (shí) <br>
+11. Hundred - 百 (bǎi) <br>
+12. Thousand - 千 (qiān) <br>
+13. Ten Thousand - 万 (wàn) <br>
+14. Dollar (or currency unit) - 元 (yuán) <br>
+15. Cent (or smaller currency unit) - 分 (fēn) <br>
+---<br>
+Example: 
+- 100元 (yī bǎi yuán) - One hundred dollars <br>
+- 50分 (wǔ shí fēn) - Fifty cents <br>
+---<br>
+References: 
+## https://www.chineseclass101.com/ ## 
+## https://www.hanbridgeMandarin.com/ ##
