@@ -1,51 +1,61 @@
-## Linking CSS in Your GitHub Pages Project <br>
+## Linking CSS in a GitHub Pages Project <br>
 ---<br>
-To link a CSS file in your GitHub Pages project, you need to ensure that your CSS file is correctly referenced in your HTML files. Here’s how to do it step by step:
+To link a CSS file located in the root directory of your GitHub Pages project while your HTML files are in a `pages` directory, you need to use a relative path in your HTML files. Here’s how to do it effectively.
 
-1. **Organize Your Files**  
-   Make sure your CSS file is in the correct directory. A common practice is to create a folder named `css` in your project directory and place your CSS file there. For example:
-   ```
-   /my-github-page
-   ├── index.html
-   └── css
-       └── styles.css
-   ```
-
-2. **Linking the CSS File in HTML**  
-   In your HTML file (e.g., `index.html`), you need to use the `<link>` tag within the `<head>` section to link your CSS file. Here’s how to do it:
-   ```html
-   <!DOCTYPE html>
-   <html lang="en">
-   <head>
-       <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>My GitHub Page</title>
-       <link rel="stylesheet" href="css/styles.css">
-   </head>
-   <body>
-       <h1>Welcome to My GitHub Page</h1>
-   </body>
-   </html>
-   ```
-   - **Explanation of the `<link>` tag**:
-     - `rel="stylesheet"`: This attribute specifies the relationship between the current document and the linked resource. In this case, it indicates that the linked file is a stylesheet.
-     - `href="css/styles.css"`: This attribute specifies the path to the CSS file. Make sure the path is correct relative to the HTML file.
-
-3. **Check Your GitHub Pages Settings**  
-   Ensure that your GitHub Pages is set up correctly. Go to your repository settings, scroll down to the "GitHub Pages" section, and make sure the source branch is set (usually `main` or `master`).
-
-4. **Commit and Push Your Changes**  
-   After making these changes, commit and push your updates to your GitHub repository. Your CSS should now be linked and applied to your HTML page when you view it on GitHub Pages.
-
+1  
 ---  
-Example:  
-If your CSS file is named `styles.css` and is located in a folder named `css`, the link in your HTML should look like this:
+In your HTML files located in the `pages` directory, you will need to reference the CSS file using a relative path. Since the CSS file is in the root directory, you can link it like this:
+
 ```html
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="../style.css">
 ```
-This will apply the styles defined in `styles.css` to your HTML document.
+
+- **`<link>`**: This is an HTML tag used to link external resources, in this case, a CSS file.
+- **`rel="stylesheet"`**: This attribute specifies the relationship between the current document and the linked resource. Here, it indicates that the linked file is a stylesheet.
+- **`href="../style.css"`**: The `href` attribute specifies the path to the CSS file. The `..` means "go up one directory level," so this path tells the browser to look for `style.css` in the root directory.
+
+2  
+---  
+Make sure your directory structure looks something like this:
+
+```
+/ (root)
+│
+├── style.css
+│
+└── pages/
+    ├── index.html
+    └── about.html
+```
+
+In this structure, `style.css` is in the root, and your HTML files are inside the `pages` directory. The relative path `../style.css` correctly points to the CSS file from the HTML files.
+
+3  
+---  
+After linking the CSS file, ensure that your CSS rules are correctly applied by checking the browser's developer tools. You can do this by right-clicking on the page, selecting "Inspect," and navigating to the "Elements" tab to see if the styles are being applied as expected.
 
 ---  
-## References:  
-## https://pages.github.com/  
+Example: Here’s a simple example of an HTML file in the `pages` directory linking to a CSS file in the root directory:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>My GitHub Page</title>
+</head>
+<body>
+    <h1>Welcome to My GitHub Page</h1>
+    <p>This is a sample page.</p>
+</body>
+</html>
+```
+
+In this example, the CSS file will style the HTML content as defined in `style.css`.
+
+---  
+## References: 
+## https://pages.github.com/ 
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link
