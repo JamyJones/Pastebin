@@ -1,39 +1,34 @@
-## Summary
-Internet censorship refers to the control or suppression of what can be accessed, published, or viewed on the internet by governments, organizations, or individuals.
+## Internet Censorship <br>
+---<br>
+Internet censorship refers to the control or suppression of what can be accessed, published, or viewed on the internet by governments, organizations, or individuals. This practice can take various forms, including blocking websites, filtering content, and monitoring online activities. The motivations behind internet censorship can range from political control and national security to protecting societal norms and values.
 
---- 
+1  
+---  
+**Types of Internet Censorship**  
+- **Government Censorship**: Many governments impose restrictions on internet access to control the flow of information. This can include blocking access to social media platforms, news websites, or any content deemed inappropriate or threatening to the state.
+- **Corporate Censorship**: Companies may censor content on their platforms to comply with local laws or to protect their brand image. This can involve removing user-generated content that violates community guidelines.
+- **Self-Censorship**: Individuals may choose to censor their own online behavior due to fear of repercussions, such as legal action or social ostracism.
 
-Explanation:
+2  
+---  
+**Methods of Censorship**  
+- **IP Blocking**: This involves preventing access to specific IP addresses associated with websites or services. Users attempting to reach these sites will receive an error message.
+- **DNS Filtering**: This method alters the Domain Name System (DNS) to prevent users from resolving the domain names of blocked websites.
+- **Content Filtering**: This technique uses software to scan and block specific keywords or phrases, effectively filtering out unwanted content.
 
-1. **Definition of Internet Censorship**  
-   Internet censorship is the practice of restricting access to certain information, websites, or online content based on political, moral, or other factors. This can occur through various methods such as blocking access to specific sites, filtering content, or manipulating search results.
+3  
+---  
+**Impacts of Internet Censorship**  
+- **Freedom of Expression**: Censorship can significantly limit individuals' ability to express their opinions and access diverse viewpoints, leading to a less informed public.
+- **Access to Information**: Censorship can restrict access to vital information, including news, educational resources, and health information, which can have serious consequences for society.
+- **Innovation and Development**: A censored internet can stifle innovation, as it limits the free exchange of ideas and collaboration among individuals and organizations.
 
----
+---  
+**Example**:  
+A notable example of internet censorship is China's "Great Firewall," which blocks access to numerous foreign websites, including Google, Facebook, and Twitter. The Chinese government employs various methods to control online content, including real-time monitoring and strict regulations on internet service providers.
 
-2. **Methods of Censorship**  
-   There are several methods used to implement internet censorship:
-   - **Blocking Websites**: This involves denying access to specific websites, which can be achieved through DNS filtering or IP blocking.
-   - **Content Filtering**: Internet Service Providers (ISPs) may use filters to prevent users from reaching particular types of content, often based on keywords or categories.
-   - **Deep Packet Inspection**: This technology allows ISPs to analyze data packets and can be used to monitor and block specific types of data.
-   - **Legislation**: Governments may enact laws that require ISPs to censor content deemed illegal or harmful.
-
----
-
-3. **Reasons for Internet Censorship**  
-   The reasons for implementing internet censorship can vary widely, including:
-   - **National Security**: Governments may censor information to protect the country's safety and interests from perceived threats.
-   - **Political Control**: Authoritarian regimes might suppress dissent and curtail freedom of expression by censoring opposition views.
-   - **Moral Values**: Some content may be censored based on the moral or ethical standards of a society, such as adult content or hate speech.
-   - **Protection of Minors**: There is a movement to protect children from harmful or inappropriate online content.
-
----
-
-Example:  
-A common practical example of internet censorship is the Great Firewall of China, which restricts access to various foreign websites and services, including Google, Facebook, and Twitter, while promoting local alternatives that comply with governmental regulations.
-
----
-
-References: 
-## https://www.aclu.org/other/what-internet-censorship ## 
-## https://www.eff.org/issues/censorship ## 
-## https://en.wikipedia.org/wiki/Internet_censorship ##
+---  
+**References**:  
+## https://www.eff.org/issues/censorship  
+## https://www.hrw.org/report/2021/01/27/online-censorship-and-its-impact-global-south  
+## https://www.amnesty.org/en/what-we-do/freedom-of-expression/
