@@ -1,59 +1,52 @@
-## Summary
-To learn how V2Ray works, you'll want to explore its architecture, configuration, and the protocols it supports.
+## Capacitor vs Cordova for Android Development<br>
+---<br>
+Many developers and companies choose Capacitor over Cordova for building cross-platform applications. This preference arises from several key differences and advantages that Capacitor offers. 
 
-### Overview of V2Ray
-V2Ray is a versatile network tunneling tool that helps users bypass internet censorship and improve privacy. It is often used in conjunction with other tools to create a more secure browsing experience.
+1<br>
+---<br>
+**Modern Architecture**<br>
+Capacitor is designed to work seamlessly with modern web standards. It allows developers to use the latest JavaScript frameworks such as React, Angular, or Vue. Its architecture provides better support for native APIs out of the box, allowing for more advanced functionalities.
 
-### Key Components
-- **Core**: The main engine that handles all the operations.
-- **Protocols**: V2Ray supports various protocols like VMess, VLess, and Shadowsocks, which are essential for establishing secure connections.
-- **Configuration**: Understanding how to configure V2Ray is crucial. It uses JSON format for its configuration files, which define how the tool operates.
+2<br>
+---<br>
+**Better Performance**<br>
+Capacitor applications tend to have better performance than Cordova apps. Capacitor uses a more optimized set of APIs, reducing the overhead common in many Cordova-based apps. This leads to quicker load times and smoother interactions for users.
 
-### How V2Ray Works
-1. **Connection Establishment**: V2Ray creates a secure tunnel between the client and the server. This is done using the specified protocol (e.g., VMess).
-2. **Traffic Routing**: Once the connection is established, V2Ray can route traffic through different paths, allowing users to access blocked content.
-3. **Obfuscation**: V2Ray can obfuscate traffic to make it harder for ISPs and firewalls to detect and block it.
+3<br>
+**Easier to Integrate with Modern Frameworks**<br>
+Capacitor allows direct use of JavaScript frameworks, making it easier to integrate with modern front-end development practices. While Cordova can work with these frameworks, it often requires additional plugins or configurations, which can complicate the development process.
 
-### Example Configuration
-Here’s a simple example of a V2Ray configuration file:
+4<br>
+---<br>
+**Live Reload for Development**<br>
+Capacitor offers live reload functionality, which allows developers to see changes in real-time during the development process. This feature enhances productivity by allowing immediate feedback without needing to rebuild the application.
 
-```json
-{
-  "inbounds": [
-    {
-      "port": 1080,
-      "protocol": "socks",
-      "settings": {
-        "auth": "noauth",
-        "udp": true
-      }
-    }
-  ],
-  "outbounds": [
-    {
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "your_server_address",
-            "port": 10086,
-            "users": [
-              {
-                "id": "your_uuid",
-                "alterId": 64
-              }
-            ]
-          }
-        ]
-      }
-    }
-  ]
-}
+5<br>
+---<br>
+**Native Plugin Development**<br>
+Capacitor supports native plugin development without the burden of the complexity found in Cordova plugin management. If a developer needs specific native features, they can build and maintain those plugins with better ease and integration within a Capacitor environment.
+
+---<br>
+**Example**: Capacitor implementation
+Here’s an example code snippet for setting up a basic Capacitor project:
+
+```bash
+# Install Capacitor in a new Angular project
+npm install @capacitor/core @capacitor/cli
 ```
-- **Inbounds**: This section defines how V2Ray receives traffic. In this case, it listens on port 1080 using the SOCKS protocol.
-- **Outbounds**: This section defines how V2Ray sends traffic out. Here, it uses the VMess protocol to connect to a specified server.
+This line installs the Capacitor core and command-line interface (CLI) for managing the development and building of the app. 
 
-### References
-## https://www.v2ray.com/
-## https://github.com/v2ray/v2ray-core
-## https://www.v2fly.org/
+```bash
+# Initialize Capacitor
+npx cap init [appName] [appId]
+```
+The `init` command initializes a new Capacitor project. `appName` is the name of your application, while `appId` is a unique identifier (typically in reverse domain form, e.g., `com.example.app`).
+
+---<br>
+**Conclusion**: 
+Overall, while both Capacitor and Cordova serve the purpose of building cross-platform mobile applications, Capacitor's modern architecture, performance advantages, easy integration with JS frameworks, and effective development features make it the preferred choice for many developers today.
+
+---<br>
+## References:<br>
+## https://capacitorjs.com/docs<br>
+## https://cordova.apache.org/docs/en/latest/
