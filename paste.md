@@ -1,33 +1,31 @@
-## Internet Censorship <br>
----<br>
-Internet censorship refers to the control or suppression of what can be accessed, published, or viewed on the internet by governments, organizations, or individuals. This practice can take various forms, including blocking websites, filtering content, and monitoring online activities. The motivations behind internet censorship can range from political control and national security to protecting societal norms and values.
+## Summary: Differences Between Software Engineering and Computer Science
+---  
+Software engineering and computer science are closely related fields, but they have distinct focuses, methodologies, and applications. Understanding these differences can help clarify the roles and responsibilities of professionals in each area.
 
 1  
 ---  
-**Types of Internet Censorship**  
-- **Government Censorship**: Many governments impose restrictions on internet access to control the flow of information. This can include blocking access to social media platforms, news websites, or any content deemed inappropriate or threatening to the state.
-- **Corporate Censorship**: Companies may censor content on their platforms to comply with local laws or to maintain a certain brand image. This can involve removing user-generated content or restricting access to specific topics.
-- **Self-Censorship**: Individuals may choose to censor themselves due to fear of repercussions, such as legal action or social ostracism. This often occurs in environments where freedom of expression is limited.
+**Focus and Scope**  
+- **Computer Science**: Primarily concerned with the theoretical foundations of computation, algorithms, data structures, and the principles of programming. It explores how computers work, the design of software, and the underlying mathematical concepts.
+- **Software Engineering**: Focuses on the practical application of engineering principles to software development. It encompasses the entire software development lifecycle, including requirements gathering, design, implementation, testing, and maintenance.
 
 2  
 ---  
-**Methods of Internet Censorship**  
-- **IP Blocking**: This involves preventing access to specific IP addresses associated with websites. When a user tries to access a blocked site, they receive an error message instead.
-- **DNS Filtering**: This method alters the Domain Name System (DNS) to prevent users from resolving the domain names of blocked websites. Users may be redirected to a different page or receive a "not found" message.
-- **Content Filtering**: This technique uses software to analyze and block specific content based on keywords or phrases. It is commonly used in schools and workplaces to restrict access to inappropriate material.
+**Methodologies**  
+- **Computer Science**: Often employs abstract and theoretical approaches. It emphasizes problem-solving and algorithmic thinking, with a strong focus on research and innovation in computing technologies.
+- **Software Engineering**: Utilizes structured methodologies and frameworks (like Agile, Scrum, and Waterfall) to manage software projects. It emphasizes collaboration, project management, and quality assurance to deliver reliable software products.
 
 3  
 ---  
-**Impacts of Internet Censorship**  
-- **Freedom of Expression**: Censorship can significantly limit individuals' ability to express their opinions and access diverse viewpoints, leading to a homogenized information landscape.
-- **Access to Information**: Censorship can hinder access to vital information, including news, educational resources, and health information, which can have serious implications for society.
-- **Innovation and Creativity**: A restricted internet can stifle innovation and creativity, as individuals may be less likely to share ideas or collaborate freely.
+**Career Paths**  
+- **Computer Science**: Graduates may pursue careers in research, data analysis, artificial intelligence, machine learning, and academic roles. They often work in roles that require deep technical knowledge and innovation.
+- **Software Engineering**: Graduates typically work as software developers, systems architects, project managers, or quality assurance engineers. Their roles are more focused on building and maintaining software systems that meet user needs and business requirements.
 
 ---  
 **Example**:  
-A notable example of internet censorship is China's "Great Firewall," which blocks access to numerous foreign websites, including Google, Facebook, and Twitter. The Chinese government employs various methods, such as IP blocking and content filtering, to control the information available to its citizens.
+A computer scientist might develop a new algorithm for data encryption, focusing on its theoretical efficiency and security. In contrast, a software engineer would implement that algorithm in a software application, ensuring it integrates well with existing systems and meets user requirements.
 
 ---  
 **References**:  
-## https://www.eff.org/issues/censorship  
-## https://www.hrw.org/report/2021/01/27/online-censorship/impact-internet-censorship-human-rights
+## https://www.cs.cmu.edu/~15110-s13/lectures/lecture1.pdf  
+## https://www.sei.cmu.edu/our-work/software-engineering/  
+## https://www.edx.org/learn/computer-science
