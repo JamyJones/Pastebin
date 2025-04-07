@@ -16,38 +16,38 @@ Balancing multiple interests and learning goals can be a rewarding yet challengi
 
 1. **Set Clear Goals:**
    - Define what you want to achieve in Android development (e.g., building a simple app).
-   - Set specific language learning goals (e.g., learn 10 new Chinese characters daily).
+   - Set specific language learning goals (e.g., mastering basic conversational skills in Chinese).
 
 2. **Create a Schedule:**
    - Allocate specific time blocks for each activity. For example:
      - **Android Development:** 4 hours
      - **Chinese Learning:** 3 hours
-     - **Other Languages:** 2 hours
-     - **Reading Manga:** 2 hours
+     - **Language Practice:** 2 hours
+     - **Manga Reading:** 2 hours
      - **Breaks and Leisure:** 5 hours
 
 3. **Use Learning Resources:**
-   - For Android Development, consider using platforms like Udacity or Coursera for structured courses.
-   - Use language apps like Duolingo or HelloChinese for interactive learning.
+   - For **Android Development**, consider using platforms like Udacity or Coursera for structured courses.
+   - For **Chinese**, apps like Duolingo or HelloChinese can be very helpful.
+   - Join language exchange communities to practice your other languages.
 
-4. **Practice Regularly:**
-   - Dedicate time each day to practice what you learn. For instance, code a small feature in your app or have a conversation in Chinese.
+4. **Stay Consistent:**
+   - Dedicate time daily to each activity to build a habit. Consistency is key in language learning and app development.
 
-5. **Stay Motivated:**
-   - Reward yourself after completing tasks. For example, after a productive study session, enjoy some manga reading time.
+5. **Reflect and Adjust:**
+   - At the end of each week, reflect on your progress and adjust your schedule as needed. This will help you stay motivated and on track.
 
 ---
 
 **Example:**
-If you decide to focus on Android app development, you might start with a simple project like creating a "To-Do List" app. Break it down into steps:
-- **Step 1:** Set up your development environment (install Android Studio).
-- **Step 2:** Learn about the basic components (Activities, Layouts).
-- **Step 3:** Code the app, starting with the user interface.
-- **Step 4:** Implement functionality (adding, deleting tasks).
+If you decide to focus on Android development first, you might start with a simple project like creating a "Hello World" app. This will give you a practical understanding of the development environment and basic coding concepts.
 
 ---
 
 **References:**
-## https://developer.android.com/docs ## https://www.duolingo.com/ ## https://www.hellochinese.cc/ ##
+## www.udacity.com
+## www.coursera.org
+## www.duolingo.com
+## www.hellochinese.cc
 
 Feel free to ask for more specific advice or resources on any of these topics!
