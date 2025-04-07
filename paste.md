@@ -1,35 +1,24 @@
-## Summary 
-A robo-advisor is an automated platform that provides financial planning and investment management services with minimal human intervention. 
+## Summary  
+A robo-advisor is an automated platform that provides financial planning services with minimal human intervention.
 
---- 
+### Explanation:  
+Robo-advisors use algorithms and technology to manage investments and provide financial advice. Here’s a breakdown of how they work:
 
-Explanation: 
+- **Automated Investment Management**  
+  Robo-advisors create and manage a diversified portfolio based on the user’s risk tolerance, investment goals, and time horizon. They typically use modern portfolio theory to optimize asset allocation.
 
-A robo-advisor typically operates using algorithms to manage client portfolios based on their risk tolerance, investment goals, and other financial factors. Here’s a breakdown of how they work:
+- **User Input**  
+  Users usually start by filling out a questionnaire that assesses their financial situation, investment goals, and risk tolerance. This information helps the robo-advisor tailor a personalized investment strategy.
 
-1. **Client Onboarding**  
-Robo-advisors begin by gathering information from clients. This usually involves an online questionnaire that assesses the client’s financial status, investment goals, and risk tolerance. This detailed information allows the robo-advisor to tailor a suitable investment strategy for the client.
+- **Low Fees**  
+  One of the main advantages of robo-advisors is their low fees compared to traditional financial advisors. They often charge a percentage of assets under management (AUM), which can be significantly lower than the fees charged by human advisors.
 
-2. **Algorithm-Based Investment Strategy**  
-Once the qualifications are gathered, the robo-advisor uses algorithms to create and manage a diversified investment portfolio. This automation involves several key components:  
-   - **Asset Allocation**: The algorithm decides how to distribute the client’s portfolio across various asset classes (stocks, bonds, ETFs, etc.) based on their risk profile and objectives.
-   - **Rebalancing**: Over time, market performance can skew the intended asset allocation. Robo-advisors automatically rebalance the portfolio to maintain the originally determined asset allocation.
+- **Rebalancing and Tax-Loss Harvesting**  
+  Robo-advisors automatically rebalance portfolios to maintain the desired asset allocation. They may also employ tax-loss harvesting strategies to minimize tax liabilities for users.
 
-3. **Low Fees and Accessibility**  
-Robo-advisors typically charge lower fees compared to traditional financial advisors as they use technology to minimize human interaction. Many platforms have low or no account minimums, making investing more accessible to a broader range of individuals.
+### Example:  
+For instance, if a user indicates a moderate risk tolerance and a goal of saving for retirement in 20 years, the robo-advisor might allocate a mix of stocks and bonds, adjusting the portfolio as market conditions change.
 
-4. **Monitoring and Reporting**  
-These platforms continuously monitor client portfolios and provide regular updates and reporting. Clients can usually access their accounts through intuitive online dashboards to view performance metrics, contributions, and other relevant information.
-
----
-
-Example: 
-
-Popular robo-advisors include companies like Betterment, Wealthfront, and Robinhood. For example, Betterment uses the client’s input to allocate assets in low-cost ETFs, automatically adjusts based on market conditions, and provides tax optimization strategies to maximize returns.
-
----
-
-References: 
+### References:  
 ## www.investopedia.com/terms/r/roboadvisor-roboadviser.asp  
-## www.betterment.com  
-## www.wealthfront.com  
+## www.forbes.com/advisor/investing/what-is-a-robo-advisor/  
