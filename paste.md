@@ -1,31 +1,39 @@
-## Summary: Differences Between Software Engineering and Computer Science
----  
-Software engineering and computer science are closely related fields, but they have distinct focuses, methodologies, and applications. Understanding these differences can help clarify the roles and responsibilities of professionals in each area.
+## summary 
+Differences Between Software Engineering and Computer Science<br>
+---<br>
+Software engineering and computer science are closely related fields, but they focus on different aspects of computer technology. Understanding the distinction can help clarify career paths, educational pursuits, and the application of knowledge in practical settings.
 
 1  
----  
-**Focus and Scope**  
-- **Computer Science**: Primarily concerned with the theoretical foundations of computation, algorithms, data structures, and the principles of programming. It explores how computers work, the design of software, and the underlying mathematical concepts.
-- **Software Engineering**: Focuses on the practical application of engineering principles to software development. It encompasses the entire software development lifecycle, including requirements gathering, design, implementation, testing, and maintenance.
+Software Engineering<br>
+---<br>
+Software engineering is a discipline that focuses on the systematic design, development, maintenance, testing, and evaluation of software. It emphasizes a structured approach to building software applications that meet specified requirements. Key characteristics include:
+
+- **Practical Application**: Software engineering is applied in real-world projects and focuses on delivering functional software solutions.
+- **Process-Driven**: Utilizes software development methodologies like Agile, Scrum, and Waterfall, which emphasize planning, development cycles, and teamwork.
+- **Test and Maintenance**: Involves extensive testing and maintenance to ensure software remains functional and efficient after deployment.
+- **Team Collaboration**: Often involves working in teams where roles are defined (e.g., developers, testers, project managers).
 
 2  
----  
-**Methodologies**  
-- **Computer Science**: Often employs abstract and theoretical approaches. It emphasizes problem-solving and algorithmic thinking, with a strong focus on research and innovation in computing technologies.
-- **Software Engineering**: Utilizes structured methodologies and frameworks (like Agile, Scrum, and Waterfall) to manage software projects. It emphasizes collaboration, project management, and quality assurance to deliver reliable software products.
+Computer Science<br>
+---<br>
+Computer science is an abstract discipline that delves into the theoretical foundations of computation, algorithms, data structures, and problem-solving techniques. Important aspects include:
+
+- **Theoretical Focus**: Emphasizes understanding conceptual frameworks, mathematical models, and algorithms rather than just coding.
+- **Research and Innovation**: Involves research on new technologies and theoretical concepts, such as artificial intelligence, machine learning, and computational theory.
+- **Problem-Solving**: Focuses on developing algorithms and solutions to complex problems, which may not necessarily lead to immediate software applications.
+- **Wide Scope**: Covers various topics beyond software, including hardware, systems design, and networking.
 
 3  
----  
-**Career Paths**  
-- **Computer Science**: Graduates may pursue careers in research, data analysis, artificial intelligence, machine learning, and academic roles. They often work in roles that require deep technical knowledge and innovation.
-- **Software Engineering**: Graduates typically work as software developers, systems architects, project managers, or quality assurance engineers. Their roles are more focused on building and maintaining software systems that meet user needs and business requirements.
+Core Differences<br>
+---<br>
+- **Objective**: Software engineering aims to create quality software efficiently, while computer science seeks to enhance understanding of computing concepts.
+- **Skills Required**: Software engineers typically need a blend of programming skills, project management, and teamwork, while computer scientists may focus more on mathematical and analytical skills.
+- **Career Paths**: Software engineers often work as developers, systems analysts, or project managers, while computer scientists may pursue roles in research, theoretical computing, or academia.
 
----  
-**Example**:  
-A computer scientist might develop a new algorithm for data encryption, focusing on its theoretical efficiency and security. In contrast, a software engineer would implement that algorithm in a software application, ensuring it integrates well with existing systems and meets user requirements.
+Example:<br>
+---<br>
+For instance, a software engineer might be tasked with creating a mobile application for a client, following a specific set of requirements and using a defined methodology. In contrast, a computer scientist might conduct research into optimizing algorithms for sorting data, which may lead to advancements in data processing but isn't necessarily tied to concrete software development. 
 
----  
-**References**:  
-## https://www.cs.cmu.edu/~15110-s13/lectures/lecture1.pdf  
-## https://www.sei.cmu.edu/our-work/software-engineering/  
-## https://www.edx.org/learn/computer-science
+## references 
+## https://www.codecademy.com/articles/computer-science-vs-software-engineering ## 
+## https://www.coursera.org/articles/what-is-software-engineering ##
