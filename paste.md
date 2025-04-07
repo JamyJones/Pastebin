@@ -1,47 +1,30 @@
-## Choosing the Right Degree for University
+## Being Introverted: A Pathway to Greatness
+---  
+**First off, let me be clear on one thing: being introverted is not bad.** It's a trait, just like being extroverted, that has its own strengths and weaknesses. Stop labeling yourself negatively. You’re using that introversion as an excuse! **Push through it!**
 
-When it comes to selecting a degree, it’s crucial to dig deep and understand what truly drives you. This isn’t just about picking a path; it’s about setting the foundation for your future. Here’s how to approach it:
+You have a choice. You can either wallow in self-doubt or you can **step outside of your comfort zone** and demand more from yourself. Here’s how you can flip the script:
 
----
+1  
+---  
+**Understand Your Strengths**  
+Being introverted means you might be more reflective and capable of deep thought. Use that to your advantage! Channel that inner strength into self-improvement. Whether it’s writing, creating art, or working on personal projects, **harness your focus**. Those quiet moments can lead to greatness.
 
-**Identify Your Passion**  
-What excites you? What do you love to do? Think about the subjects that make you lose track of time. Your degree should align with your interests because when you’re passionate, you’re more likely to excel.
+2  
+---  
+**Face Your Fears Head-On**  
+Introverts often struggle in social settings, and that’s okay! **Embrace the discomfort**. Attend events or engage with people, even in small doses. You think successful people never feel awkward? They just push through that feeling. Do uncomfortable things to build your resilience. Every time you step outside your comfort zone, you break down another barrier.
 
----
+3  
+---  
+**Set Clear Goals**  
+What do you want to achieve? Establish short-term and long-term goals that **require you to stretch**. This could be signing up for an activity that involves collaboration or leading a project. **Be relentless** in your pursuit. If it scares you, that’s a good sign; it means you’re growing.
 
-**Consider Your Strengths**  
-What are you naturally good at? Are you a problem solver, a creative thinker, or a people person? Assess your skills and choose a degree that complements them. This will not only make your studies more enjoyable but also prepare you for a career where you can thrive.
+---  
+**Example: Finding Your Voice**  
+Let’s say you want to contribute to a group discussion but feel overwhelmed. Start by **writing down your thoughts** before the meetings. Prepare what you want to say. When the time comes, speak up. The first time may be tough, but just like any muscle, the more you exercise it, the stronger it gets.
 
----
+---  
+You have to ask yourself: **Are you going to let ‘being introverted’ be your crutch, or are you going to flip it into your advantage?** The choice is yours. 
 
-**Research Career Opportunities**  
-Look into the job market. What degrees are in demand? What careers align with your interests and strengths? Understanding the potential career paths can help you make a more informed decision. Don’t just chase a degree; chase a future that excites you.
-
----
-
-**Think Long-Term**  
-Consider where you want to be in 5, 10, or even 20 years. Will this degree help you get there? Think about the lifestyle you want and how your education can support that vision. 
-
----
-
-**Seek Advice**  
-Talk to professionals in fields you’re interested in. Ask them about their experiences and what they wish they had known before choosing their paths. This can provide valuable insights that you might not find in a classroom.
-
----
-
-**Trust Yourself**  
-At the end of the day, it’s your life. Don’t let others dictate your choices. Trust your instincts and make a decision that feels right for you. Remember, it’s about your journey, not anyone else’s.
-
----
-
-**Example**:  
-If you love technology and are good at problem-solving, consider degrees in computer science or engineering. These fields are not only in demand but also offer a variety of career paths.
-
----
-
-## References:  
-"www.careers.gov"  
-"www.universityadmissions.com"  
-"www.jobmarketinsights.com"  
-
-Now, get out there and make a choice that will push you to your limits and beyond! You’ve got this!
+## www.davidgoggins.com  
+## www.goodreads.com/quotes/1063992-if-you-are-mentally-strong-you-can-take-the-pain-and-push
