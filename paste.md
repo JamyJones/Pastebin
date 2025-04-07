@@ -15,27 +15,33 @@ What are you naturally good at? Are you a problem solver, a creative thinker, or
 ---
 
 **Research Career Opportunities**  
-Look into the job market. What degrees are in demand? What careers align with your interests and strengths? Understanding the potential career paths can help you make a more informed decision. Don’t just chase a degree; chase a future.
+Look into the job market. What degrees are in demand? What careers align with your interests and strengths? Understanding the potential career paths can help you make a more informed decision. Don’t just chase a degree; chase a future that excites you.
 
 ---
 
 **Think Long-Term**  
-Consider where you want to be in 5, 10, or even 20 years. Will this degree help you get there? Think about the lifestyle you want and how your choice will impact that. This is about building a life, not just getting a piece of paper.
+Consider where you want to be in 5, 10, or even 20 years. Will this degree help you get there? Think about the lifestyle you want and how your education can support that vision. 
 
 ---
 
-**Seek Advice, But Trust Yourself**  
-Talk to professionals in fields you’re interested in. Get their insights, but remember, this is your journey. Don’t let others dictate your path. Trust your instincts and make a choice that feels right for you.
+**Seek Advice**  
+Talk to professionals in fields you’re interested in. Ask them about their experiences and what they wish they had known before choosing their paths. This can provide valuable insights that you might not find in a classroom.
 
 ---
 
-**Example**  
-If you love technology and are good at math, consider degrees in computer science or engineering. These fields are not only exciting but also have a strong job market. 
+**Trust Yourself**  
+At the end of the day, it’s your life. Don’t let others dictate your choices. Trust your instincts and make a decision that feels right for you. Remember, it’s about your journey, not anyone else’s.
 
 ---
 
-## References  
-"www.careersintech.com"  
-"www.universitydegreeguide.com"  
+**Example**:  
+If you love technology and are good at problem-solving, consider degrees in computer science or engineering. These fields are not only in demand but also offer a variety of career paths.
+
+---
+
+## References:  
+"www.careers.gov"  
+"www.universityadmissions.com"  
+"www.jobmarketinsights.com"  
 
 Now, get out there and make a choice that will push you to your limits and beyond! You’ve got this!
