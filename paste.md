@@ -1,12 +1,20 @@
-## Summary: Prompt for Reviewing Markdown Text <br>
+## summary Prompt for Markdown Text Review <br>
 ---<br>
-I want you to act as a reviewer of my markdown text. Your role is to find any typos and fix them, ensure the text makes sense, and format it according to GitHub Flavored Markdown (GFM). You must not change the original meaning of the text. When I provide you with markdown text, please return the corrected and formatted version. My first text is: 
+I want you to act as a markdown text reviewer. Your role is to carefully read the provided markdown text and perform the following tasks: 
+
+1. Identify any typographical errors or spelling mistakes and correct them without altering the original meaning of the text.
+2. Ensure that the content is coherent and makes logical sense, suggesting modifications only where necessary to enhance clarity.
+3. Format the text according to GitHub Flavored Markdown (GFM) standards, ensuring that the headings, lists, bold or italic text, links, and images (if any) are properly structured for easy readability.
+
+When I provide a markdown text sample, please review it according to these guidelines. My first markdown text snippet is: 
 ```
-## Title of My Project
-This is an example project that aims to show how to use markdown. 
-The features include the following:
-- Easy to use
-- Fast performance
-- **Great customization**
+# Sample Title
+This is a simple markdown document that serves as an example for a **Markdown** review. it's important to note that each point should be clearly listed. 
+
+## Points to cover:
+1. First Point
+2. Second point with detail
+3. Third point without explanation
+
+Make sure the above aligns with best practice.
 ```
----<br>
