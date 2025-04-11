@@ -1,79 +1,57 @@
-## Configuring Compiler for Static Linking with glibc <br>
----<br>
-To statically include all symbols from glibc and ensure your application runs on systems with older versions of glibc, you need to take a few specific steps. Static linking with glibc can be tricky due to its design, but here’s how you can approach it.
+## Summary Statically Linking C Library and Clang Runtime Library <br>
+---
+Static linking is the process of including all external libraries into the final executable at compile time, rather than relying on dynamic libraries at runtime. This makes the executable larger, but ensures that all necessary code is included for the application to run independently of the external libraries.
 
-1<br>
----<br>
-**Understanding Static vs Dynamic Linking**  
-Static linking includes all the necessary libraries and symbols directly into the executable at compile time, while dynamic linking relies on shared libraries at runtime. When you use `-static`, it tells the linker to include static versions of libraries. However, glibc is primarily designed to be used dynamically, and static linking can lead to missing symbols or compatibility issues.
+### Explanation
+1  
+---
+To statically link a C library using the Clang compiler, you usually need to use specific flags in your `LDFLAGS`. The flags you mentioned, `-static-libgcc` and `-static-libstdc++`, are used to statically link the GCC runtime library and the C++ standard library, respectively.
 
-2<br>
----<br>
-**Using the Correct Flags**  
-To statically link your application with glibc, you can use the following flags:
+- **-static-libgcc**: This option tells the linker to link the GCC runtime library (libgcc.a) statically. It ensures that the necessary low-level runtime support used by the GCC compiler is included in the output binary. This library contains functions that handle exception handling and passing of complex data types.
 
-```bash
-gcc -o my_program my_program.c -static -static-libgcc -static-libstdc++
-```
+- **-static-libstdc++**: This option tells the linker to link the C++ Standard Library (libstdc++.a) statically. It includes the code from the C++ Standard Library that your application uses, making the application independent of the shared version of the library.
 
-- `-static`: This flag tells the compiler to link against the static versions of libraries.
-- `-static-libgcc`: This flag links the GCC runtime library statically.
-- `-static-libstdc++`: This flag links the C++ standard library statically.
-
-However, simply using these flags may not be sufficient for glibc, as it may still require dynamic linking for certain functionalities.
-
-3<br>
----<br>
-**Using musl libc as an Alternative**  
-If you encounter issues with glibc, consider using musl libc, which is designed for static linking and is compatible with many applications. You can compile your application with musl by using the following command:
+2  
+---
+To apply these flags, you can modify your makefile or compilation command as follows:
 
 ```bash
-musl-gcc -o my_program my_program.c
+clang my_program.c -o my_program $LDFLAGS
 ```
 
-This will create a statically linked executable that is more portable across different systems.
+In this command, `my_program.c` is your source file, and `my_program` is the resulting static executable. The `$LDFLAGS` variable holds your linker flags.
 
-4<br>
----<br>
-**Checking for Missing Symbols**  
-If you still face issues with missing symbols, you can use the `ldd` command to check which dynamic libraries your executable is trying to link against:
+Additional options might be necessary depending on the specific libraries your code requires. You might also want to include `-static` to enforce static linking of all libraries:
 
 ```bash
-ldd my_program
+LDFLAGS="-static -static-libgcc -static-libstdc++"
 ```
 
-This will list all the shared libraries required by your executable. If you see any glibc libraries listed, it indicates that your application is not fully statically linked.
+3  
+---
+It's important to note that not all libraries support static linking. Ensure that you have the static versions of the libraries available on your system. They usually have a `.a` extension (e.g., `libexample.a`).
 
-5<br>
----<br>
-**Considerations**  
-- Statically linking glibc can lead to larger binaries and potential compatibility issues. 
-- Some features of glibc, such as threading and locale support, may not work correctly when statically linked.
-- Always test your statically linked binaries on the target systems to ensure compatibility.
-
----<br>
-**Example**  
-Here’s a simple example of compiling a C program with static linking:
-
-```c
-#include <stdio.h>
-
-int main() {
-    printf("Hello, World!\n");
-    return 0;
-}
-```
-
-Compile it with:
+Sometimes, you might encounter compatibility issues since certain libraries are designed to be used with shared linking. You can check if the static library exists in your system with:
 
 ```bash
-gcc -o hello hello.c -static -static-libgcc -static-libstdc++
+ls /usr/lib/x86_64-linux-gnu/lib*.a
 ```
 
-This will create a statically linked executable named `hello`.
+This command lists all static libraries available on a typical Linux system. Make sure the libraries you plan to link statically are present.
 
----<br>
-**References**  
-## https://gcc.gnu.org/onlinedocs/gcc/Link-Options.html  
-## https://musl.libc.org/  
-## https://www.gnu.org/software/libc/manual/html_node/Static-Linking.html  
+### Example
+Here's a simple command that compiles a C program named `example.c` while linking with specified flags:
+
+```bash
+clang example.c -o example -static -static-libgcc -static-libstdc++
+```
+
+In this command:
+- `example.c` is your source file.
+- `-o example` specifies the output binary name.
+- The flags ensure that both the GCC and the C++ standard libraries are linked statically.
+
+---
+#### References:
+## https://clang.llvm.org/docs/CommandGuide/clang.html
+## https://gcc.gnu.org/onlinedocs/gcc/Link-Options.html#Link-Options
