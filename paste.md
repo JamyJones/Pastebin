@@ -1,75 +1,104 @@
-## summary Script issue with skipping certain files in Bash <br>
----<br>
-It looks like there are a few key points in your script that may be contributing to the failure to skip files as intended. Below, I'll break down the sections of your script for better understanding and troubleshooting.
+## Hello Program Using `getgrgid_r()` in C
+<br>
+This program demonstrates how to use the `getgrgid_r()` function in C to retrieve group information based on a group ID. The `getgrgid_r()` function is part of the POSIX standard and is used to get the group information in a thread-safe manner.
 
+### Explanation:
 1
----  
-**Defining the Variables**  
-```bash
-JOHN_PKG_BUILD_SCRIPT=$(find "./packages/$JOHN_PKG_TO_BUILD" -type f -name "build.sh")
-JOHN_PKG_DEPENDS=$(grep "TERMUX_PKG_DEPENDS" $JOHN_PKG_BUILD_SCRIPT | sed -n 's/.*"\([^"]*\)".*/\1/p')
+---
+**Include Necessary Headers**  
+To use `getgrgid_r()`, you need to include the following headers:
+```c
+#include <stdio.h>      // For printf
+#include <stdlib.h>     // For malloc and free
+#include <string.h>     // For memset
+#include <grp.h>        // For getgrgid_r and struct group
+#include <unistd.h>     // For getgid
 ```
-- **`JOHN_PKG_BUILD_SCRIPT`**: This line finds the `build.sh` script within the specified package directory.
-- **`JOHN_PKG_DEPENDS`**: This extracts dependencies listed in the `build.sh` script using `grep` to find the `TERMUX_PKG_DEPENDS` line and `sed` to clean up the output.
+- `stdio.h`: Provides functionalities for input and output.
+- `stdlib.h`: Contains functions for memory allocation.
+- `string.h`: Used for string manipulation functions like `memset`.
+- `grp.h`: Contains the definition of the `getgrgid_r()` function and the `group` structure.
+- `unistd.h`: Provides access to the POSIX operating system API, including `getgid()`.
 
 2
----  
-**Handling Dependencies**  
-```bash
-IFS="," read -r -a dep_array <<< "$JOHN_PKG_DEPENDS"
-exclude_these_script=("fontconfig")
+---
+**Define the Main Function**  
+The main function is where the program execution begins.
+```c
+int main() {
+    gid_t gid = getgid(); // Get the current group ID
+    struct group grp;     // Declare a group structure
+    struct group *result; // Pointer to hold the result
+    char buffer[1024];    // Buffer for the group name
+    int s;                // Status variable
 ```
-- **`IFS=","`**: Sets the Internal Field Separator to a comma, allowing you to read a comma-separated string into an array.
-- **`exclude_these_script`**: An array containing scripts that you want to exclude from processing.
+- `getgid()`: Retrieves the group ID of the calling process.
+- `struct group`: A structure that holds information about a group.
+- `char buffer[1024]`: A buffer to store the group name.
+- `int s`: A variable to store the return status of `getgrgid_r()`.
 
 3
----  
-**Checking Dependency Against Excluded Scripts**  
-```bash
-for dep_ in "${dep_array[@]}"; do
-  dep_=$(echo "$dep_" | xargs) #remove white space from beginning
-  if [[ "${exclude_these_script[@]}" =~ " $dep_ " ]]; then
-    continue
-  fi
+---
+**Retrieve Group Information**  
+Use `getgrgid_r()` to get the group information based on the group ID.
+```c
+    s = getgrgid_r(gid, &grp, buffer, sizeof(buffer), &result);
+    if (s != 0) {
+        perror("getgrgid_r failed"); // Print error if it fails
+        return 1; // Exit with error code
+    }
 ```
-- The line `dep_=$(echo "$dep_" | xargs)` trims whitespace from the beginning and end of the dependency.
-- The conditional check `if [[ "${exclude_these_script[@]}" =~ " $dep_ " ]]` attempts to check if the current dependency is in the `exclude_these_script` array. However, this matches a string pattern in a way that may not work as expected—this is likely the source of the problem.
+- `getgrgid_r(gid, &grp, buffer, sizeof(buffer), &result)`: This function retrieves the group information for the specified group ID (`gid`). It fills the `grp` structure with the group details, uses `buffer` to store the group name, and `result` to point to the filled structure.
+- `perror()`: Prints a description for the last error that occurred.
 
 4
----  
-**Fixing the Exclusion Logic**  
-To correctly check if a dependency is excluded, you can use a nested loop. The corrected code is as follows:
-```bash
-skip_dependency=false
-for dep_ in "${dep_array[@]}"; do
-  dep_=$(echo "$dep_" | xargs)
-  for excluded in "${exclude_these_script[@]}"; do
-    if [[ "$dep_" == "$excluded" ]]; then
-      skip_dependency=true
-      break 2 # Break out of both loops
-    fi
-  done
-done
+---
+**Display the Group Name**  
+Finally, print the group name to the console.
+```c
+    printf("Group ID: %d\n", gid);
+    printf("Group Name: %s\n", grp.gr_name); // Print the group name
+    return 0; // Exit successfully
+}
 ```
-- This nested loop checks each dependency against the excluded scripts more reliably.  
-- Using `break 2` will exit both loops if a match is found.
+- `printf()`: Used to output the group ID and group name to the console.
 
-5
----  
-**Adding Scripts**  
-```bash
-for p in "${build_script_paths[@]}"; do
-  echo "$add_script" >> "$p"
-done
+### Complete Code Example:
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <grp.h>
+#include <unistd.h>
+
+int main() {
+    gid_t gid = getgid(); // Get the current group ID
+    struct group grp;     // Declare a group structure
+    struct group *result; // Pointer to hold the result
+    char buffer[1024];    // Buffer for the group name
+    int s;                // Status variable
+
+    s = getgrgid_r(gid, &grp, buffer, sizeof(buffer), &result);
+    if (s != 0) {
+        perror("getgrgid_r failed"); // Print error if it fails
+        return 1; // Exit with error code
+    }
+
+    printf("Group ID: %d\n", gid);
+    printf("Group Name: %s\n", grp.gr_name); // Print the group name
+    return 0; // Exit successfully
+}
 ```
-- This loops through the collected scripts and appends the `add_script` content to each of them. 
+### How to Compile and Run:
+To compile the program, use the following command in your terminal:
+```bash
+gcc -o hello_group hello_group.c
+```
+Then, run the program:
+```bash
+./hello_group
+```
 
-### Example
-You can test the script by modifying the `exclude_these_script` array and running it on a package with various dependencies. Make sure that `fontconfig` is indeed a dependency of a package you are testing.
-
-### Conclusion
-Make sure to implement the suggested changes in how you exclude the dependencies. After these adjustments, your script should work as intended without incorrectly processing the excluded files. 
-
-## references:
-## http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_02_04.html  
-## http://tldp.org/LDP/abs/html/internalfieldseparators.html  
+### References:
+## https://man7.org/linux/man-pages/man3/getgrgid.3.html  
+## https://man7.org/linux/man-pages/man3/getgrgid_r.3.html  
