@@ -1,54 +1,43 @@
 ## Summary
-The error message indicates a syntax issue in a shell script, specifically in a conditional expression on line 12 of the `pre_conf_build.sh` script.
+The error message indicates a syntax issue in a shell script (`pre_conf_build.sh`) on line 12, specifically within a conditional expression.
 
 ---
-Explanation:
 
-1. **Understanding the Error Message**  
-   The error message states that there is a "syntax error in conditional expression" and points to an unexpected token `;`. This typically means that the shell is unable to parse the conditional statement correctly due to improper syntax.
-
-2. **Analyzing the Conditional Statement**  
-   The problematic line is:
-   ```bash
-   if [[ "${exclude_these_script[@]}" =~ " $dep_ "]]; then
-   ```
-   Here are the issues:
-   - **Spacing**: There should be a space before the closing brackets `]]`. The correct syntax should be:
-     ```bash
-     if [[ "${exclude_these_script[@]}" =~ " $dep_ " ]]; then
-     ```
-   - **Quoting**: The use of quotes around the variable `$dep_` may not be necessary depending on the context. If `$dep_` is meant to be a variable, ensure it is defined properly.
-
-3. **Correcting the Syntax**  
-   To fix the error, modify the line as follows:
-   ```bash
-   if [[ "${exclude_these_script[@]}" =~ " $dep_ " ]]; then
-   ```
-   Ensure that:
-   - There is a space before `]]`.
-   - The variable `$dep_` is defined and holds the expected value.
-
-4. **General Tips for Debugging Shell Scripts**  
-   - **Use `set -x`**: This command can be added at the beginning of your script to enable debugging, which will print each command before it is executed.
-   - **Check for Unmatched Quotes or Brackets**: Ensure that all quotes and brackets are properly matched.
-   - **Run ShellCheck**: This is a useful tool for analyzing shell scripts for potential issues.
-
----
-Example:
-Here’s a corrected version of the conditional statement in context:
-```bash
-exclude_these_script=("script1" "script2")
-dep_="script1"
-
-if [[ "${exclude_these_script[@]}" =~ " $dep_ " ]]; then
-    echo "$dep_ is excluded."
-else
-    echo "$dep_ is not excluded."
-fi
+1
+The error message states: 
 ```
-In this example, if `dep_` matches any of the scripts in `exclude_these_script`, it will print that it is excluded.
+syntax error in conditional expression: unexpected token `;'
+```
+This suggests that there is a problem with the syntax of the `if` statement on line 12. The specific line in question is:
+```bash
+if [[ "${exclude_these_script[@]}" =~ " $dep_ "]]; then
+```
 
 ---
+
+2
+The issue arises from the placement of the closing brackets `]]`. In Bash, when using the `[[ ... ]]` construct for conditional expressions, there should be a space before the closing brackets. The correct syntax should look like this:
+```bash
+if [[ "${exclude_these_script[@]}" =~ " $dep_ " ]]; then
+```
+Notice the space before the `]]`.
+
+---
+
+3
+Additionally, the use of the `=~` operator is for regex matching in Bash. Ensure that the variable `exclude_these_script` is an array and that the regex pattern is correctly formatted. If you want to check if any element in the array matches the pattern, you might need to iterate through the array or adjust the regex accordingly.
+
+---
+
+Example:
+Here’s a corrected version of the line:
+```bash
+if [[ "${exclude_these_script[@]}" =~ " $dep_ " ]]; then
+```
+Make sure to test the script after making this change to confirm that the error is resolved.
+
+---
+
 References:
-## https://www.shellcheck.net/  
-## https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_05.html
+## https://www.gnu.org/software/bash/manual/bash.html#Conditional-Expressions
+## https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_05.html
