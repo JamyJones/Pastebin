@@ -1,38 +1,51 @@
-## summary 
-Understanding the requirement for `-static-libstdc++` in compiler command line arguments. <br>
----<br>
-Explanation: 
+## Summary
+The `libcrypto.so` library is part of the OpenSSL package, which provides cryptographic functions and protocols.
 
-1. **What is `-static-libstdc++`?**  
-   The `-static-libstdc++` flag is a compiler option used in conjunction with **GCC (GNU Compiler Collection)** when compiling C++ programs. Its primary purpose is to statically link the C++ standard library (libstdc++) into your final executable. This means that instead of the program relying on the shared (dynamic) version of the library that exists on the system where it runs, the entire library is included within the executable itself.
+---
+Explanation:
 
-2. **Why use it?**  
-   By using this flag, you can ensure that your program is self-contained, which can simplify distribution and deployment. This is particularly useful if you expect your program to be run on systems where the specific version of the C++ library is unknown or where there could be compatibility issues.
+1. **What is `libcrypto.so`?**  
+   `libcrypto.so` is a shared library file that contains the implementation of various cryptographic algorithms and functions. It is a core component of the OpenSSL project, which is widely used for secure communication over networks.
 
-3. **Requirements for using `-static-libstdc++`**  
-   To use the `-static-libstdc++` flag, you need to have the following installed:
-   - **GCC/G++:** Make sure you have the GNU Compiler Collection installed in your development environment.
-   - **Static libraries:** The static version of the C++ standard library must be available on your system. In Linux, this is usually installed by default along with the GCC libraries, but you can also ensure it's installed by installing the corresponding package, for example: 
-     - For Debian/Ubuntu: `sudo apt install libstdc++-static`
-     - For Red Hat/Fedora: `sudo dnf install libstdc++-static`
-  
-   If you're on Windows and using MinGW, ensure that the `libg++.a` library is available within your installation.
+---
+2. **Where to find `libcrypto.so`?**  
+   The `libcrypto.so` file is typically found in the following packages, depending on your operating system:
 
----<br>
+   - **On Debian/Ubuntu-based systems:**  
+     You can install it using the following command:
+     ```bash
+     sudo apt-get install libssl-dev
+     ```
+     This package includes both `libcrypto.so` and `libssl.so`, which are essential for SSL/TLS operations.
+
+   - **On Red Hat/CentOS-based systems:**  
+     You can install it using:
+     ```bash
+     sudo yum install openssl-devel
+     ```
+     This will also provide the necessary libraries for cryptographic functions.
+
+   - **On macOS:**  
+     You can install OpenSSL using Homebrew:
+     ```bash
+     brew install openssl
+     ```
+     After installation, you may need to link the library to your system paths.
+
+---
+3. **Usage of `libcrypto.so`:**  
+   Applications that require cryptographic functions, such as secure web servers, VPNs, and various security tools, will link against `libcrypto.so`. This allows them to utilize the cryptographic algorithms provided by OpenSSL.
+
+---
 Example:  
-Here is a basic example of using `-static-libstdc++` while compiling a C++ program:
-
+To check if `libcrypto.so` is installed on your system, you can use the following command:
 ```bash
-g++ -o my_program my_program.cpp -static-libstdc++
+ldconfig -p | grep libcrypto
 ```
+This command lists all shared libraries currently available, filtering for `libcrypto`.
 
-In this command:  
-- `g++` is the GNU C++ compiler.
-- `-o my_program` specifies the output file name for the compiled executable.
-- `my_program.cpp` is the input source file you want to compile.
-- `-static-libstdc++` tells the compiler to statically link the C++ standard library.
-
----<br>
-## References:
-## https://gcc.gnu.org/onlinedocs/gcc/Link-Options.html## 
-## https://gcc.gnu.org/gcc-10/changes.html## 
+---
+References:  
+## https://www.openssl.org/  
+## https://packages.ubuntu.com/  
+## https://www.rpmfind.net/
