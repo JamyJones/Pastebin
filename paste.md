@@ -1,77 +1,55 @@
 ## Configuring Compiler for Static Linking with Older glibc Versions
 ---  
-When you want to ensure that your application runs on systems with older versions of glibc, you can configure your compiler to statically link all necessary symbols. This means that the required libraries will be included in your executable, rather than relying on the system's shared libraries. Here’s how to do it:
+To ensure that your application can run on systems with older versions of glibc, you can configure your compiler to statically link all necessary symbols. This process involves using specific flags during the compilation and linking stages. Below are the steps and explanations for achieving this.
 
 1  
 ---  
-**Use the `-static` Flag**  
-To statically link your application, you can use the `-static` flag when compiling your code. This tells the compiler to link against static libraries instead of shared ones.
+**Understanding Static vs. Dynamic Linking**  
+- **Static Linking**: This process includes all the necessary library code into the final executable at compile time. This means that the executable does not depend on the presence of shared libraries on the target system.
+- **Dynamic Linking**: In contrast, dynamic linking relies on shared libraries (like glibc) being present on the target system at runtime.
+
+2  
+---  
+**Compiler Flags for Static Linking**  
+To statically link your application, you typically use the `-static` flag with the GCC (GNU Compiler Collection). Here’s how you can do it:
 
 ```bash
 gcc -static -o my_program my_program.c
 ```
-- `gcc`: This is the GNU Compiler Collection, which is used to compile C programs.
-- `-static`: This flag instructs the compiler to use static linking.
+- `gcc`: This is the GNU Compiler Collection command.
+- `-static`: This flag tells the compiler to link against static libraries instead of shared ones.
 - `-o my_program`: This specifies the output file name for the compiled program.
-- `my_program.c`: This is the source file you want to compile.
-
-2  
----  
-**Ensure Static Libraries are Available**  
-You need to have the static versions of the libraries you are using. For glibc, you may need to install the static library package. On many systems, this can be done using the package manager.
-
-For example, on Debian-based systems, you can install the static library with:
-
-```bash
-sudo apt-get install glibc-source
-```
+- `my_program.c`: This is your source code file.
 
 3  
 ---  
-**Linking Other Libraries Statically**  
-If your program depends on other libraries (like `libm`, `libpthread`, etc.), you should also link them statically. You can specify them explicitly in your compile command:
+**Including All Symbols**  
+To ensure that all symbols are included, you may also want to use the `-Wl,--whole-archive` option. This option forces the linker to include all object files from the specified static libraries. Here’s an example:
 
 ```bash
-gcc -static -o my_program my_program.c -lm -lpthread
+gcc -o my_program my_program.c -Wl,--whole-archive -l<library_name> -Wl,--no-whole-archive
 ```
-- `-lm`: Links the math library statically.
-- `-lpthread`: Links the pthread library statically.
+- `-Wl,`: This prefix tells GCC to pass the following options to the linker.
+- `--whole-archive`: This option includes all symbols from the specified library.
+- `-l<library_name>`: Replace `<library_name>` with the actual library you want to link statically.
+- `--no-whole-archive`: This option stops the whole archive mode, allowing subsequent libraries to be linked normally.
 
 4  
 ---  
-**Considerations for Compatibility**  
-While static linking can help with compatibility, it can also lead to larger binary sizes and potential licensing issues with certain libraries. Always check the licenses of the libraries you are using to ensure compliance.
+**Considerations**  
+- **Dependencies**: Ensure that all libraries you are linking against have static versions available (usually with a `.a` extension).
+- **Size**: Statically linked binaries can be significantly larger than dynamically linked ones because they include all the necessary library code.
+- **Compatibility**: Test your statically linked binaries on the target systems to ensure compatibility with older glibc versions.
 
-5  
----  
-**Testing on Older Systems**  
-After compiling your program, it’s essential to test it on the target systems with older versions of glibc to ensure that it runs correctly without any issues.
-
----  
 Example:  
-Here’s a simple example of compiling a C program that uses the math library:
-
-```c
-#include <stdio.h>
-#include <math.h>
-
-int main() {
-    double result = sqrt(16.0);
-    printf("The square root of 16 is: %f\n", result);
-    return 0;
-}
-```
-
-To compile this program statically, you would run:
+Here’s a complete example of compiling a simple C program with static linking:
 
 ```bash
-gcc -static -o sqrt_program sqrt_program.c -lm
+gcc -static -o my_program my_program.c -Wl,--whole-archive -lm -Wl,--no-whole-archive
 ```
-
-This will create an executable named `sqrt_program` that includes all necessary symbols, allowing it to run on systems with older glibc versions.
+In this example, `-lm` links the math library statically.
 
 ---  
-## References:  
+## References  
 ## https://gcc.gnu.org/onlinedocs/gcc/Link-Options.html  
-## https://man7.org/linux/man-pages/man1/gcc.1.html  
 ## https://www.gnu.org/software/libc/manual/html_node/Static-Libraries.html  
