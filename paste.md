@@ -1,73 +1,54 @@
 ## Summary
-The provided C code retrieves and displays the group name associated with the current process's group ID using the `getgrgid_r` function. 
+The error message indicates a syntax issue in a shell script, specifically in a conditional expression on line 12 of the `pre_conf_build.sh` script.
 
 ---
+Explanation:
 
-### Explanation:
+1. **Understanding the Error Message**  
+   The error message states that there is a "syntax error in conditional expression" and points to an unexpected token `;`. This typically means that the shell is unable to parse the conditional statement correctly due to improper syntax.
 
-1. **Header Files**  
-   ```c
-   #include <stdio.h>
-   #include <grp.h>
-   #include <unistd.h>
+2. **Analyzing the Conditional Statement**  
+   The problematic line is:
+   ```bash
+   if [[ "${exclude_these_script[@]}" =~ " $dep_ "]]; then
    ```
-   - `#include <stdio.h>`: This header file is included for input and output functions, such as `printf` and `perror`.
-   - `#include <grp.h>`: This header file is necessary for working with group information, including the `struct group` and the `getgrgid_r` function.
-   - `#include <unistd.h>`: This header file provides access to the POSIX operating system API, including the `getgid` function.
+   Here are the issues:
+   - **Spacing**: There should be a space before the closing brackets `]]`. The correct syntax should be:
+     ```bash
+     if [[ "${exclude_these_script[@]}" =~ " $dep_ " ]]; then
+     ```
+   - **Quoting**: The use of quotes around the variable `$dep_` may not be necessary depending on the context. If `$dep_` is meant to be a variable, ensure it is defined properly.
 
----
-
-2. **Main Function and Variable Declarations**  
-   ```c
-   int main() {
-       gid_t gid = getgid();
-       struct group grp;
-       char buffer[1024];
-       struct group *result;
+3. **Correcting the Syntax**  
+   To fix the error, modify the line as follows:
+   ```bash
+   if [[ "${exclude_these_script[@]}" =~ " $dep_ " ]]; then
    ```
-   - `int main()`: The entry point of the program.
-   - `gid_t gid = getgid();`: This line retrieves the current process's group ID and stores it in the variable `gid`.
-   - `struct group grp;`: Declares a variable `grp` of type `struct group`, which will hold the group information.
-   - `char buffer[1024];`: Allocates a buffer of 1024 bytes to hold the group name and other information.
-   - `struct group *result;`: Declares a pointer to a `struct group`, which will be used to check if the retrieval of group information was successful.
+   Ensure that:
+   - There is a space before `]]`.
+   - The variable `$dep_` is defined and holds the expected value.
+
+4. **General Tips for Debugging Shell Scripts**  
+   - **Use `set -x`**: This command can be added at the beginning of your script to enable debugging, which will print each command before it is executed.
+   - **Check for Unmatched Quotes or Brackets**: Ensure that all quotes and brackets are properly matched.
+   - **Run ShellCheck**: This is a useful tool for analyzing shell scripts for potential issues.
 
 ---
-
-3. **Retrieving Group Information**  
-   ```c
-   if (getgrgid_r(gid, &grp, buffer, sizeof(buffer), &result) == 0 && result != NULL) {
-       printf("Group Name: %s\n", grp.gr_name);
-   } else {
-       perror("getgrgid_r failed");
-   }
-   ```
-   - `getgrgid_r(gid, &grp, buffer, sizeof(buffer), &result)`: This function retrieves the group information for the given group ID (`gid`). It fills the `grp` structure with the group details, uses `buffer` for temporary storage, and sets `result` to point to the `grp` structure if successful.
-     - The function returns `0` on success.
-     - `result != NULL` checks if the group information was successfully retrieved.
-   - `printf("Group Name: %s\n", grp.gr_name);`: If successful, this line prints the group name stored in `grp.gr_name`.
-   - `perror("getgrgid_r failed");`: If the function fails, this line prints an error message indicating the failure.
-
----
-
-4. **Return Statement**  
-   ```c
-   return 0;
-   ```
-   - This line indicates that the program has completed successfully.
-
----
-
-### Example:
-To compile and run this code, you can use the following commands in a terminal:
+Example:
+Here’s a corrected version of the conditional statement in context:
 ```bash
-gcc -o get_group_name get_group_name.c
-./get_group_name
+exclude_these_script=("script1" "script2")
+dep_="script1"
+
+if [[ "${exclude_these_script[@]}" =~ " $dep_ " ]]; then
+    echo "$dep_ is excluded."
+else
+    echo "$dep_ is not excluded."
+fi
 ```
-This will display the group name associated with the current process's group ID.
+In this example, if `dep_` matches any of the scripts in `exclude_these_script`, it will print that it is excluded.
 
 ---
-
-### References:
-## https://man7.org/linux/man-pages/man3/getgrent.3.html  
-## https://man7.org/linux/man-pages/man3/getgrgid.3.html  
-## https://man7.org/linux/man-pages/man2/getgid.2.html  
+References:
+## https://www.shellcheck.net/  
+## https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_05.html
