@@ -1,104 +1,130 @@
-## Hello Program Using `getgrgid_r()` in C
-<br>
-This program demonstrates how to use the `getgrgid_r()` function in C to retrieve group information based on a group ID. The `getgrgid_r()` function is part of the POSIX standard and is used to get the group information in a thread-safe manner.
+## Hello Program using `getgrgid_r()` in C <br>
+---<br>
+The `getgrgid_r()` function is used to get information about a group based on its group ID (gid). It is defined in the `<grp.h>` header file and provides a thread-safe way to retrieve group information. The primary purpose of this function is to fill a `group` structure with the details of a group corresponding to a specified group ID.
 
-### Explanation:
-1
----
-**Include Necessary Headers**  
-To use `getgrgid_r()`, you need to include the following headers:
-```c
-#include <stdio.h>      // For printf
-#include <stdlib.h>     // For malloc and free
-#include <string.h>     // For memset
-#include <grp.h>        // For getgrgid_r and struct group
-#include <unistd.h>     // For getgid
-```
-- `stdio.h`: Provides functionalities for input and output.
-- `stdlib.h`: Contains functions for memory allocation.
-- `string.h`: Used for string manipulation functions like `memset`.
-- `grp.h`: Contains the definition of the `getgrgid_r()` function and the `group` structure.
-- `unistd.h`: Provides access to the POSIX operating system API, including `getgid()`.
+**Note:** You need to include `<stdlib.h>` for memory allocation and error checking, and `<stdio.h>` for standard input/output.
 
-2
----
-**Define the Main Function**  
-The main function is where the program execution begins.
-```c
-int main() {
-    gid_t gid = getgid(); // Get the current group ID
-    struct group grp;     // Declare a group structure
-    struct group *result; // Pointer to hold the result
-    char buffer[1024];    // Buffer for the group name
-    int s;                // Status variable
-```
-- `getgid()`: Retrieves the group ID of the calling process.
-- `struct group`: A structure that holds information about a group.
-- `char buffer[1024]`: A buffer to store the group name.
-- `int s`: A variable to store the return status of `getgrgid_r()`.
+Here’s a simple program that demonstrates how to use `getgrgid_r()` to retrieve and print information about a group.
 
-3
----
-**Retrieve Group Information**  
-Use `getgrgid_r()` to get the group information based on the group ID.
-```c
-    s = getgrgid_r(gid, &grp, buffer, sizeof(buffer), &result);
-    if (s != 0) {
-        perror("getgrgid_r failed"); // Print error if it fails
-        return 1; // Exit with error code
-    }
-```
-- `getgrgid_r(gid, &grp, buffer, sizeof(buffer), &result)`: This function retrieves the group information for the specified group ID (`gid`). It fills the `grp` structure with the group details, uses `buffer` to store the group name, and `result` to point to the filled structure.
-- `perror()`: Prints a description for the last error that occurred.
-
-4
----
-**Display the Group Name**  
-Finally, print the group name to the console.
-```c
-    printf("Group ID: %d\n", gid);
-    printf("Group Name: %s\n", grp.gr_name); // Print the group name
-    return 0; // Exit successfully
-}
-```
-- `printf()`: Used to output the group ID and group name to the console.
-
-### Complete Code Example:
 ```c
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <grp.h>
 #include <unistd.h>
+#include <string.h>
 
 int main() {
     gid_t gid = getgid(); // Get the current group ID
-    struct group grp;     // Declare a group structure
+    struct group grp; // Create a group structure
     struct group *result; // Pointer to hold the result
-    char buffer[1024];    // Buffer for the group name
-    int s;                // Status variable
+    char buf[1024]; // Buffer to store the returned data
+    int errnum; // Variable to hold error numbers
 
-    s = getgrgid_r(gid, &grp, buffer, sizeof(buffer), &result);
-    if (s != 0) {
-        perror("getgrgid_r failed"); // Print error if it fails
-        return 1; // Exit with error code
+    // Get the group information using getgrgid_r
+    errnum = getgrgid_r(gid, &grp, buf, sizeof(buf), &result);
+    
+    // Check for errors
+    if (errnum != 0) {
+        perror("getgrgid_r error");
+        return 1;
     }
 
-    printf("Group ID: %d\n", gid);
-    printf("Group Name: %s\n", grp.gr_name); // Print the group name
-    return 0; // Exit successfully
+    // Check if the group was found
+    if (result == NULL) {
+        printf("Group ID %d not found.\n", gid);
+        return 1;
+    }
+
+    // Print group information
+    printf("Group Name: %s\n", grp.gr_name);
+    printf("Group ID: %d\n", grp.gr_gid);
+    printf("Group Members: ");
+    
+    // Print the members of the group
+    char **members = grp.gr_mem;
+    if (*members) {
+        for (int i = 0; members[i] != NULL; i++) {
+            printf("%s ", members[i]);
+        }
+    } else {
+        printf("(No members)");
+    }
+    printf("\n");
+
+    return 0;
 }
 ```
-### How to Compile and Run:
-To compile the program, use the following command in your terminal:
-```bash
-gcc -o hello_group hello_group.c
-```
-Then, run the program:
-```bash
-./hello_group
-```
 
-### References:
-## https://man7.org/linux/man-pages/man3/getgrgid.3.html  
-## https://man7.org/linux/man-pages/man3/getgrgid_r.3.html  
+---<br>
+Explanation:
+1
+---  
+`#include <stdio.h>`: This line includes the standard I/O library for input and output functions, such as `printf` and `perror`.
+
+2
+---  
+`#include <stdlib.h>`: This line includes the standard library, which contains functions for memory allocation and other utilities.
+
+3
+---  
+`#include <grp.h>`: This header file defines the structure and function prototypes for group-related calls, including `getgrgid_r()`.
+
+4
+---  
+`#include <unistd.h>`: This header file provides access to the POSIX operating system API, which includes the `getgid()` function to get the current process's group ID.
+
+5
+---  
+`#include <string.h>`: This header file provides functions for handling strings, though it's not strictly necessary for this example.
+
+6
+---  
+`gid_t gid = getgid();`: This line gets the current user’s group ID and stores it in `gid`.
+
+7
+---  
+`struct group grp;`: This line declares a structure `grp` of type `struct group`, which will hold the group information.
+
+8
+---  
+`struct group *result;`: This line declares a pointer `result` to hold the return value of `getgrgid_r()`.
+
+9
+---  
+`char buf[1024];`: This creates a buffer for storing the group information returned by `getgrgid_r()`.
+
+10
+---  
+`int errnum;`: This variable is used to capture any potential errors that occur during the call.
+
+11
+---  
+`errnum = getgrgid_r(gid, &grp, buf, sizeof(buf), &result);`: This line calls `getgrgid_r()` with the current group ID to fill the `grp` structure with the group details into the buffer `buf`.
+
+12
+---  
+`if (errnum != 0)`: This checks if the `getgrgid_r()` function returned an error.
+
+13
+---  
+`if (result == NULL)`: This checks whether the group was found.
+
+14
+---  
+`printf("Group Name: %s\n", grp.gr_name);`: This prints the name of the group.
+
+15
+---  
+`printf("Group ID: %d\n", grp.gr_gid);`: This prints the group's ID.
+
+16
+---  
+The code in the loop prints the members of the group. If there are no members, it outputs "(No members)".
+
+This program, when compiled and executed, will show the group information of the current process based on the group ID. You can use a C compiler such as `gcc` to compile the code.
+
+---  
+References: 
+## https://man7.org/linux/man-pages/man3/getgrent.3.html 
+## https://man7.org/linux/man-pages/man3/getgrgid.3.html 
+## https://man7.org/linux/man-pages/man3/getgrgid_r.3.html
