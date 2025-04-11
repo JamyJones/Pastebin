@@ -1,58 +1,43 @@
-## Statically Linking C Library and Clang Runtime Library  
----  
-To statically link C libraries and the Clang runtime library, you typically use linker flags during the compilation process. The command you provided (`LDFLAGS+="-static-libgcc -static-libstdc++"`) is a method to achieve that with GCC/Clang.  
+## Summary 
+This command is used to compile a C program `test.c` using the GCC compiler with specific flags that alter the behavior of the compilation process. 
 
-### Understanding LDFLAGS
-- **LDFLAGS**: This is an environment variable used to specify options that the linker should use when linking object files.
-- In the command, you append the flags `-static-libgcc` and `-static-libstdc++` to the `LDFLAGS`.
+---
 
-### Breakdown of Flags  
-1. **-static-libgcc**  
-   - **Purpose**: This flag instructs the compiler to statically link the GCC runtime library (libgcc).
-   - **Usage**: It is particularly important when you want to ensure that your application does not rely on shared versions of the library, which could lead to versioning issues in different environments.
+Explanation:
 
-2. **-static-libstdc++**  
-   - **Purpose**: Similar to `-static-libgcc`, this flag tells the compiler to statically link the GNU Standard C++ Library (libstdc++).
-   - **Usage**: It ensures that all the standard C++ libraries used in the application are included in the executable, making it self-contained.
+1. **GCC Compiler**  
+   - `gcc` stands for GNU Compiler Collection. It is the standard compiler for C and C++ programming any target operating system. It compiles source code into an executable.
+  
+2. **Flags Explanation**  
+   - `-no-pie`:  
+     - This flag tells the compiler to generate a non-Position Independent Executable (non-PIE). By default, modern compilers generate position-independent executables which can run at arbitrary memory addresses. This is useful for security but can be disabled if necessary for reasons like debugging or performance.
+   
+   - `-static`:  
+     - This option instructs the linker to create a statically linked executable. In a static link, all the required libraries are included within the final executable file, meaning it doesn't depend on dynamic shared libraries at runtime. This is beneficial for portability, as the executable can run on a system without the need for specific versions of libraries. However, it can lead to larger file sizes because of the inclusion of all library code.
 
-### Required Modules
-- To use the flags properly, make sure you have the required static library files on your system. Static libraries typically have the `.a` extension.
+3. **File to Compile**  
+   - `test.c`:  
+     - This is the source file that you wish to compile. It should contain your C code, which the GCC compiler will process according to the options provided. 
 
-### Example Scenario
-Suppose you are compiling a simple C++ program called `example.cpp` that uses standard library features. You would run the following command:
+---
 
-```sh
-clang++ example.cpp -o example -static-libgcc -static-libstdc++
-```
+Example: 
+If you have a simple C program in `test.c`:
 
-This command does the following:
-- `clang++`: Calls the Clang C++ compiler.
-- `example.cpp`: Input file containing your C++ code.
-- `-o example`: Specifies the output executable name.
-- `-static-libgcc`: Statically links the GNU C runtime library.
-- `-static-libstdc++`: Statically links the GNU C++ standard library.
+```c
+#include <stdio.h>
 
-### Additional Notes
-- Ensure your system has the static versions of the libraries installed (often these are separate packages in many Linux distributions).
-- Statically linking libraries can increase the size of your executable but can improve portability since it will not be dependent on the availability of shared libraries on the target machine.
-
-## Example: Minimal Code Demonstration  
-```cpp
-#include <iostream>
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    printf("Hello, World!\n");
     return 0;
 }
 ```
-The command to compile the above code statically would look like this:
 
-```sh
-clang++ hello.cpp -o hello -static-libgcc -static-libstdc++
-```
+By running `gcc -no-pie -static test.c`, the compiler will create an executable file (often named `a.out` by default unless specified otherwise) that contains all the necessary code from `stdio.h` and other libraries directly embedded, rather than linking to them at runtime.
 
-Running `hello` will produce the output without needing any shared C++ libraries installed on the target machine.
+---
 
-## References  
-## https://gcc.gnu.org/onlinedocs/gcc/Link-Options.html  
-## https://clang.llvm.org/docs/CommandGuide/clang.html  
-## https://www.gnu.org/software/libc/manual/html_node/Static-Libraries.html
+References:
+## https://gcc.gnu.org/onlinedocs/gcc/Invoking-GCC.html  
+## https://man7.org/linux/man-pages/man1/gcc.1.html  
+## https://man7.org/linux/man-pages/man1/ld.1.html
