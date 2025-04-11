@@ -1,1 +1,1 @@
-How can I assist you today? If you have any questions or topics you'd like to learn more about, feel free to let me know!
+It seems like you didn't ask a specific question. Please let me know what you'd like to know or discuss, and I’ll be happy to assist you!
